@@ -15,9 +15,13 @@ const SignIn = () => {
       <Text><Text style={styles.textColorSuccess}>English</Text> | French</Text>
       </View>
       <View style={styles.screenMid}>
+        <View style={{
+          alignItems: "center",
+          justifyContent: "center"
+        }}>
 <Image
 source={require('../../Assets/Images/logoR.png')}
-style={{ height: 100}}/>
+style={{ height: 100}}/></View>
         <Text style={styles.TextSty}>Enter Email</Text>
         <TextInputField placeholder="Your Email" />
         <Text style={styles.TextSty}>Enter Password</Text>
@@ -29,11 +33,23 @@ style={{ height: 100}}/>
               backgroundColor: baseColors.primaryColor,
               borderRadius: 10,
               paddingVertical: 10,
-              paddingHorizontal: 12,}}
+              paddingHorizontal: 12,
+           }}
             onPress={() => {
               navigation.navigate("SignUp");
             }}
-          >Log In</TouchableButton>
+          >
+            <Text style={{
+             fontSize: 15,
+            color: "#fff",
+            fontWeight: "bold",
+            alignSelf: "center",
+            textTransform: "uppercase",
+            borderRadius: 50, 
+            textAlign: "center" }}>
+              Log In
+              </Text>
+              </TouchableButton>
         </View>
         <View>
       <Text style={styles.textColorDanger}>Forget Password</Text>
