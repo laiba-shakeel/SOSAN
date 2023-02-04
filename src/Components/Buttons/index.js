@@ -32,7 +32,8 @@ const defaultStyles = StyleSheet.create({
       paddingVertical: 10,
       paddingHorizontal: 12,
       width: 200,
-      justifyContent: "center"
+      justifyContent:"center",
+      alignItems: "center"
      
     },
     appButtonText: {
