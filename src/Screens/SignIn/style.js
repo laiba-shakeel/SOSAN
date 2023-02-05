@@ -27,10 +27,11 @@ const styles = StyleSheet.create({
       justifyContent: "center",
       width: 130,
       margin: "auto",
+      alignItems: "center"
     },
     TextSty: {
       paddingLeft: 11,
-      fontWeight: 600,
+      fontWeight: "600",
     },
     container: {
       flex: 1,

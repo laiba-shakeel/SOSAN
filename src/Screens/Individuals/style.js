@@ -1,8 +1,7 @@
-import { Dimensions, StyleSheet} from "react-native"
-import baseColors from "../../Theme/Colors/Colors";
+import baseColors from "../../Theme/Colors/Colors"
+import { Dimensions , StyleSheet } from "react-native"
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
-
 const styles = StyleSheet.create({
     screenContainer: {
       height: deviceHeight / 1,
@@ -30,13 +29,10 @@ const styles = StyleSheet.create({
     heading: {
       fontWeight: "600",
       color: baseColors.darkTextColor,
-      textTransform: "uppercase",
       justifyContent: "center",
       textAlign: "center",
-    },
-    TextSty: {
-      paddingLeft: 11,
-      fontWeight: "600",
-    },
-  });
-  export default styles;
+      fontSize: 16
+    }, 
+
+})
+export default styles

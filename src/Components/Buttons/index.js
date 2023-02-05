@@ -39,7 +39,7 @@ const defaultStyles = StyleSheet.create({
     appButtonText: {
       fontSize: 15,
       color: "#fff",
-      fontWeight: "bold",
+      fontWeight: "100",
       alignSelf: "center",
       textTransform: "uppercase",
       borderRadius: 50

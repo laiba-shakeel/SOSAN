@@ -7,6 +7,8 @@ import styles from "./style";
 import TextInputField from "../../Components/InputFiled";
 import CheckBtn from "../../Components/CheckboxButton";
 
+
+
 const SignUp = () => {
 
   const navigation = useNavigation();
@@ -31,7 +33,10 @@ const SignUp = () => {
           justifyContent: 'space-evenly',
           alignItems: 'center'
         }}>
-          <CheckBtn /><Text>Individual</Text>
+          <CheckBtn  
+          /><Text  onPress={() => {
+            navigation.navigate("Individuals");
+          }}>Individual</Text>
           <CheckBtn /><Text>Professional</Text>
           
         </View>
@@ -62,11 +67,11 @@ const SignUp = () => {
                 style={{
                   fontSize: 15,
                   color: "#fff",
-                  fontWeight: "bold",
+                  fontWeight: "600",
                   alignSelf: "center",
                   textTransform: "uppercase",
                   borderRadius: 50,
-                  textAlign: "center ",
+                  textAlign: "center",
                 }}>
                 Log In
               </Text>
@@ -89,11 +94,11 @@ const SignUp = () => {
                 style={{
                   fontSize: 15,
                   color: "#fff",
-                  fontWeight: "bold",
+                  fontWeight: "600",
                   alignSelf: "center",
                   textTransform: "uppercase",
                   borderRadius: 50,
-                  textAlign: "center ",
+                  textAlign: "center",
                 }}>
                 Log In
               </Text>

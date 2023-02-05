@@ -23,7 +23,7 @@ const SignIn = () => {
           }}>
           <Image
             source={require("../../Assets/Images/logoR.png")}
-            style={{ height: 100 }}
+            style={{ height: 50}}
           />
         </View>
         <Text style={styles.TextSty}>Enter Email</Text>
@@ -48,11 +48,11 @@ const SignIn = () => {
               style={{
                 fontSize: 15,
                 color: "#fff",
-                fontWeight: "bold",
+                fontWeight: "600",
                 alignSelf: "center",
                 textTransform: "uppercase",
                 borderRadius: 50,
-                textAlign: "center ",
+                textAlign: "center",
               }}>
               Log In
             </Text>
