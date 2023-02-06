@@ -23,16 +23,34 @@ const styles = StyleSheet.create({
       width: deviceWidth / 1,
       borderRadius: 30,
       backgroundColor: baseColors.lightColor,
-      justifyContent: "center",
-      paddingHorizontal: 15,
+      paddingTop: 30
     },
     heading: {
-      fontWeight: "600",
-      color: baseColors.darkTextColor,
+      // fontWeight: "600",
+      color: baseColors.sucessTextColor,
       justifyContent: "center",
       textAlign: "center",
-      fontSize: 16
-    }, 
-
-})
+      fontSize: 20,
+    } 
+,
+BoxScreen:{
+marginTop: 65,
+}, 
+headingMini:{
+   color: baseColors.sucessTextColor,
+  fontSize: 14,
+  marginBottom: 10,
+  paddingStart: 5
+},
+TextContainer:{
+marginTop: 12,
+padding: 12
+},
+TextNormal:{
+fontSize:12.5
+},
+underline:{
+textDecorationLine: "underline"
+}
+  })
 export default styles

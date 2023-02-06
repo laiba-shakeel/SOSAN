@@ -1,4 +1,6 @@
 import React from "react";
+import Individuals from "../Individuals";
+import Professional from "../Professionals";
 import { View, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import TouchableButton from "../../Components/Buttons";
@@ -6,7 +8,6 @@ import baseColors from "../../Theme/Colors/Colors";
 import styles from "./style";
 import TextInputField from "../../Components/InputFiled";
 import CheckBtn from "../../Components/CheckboxButton";
-
 
 
 const SignUp = () => {
@@ -37,7 +38,11 @@ const SignUp = () => {
           /><Text  onPress={() => {
             navigation.navigate("Individuals");
           }}>Individual</Text>
-          <CheckBtn /><Text>Professional</Text>
+          <CheckBtn /><Text 
+          onPress={() => {
+            navigation.navigate("Professional");
+          }}>
+            Professional</Text>
           
         </View>
         
@@ -73,7 +78,7 @@ const SignUp = () => {
                   borderRadius: 50,
                   textAlign: "center",
                 }}>
-                Log In
+                Cancel
               </Text>
             </TouchableButton>
             <TouchableButton
@@ -88,7 +93,7 @@ const SignUp = () => {
                 width: 130,
               }}
               onPress={() => {
-                navigation.navigate("SignIn");
+                navigation.navigate("Individuals");
               }}>
               <Text
                 style={{
@@ -100,7 +105,7 @@ const SignUp = () => {
                   borderRadius: 50,
                   textAlign: "center",
                 }}>
-                Log In
+                Next
               </Text>
             </TouchableButton>
           </View>
