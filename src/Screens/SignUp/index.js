@@ -1,6 +1,4 @@
 import React from "react";
-import Individuals from "../Individuals";
-import Professional from "../Professionals";
 import { View, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import TouchableButton from "../../Components/Buttons";
@@ -8,10 +6,9 @@ import baseColors from "../../Theme/Colors/Colors";
 import styles from "./style";
 import TextInputField from "../../Components/InputFiled";
 import CheckBtn from "../../Components/CheckboxButton";
-
+import ModalTester from "../../Components/Modal";
 
 const SignUp = () => {
-
   const navigation = useNavigation();
   return (
     <View style={styles.screenContainer}>
@@ -29,29 +26,31 @@ const SignUp = () => {
           <Text style={styles.TextSty}>Enter Password</Text>
           <TextInputField placeholder="*************" />
           <Text>What are you</Text>
-     <View style={{
-          flexDirection: "row",
-          justifyContent: 'space-evenly',
-          alignItems: 'center'
-        }}>
-          <CheckBtn  
-          /><Text  onPress={() => {
-            navigation.navigate("Individuals");
-          }}>Individual</Text>
-          <CheckBtn /><Text 
-          onPress={() => {
-            navigation.navigate("Professional");
-          }}>
-            Professional</Text>
-          
-        </View>
-        
-        <View style={{
-          flexDirection: "row",
-          alignItems: 'center'
-        }}>
-        <CheckBtn /><Text>i agree with the terms and agreements</Text>
-        </View>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-evenly",
+              alignItems: "center",
+            }}>
+            <CheckBtn />
+            <Text
+              onPress={() => {
+                navigation.navigate("Individuals");
+              }}>
+              Individual
+            </Text>
+            <CheckBtn />
+             <ModalTester />
+          </View>
+
+          <View
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+            }}>
+            <CheckBtn />
+            <Text>i agree with the terms and agreements</Text>
+          </View>
           <View
             style={{ flexDirection: "row", justifyContent: "space-evenly" }}>
             <TouchableButton

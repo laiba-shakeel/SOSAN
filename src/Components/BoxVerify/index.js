@@ -11,6 +11,7 @@ const Boxes = () => {
          height: 90,
          width: 60,
          borderRadius: 6,
+         borderWidth: 1,
       }}>
       </View>
     </View>
