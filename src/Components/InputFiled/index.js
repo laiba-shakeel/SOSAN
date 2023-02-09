@@ -1,35 +1,39 @@
-import React from 'react';
-import {SafeAreaView, StyleSheet, TextInput} from 'react-native';
-import baseColors from '../../Theme/Colors/Colors';
-
-const TextInputField = ({placeholder , keyboardType , secureTextEntry}) => {
- 
-  const [number, onChangeNumber] = React.useState('');
-
+import React from "react";
+import { SafeAreaView, StyleSheet, TextInput } from "react-native";
+import baseColors from "../../Theme/Colors/Colors";
+import _ from 'lodash'
+const TextInputField = ({ placeholder, keyboardType, secureTextEntry, styles: customStyles,multiline, numberOfLines  }) => {
+  const [number, onChangeNumber] = React.useState("");
+  let styles = defaultStyles.appButtonContainer;
+  if (!_.isEmpty(customStyles)) {
+    styles = { styles, ...customStyles };
+  }
   return (
     <SafeAreaView>
-     
       <TextInput
-        style={styles.input}
+        style={styles}
         onChangeText={onChangeNumber}
         value={number}
         placeholder={placeholder}
         keyboardType={keyboardType}
         secureTextEntry={secureTextEntry}
+        multiline={multiline}
+        numberOfLines={numberOfLines}
       />
     </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({
-    input: {
-      height: 40,
-      margin: 12,
-      borderWidth: 1,
-      padding: 10,
-      borderRadius: 50,
-      borderColor: baseColors.sucessTextColor,
-    },
-  });
+const defaultStyles = StyleSheet.create({
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+    borderRadius: 50,
+    borderColor: baseColors.sucessTextColor,
+    textAlignVertical: "top",
+  },
+});
 
 export default TextInputField;

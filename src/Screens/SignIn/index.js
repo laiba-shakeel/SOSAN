@@ -27,9 +27,25 @@ const SignIn = () => {
           />
         </View>
         <Text style={styles.TextSty}>Enter Email</Text>
-        <TextInputField placeholder="abc@gmail.com" />
+        <TextInputField styles={{
+            height: 40,
+            margin: 12,
+            borderColor: baseColors.sucessColor,
+            borderWidth: 1,
+            borderRadius: 50,
+            padding: 10,
+          }} placeholder="abc@gmail.com" />
         <Text style={styles.TextSty}>Enter Password</Text>
-        <TextInputField placeholder="************" secureTextEntry={true} />
+        <TextInputField 
+        styles={{
+          height: 40,
+          margin: 12,
+          borderColor: baseColors.sucessColor,
+          borderWidth: 1,
+          borderRadius: 50,
+          padding: 10,
+        }}
+        placeholder="************" secureTextEntry={true} />
         <View style={styles.LoginBtn}>
           <TouchableButton
             styles={{

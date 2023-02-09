@@ -18,13 +18,41 @@ const SignUp = () => {
             Create a new account
           </Text>
           <Text style={styles.TextSty}>Enter Email</Text>
-          <TextInputField placeholder="abc@gmail.com" />
+          <TextInputField 
+          styles={{height: 40,
+            margin: 12,
+            borderColor: baseColors.sucessColor,
+            borderWidth: 1,
+            borderRadius: 50,
+            padding: 10,}}
+             placeholder="abc@gmail.com" />
           <Text style={styles.TextSty}>Enter Username</Text>
-          <TextInputField placeholder="Enter Username" />
+          <TextInputField 
+          styles={{height: 40,
+            margin: 12,
+            borderColor: baseColors.sucessColor,
+            borderWidth: 1,
+            borderRadius: 50,
+            padding: 10,}}
+          placeholder="Enter Username" />
           <Text style={styles.TextSty}>Enter Phonenumber</Text>
-          <TextInputField placeholder="00923584582" />
+          <TextInputField 
+          styles={{height: 40,
+            margin: 12,
+            borderColor: baseColors.sucessColor,
+            borderWidth: 1,
+            borderRadius: 50,
+            padding: 10,}}
+          placeholder="00923584582" />
           <Text style={styles.TextSty}>Enter Password</Text>
-          <TextInputField placeholder="*************" />
+          <TextInputField 
+          styles={{height: 40,
+            margin: 12,
+            borderColor: baseColors.sucessColor,
+            borderWidth: 1,
+            borderRadius: 50,
+            padding: 10,}}
+          placeholder="*************" />
           <Text>What are you</Text>
           <View
             style={{
