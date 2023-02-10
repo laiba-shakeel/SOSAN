@@ -4,11 +4,11 @@ import { styles } from "./style";
 const Gallary = () => {
   return (
     <View style={styles.MainConatiner}>
-      <View>
-        <Text style={styles.TextSty}>Gallary</Text>
-        <Text style={styles.TextStyle}>Add Minimum 2 Photos</Text>
+      <Text style={styles.TextSty}>Gallary</Text>
+      <Text style={styles.TextStyle}>Add Minimum 2 Photos</Text>
+      <View style={styles.TopImg}>
         <Image
-          style={{ height: 150, borderRadius: 10, resizeMode: "cover" }}
+          style={styles.ColumnImg}
           source={require("../../Assets/Images/vector.png")}
         />
       </View>

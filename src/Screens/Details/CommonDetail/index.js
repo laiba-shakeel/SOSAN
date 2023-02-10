@@ -18,11 +18,10 @@ function CommonDetail() {
         <InputField placeholder="Type Here" styles={styles.InputStyling} />
         <Text style={styles.formText}>Set Location</Text>
         <InputField placeholder="Type Here" styles={styles.InputStyling} />
-
         <Text style={styles.lightText}>Set on map</Text>
         <View style={styles.Mapping}>
           <Image
-            style={{ height: 200 }}
+            style={styles.ImgSty}
             source={require("../../../Assets/Images/map.png")}
           />
         </View>
@@ -61,14 +60,7 @@ function CommonDetail() {
             onPress={() => {
               navigation.navigate("Services");
             }}>
-            <Text
-              style={{
-                color: "#fff",
-                fontWeight: "bold",
-                textTransform: "uppercase",
-              }}>
-              Login
-            </Text>
+            <Text style={styles.LoginTextSty}>Login</Text>
           </Button>
         </View>
       </View>

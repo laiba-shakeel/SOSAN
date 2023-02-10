@@ -92,4 +92,12 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  ImgSty:{
+     height: 200 
+  },
+  LoginTextSty:{
+    color: "#fff",
+    fontWeight: "bold",
+    textTransform: "uppercase",
+  }
 });

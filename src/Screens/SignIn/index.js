@@ -58,7 +58,7 @@ const SignIn = () => {
               alignItems: "center",
             }}
             onPress={() => {
-              navigation.navigate("SignUp");
+              navigation.navigate("AppHome");
             }}>
             <Text
               style={{

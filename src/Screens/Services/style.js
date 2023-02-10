@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: baseColors.darkTextColor,
     borderRadius: 15,
-    elevation:6
   },
   TextSty: {
     fontWeight: "600",
@@ -56,5 +55,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  LoginBtnTextSty: {
+    color: "#fff",
+    fontWeight: "bold",
+    
+  }
 });
 export default styles;

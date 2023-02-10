@@ -1,10 +1,9 @@
 import React from "react";
-import { View, Text} from "react-native";
+import { View, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import TouchableButton from "../../Components/Buttons";
 import Boxes from "../../Components/BoxVerify";
 import styles from "./style";
-import baseColors from "../../Theme/Colors/Colors";
 const Individuals = () => {
   const navigation = useNavigation();
 
@@ -31,74 +30,23 @@ const Individuals = () => {
             </Text>
             <Text style={styles.TextNormal}>
               There is a code sent to your email please check. if not press{" "}
-              <Text
-                style={{
-                  textDecorationLine: "underline",
-                  color: baseColors.sucessTextColor,
-                }}>
-                Resend
-              </Text>
+              <Text style={styles.InputUnderline}>Resend</Text>
             </Text>
           </View>
-          <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "space-evenly",
-              marginTop: 30,
-            }}>
+          <View style={styles.BtnDiv}>
             <TouchableButton
-              styles={{
-                elevation: 8,
-                backgroundColor: baseColors.secondaryColor,
-                borderRadius: 10,
-                paddingVertical: 10,
-                paddingHorizontal: 12,
-                justifyContent: "center",
-                alignItems: "center",
-                width: 130,
-              }}
+              styles={styles.ButtonSty}
               onPress={() => {
                 navigation.navigate("SignIn");
               }}>
-              <Text
-                style={{
-                  fontSize: 15,
-                  color: "#fff",
-                  fontWeight: "600",
-                  alignSelf: "center",
-                  textTransform: "uppercase",
-                  borderRadius: 50,
-                  textAlign: "center",
-                }}>
-                Back
-              </Text>
+              <Text style={styles.TextSty}>Back</Text>
             </TouchableButton>
             <TouchableButton
-              styles={{
-                elevation: 8,
-                backgroundColor: baseColors.primaryColor,
-                borderRadius: 10,
-                paddingVertical: 10,
-                paddingHorizontal: 12,
-                justifyContent: "center",
-                alignItems: "center",
-                width: 130,
-              }}
+              styles={styles.NextBtn}
               onPress={() => {
                 navigation.navigate("SignIn");
               }}>
-              <Text
-                style={{
-                  fontSize: 15,
-                  color: "#fff",
-                  fontWeight: "600",
-                  alignSelf: "center",
-                  textTransform: "uppercase",
-                  borderRadius: 50,
-                  textAlign: "center",
-                }}>
-                Next
-              </Text>
+              <Text style={styles.TextSty}>Next</Text>
             </TouchableButton>
           </View>
         </View>

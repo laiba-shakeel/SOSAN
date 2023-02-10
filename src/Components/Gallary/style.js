@@ -6,8 +6,12 @@ export const styles = StyleSheet.create({
   MainConatiner: {
     borderColor: baseColors.lightColor,
     flexDirection: "column",
-    width: deviceWidth / 1 - 60,
-    justifyContent: "center",
+    width: deviceWidth / 1 - 40,
+    paddingVertical: 10
+  },
+  TopImg:{
+    justifyContent:"center",
+    alignItems: "center",
   },
   TextSty: {
     fontWeight: "600",
@@ -21,12 +25,19 @@ export const styles = StyleSheet.create({
   },
   RowImages: {
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "space-evenly",
     marginVertical: 10,
+    alignItems:"center"
   },
   ImgSty: {
     borderRadius: 5,
-    height: 90,
-    width: 100,
+    height: 80,
+    width: 90,
   },
+  ColumnImg:{
+    height: 150,
+    borderRadius: 10,
+    width: 300,
+    resizeMode: "cover",
+  }
 });

@@ -25,24 +25,18 @@ const Services = () => {
             <Text style={styles.TextSpan}>Ultrasound</Text>
           </View>
         </View>
-        </View>
-        <View style={styles.BottomBtn}>
-          <Button
-            styles={styles.LoginBtn}
-            onPress={() => {
-              navigation.navigate("Services");
-            }}>
-            <Text
-              style={{
-                color: "#fff",
-                fontWeight: "bold",
-                textTransform: "uppercase",
-              }}>
-              Login
-            </Text>
-          </Button>
-        </View>
-     
+      </View>
+      <View style={styles.BottomBtn}>
+        
+        <Button
+          styles={styles.LoginBtn}
+          onPress={() => {
+            // Navigate using the `navigation` prop that you received
+            navigation.navigate('SignIn');
+          }}>
+          <Text style={styles.LoginBtnTextSty}>Login</Text>
+        </Button>
+      </View>
     </View>
   );
 };
