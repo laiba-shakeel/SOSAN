@@ -1,5 +1,5 @@
 import React from "react";
-import { View,Text, Image } from "react-native";
+import { View, Text, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import TouchableButton from "../../Components/Buttons";
 import TextInputField from "../../Components/InputFiled";
@@ -23,29 +23,34 @@ const SignIn = () => {
           }}>
           <Image
             source={require("../../Assets/Images/logoR.png")}
-            style={{ height: 50}}
+            style={{ height: 50 }}
           />
         </View>
         <Text style={styles.TextSty}>Enter Email</Text>
-        <TextInputField styles={{
+        <TextInputField
+          styles={{
             height: 40,
             margin: 12,
             borderColor: baseColors.sucessColor,
             borderWidth: 1,
             borderRadius: 50,
             padding: 10,
-          }} placeholder="abc@gmail.com" />
+          }}
+          placeholder="abc@gmail.com"
+        />
         <Text style={styles.TextSty}>Enter Password</Text>
-        <TextInputField 
-        styles={{
-          height: 40,
-          margin: 12,
-          borderColor: baseColors.sucessColor,
-          borderWidth: 1,
-          borderRadius: 50,
-          padding: 10,
-        }}
-        placeholder="************" secureTextEntry={true} />
+        <TextInputField
+          styles={{
+            height: 40,
+            margin: 12,
+            borderColor: baseColors.sucessColor,
+            borderWidth: 1,
+            borderRadius: 50,
+            padding: 10,
+          }}
+          placeholder="************"
+          secureTextEntry={true}
+        />
         <View style={styles.LoginBtn}>
           <TouchableButton
             styles={{
@@ -74,14 +79,16 @@ const SignIn = () => {
             </Text>
           </TouchableButton>
         </View>
-        <View style= {styles.OptionScreen}>
+        <View style={styles.OptionScreen}>
           <Text style={styles.textColorDanger}>Forget Password</Text>
           <Text>create a new account</Text>
-          <Text style={styles.textColorSuccess} 
-             onPress={() => {
+          <Text
+            style={styles.textColorSuccess}
+            onPress={() => {
               navigation.navigate("SignUp");
-            }}
-          >Registered Now</Text>
+            }}>
+            Registered Now
+          </Text>
         </View>
       </View>
       <Image
@@ -92,4 +99,3 @@ const SignIn = () => {
   );
 };
 export default SignIn;
-
