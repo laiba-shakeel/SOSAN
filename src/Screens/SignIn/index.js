@@ -93,7 +93,7 @@ const SignIn = () => {
       </View>
       <Image
         source={require("../../Assets/Images/bgHero1.png")}
-        style={{ height: 300 }}
+        style={{ height: 270,resizeMode: 'contain' }}
       />
     </View>
   );

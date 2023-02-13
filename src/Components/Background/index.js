@@ -1,44 +1,38 @@
-import * as React from 'react';
-import {View , Dimensions } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
+import React from "react";
+import { View, Dimensions } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import baseColors from "../../Theme/Colors/Colors";
+
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
-import baseColors from '../../Theme/Colors/Colors';
-import { StyleSheet } from 'react-native';
-export default function Background({children}) {
 
+function Background({ children }) {
   return (
-    <View style={styles.screenBackground}>
-    <View
-      style={{
-        flex:1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'orange',
-      }}>
+    <View>
       <LinearGradient
-        // Background Linear Gradient
-        colors={['rgba(0,0,0,0.8)', 'transparent']}
-        style={{
-          position: 'absolute',
-          left: 0,
-          right: 0,
-          top: 0,
-          height: 20,
+        colors={[baseColors.gradientsucessColor, baseColors.gradientprimaryColor, baseColors.primaryColor]}
+        start={{
+          x: 0,
+          y: 0.5,
         }}
-      >{children}</LinearGradient>
-    </View>
+        end={{
+          x: 1,
+          y: 0.5,
+        }}
+        locations={[0.1, 0.7,0.9]}
+        
+        style={{
+          position: "absolute",
+          flex: 1,
+          width: deviceWidth / 1,
+          height: deviceHeight / 1,
+        }}
+      >
+        {children}
+      </LinearGradient>
     </View>
   );
 }
-const styles = StyleSheet.create({
-    screenBackground: {
-        backgroundColor: baseColors.primaryColor,
-        height: deviceHeight / 1,
-        width: deviceWidth / 1,
-        flexDirection: "column",
-        justifyContent: "center",
-      },
 
-})
+export default Background;
 

@@ -3,12 +3,14 @@ import { View, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import TouchableButton from "../../Components/Buttons";
 import Boxes from "../../Components/BoxVerify";
+import Background from "../../Components/Background";
 import styles from "./style";
 const Individuals = () => {
   const navigation = useNavigation();
 
   return (
     <View style={styles.screenContainer}>
+      <Background>
       <View style={styles.screenBackground}>
         <View style={styles.middleScreen}>
           <Text style={styles.heading}>Confirm your Email</Text>
@@ -51,6 +53,7 @@ const Individuals = () => {
           </View>
         </View>
       </View>
+      </Background>
     </View>
   );
 };

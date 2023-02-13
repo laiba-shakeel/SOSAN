@@ -9,6 +9,7 @@ import Document from "../../Screens/AppHome/Document";
 import Feed from "../../Screens/AppHome/Feed";
 import Profile from "../../Screens/AppHome/Profile";
 import baseColors from "../../Theme/Colors/Colors";
+import PersonalDetail from "../../Screens/Details/PersonalDetail/index"
 function MyTabs() {
   const Tab = createBottomTabNavigator();
   return (

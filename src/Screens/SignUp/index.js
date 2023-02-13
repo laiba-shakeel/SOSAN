@@ -7,11 +7,12 @@ import styles from "./style";
 import TextInputField from "../../Components/InputFiled";
 import CheckBtn from "../../Components/CheckboxButton";
 import ModalTester from "../../Components/Modal";
-
+import Background from "../../Components/Background";
 const SignUp = () => {
   const navigation = useNavigation();
   return (
     <View style={styles.screenContainer}>
+      <Background>
       <View style={styles.screenBackground}>
         <View style={styles.middleScreen}>
           <Text var style={styles.heading}>
@@ -138,6 +139,7 @@ const SignUp = () => {
           </View>
         </View>
       </View>
+      </Background>
     </View>
   );
 };
