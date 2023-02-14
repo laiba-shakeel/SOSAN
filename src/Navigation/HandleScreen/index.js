@@ -1,52 +1,53 @@
-// import * as React from 'react';
-// import { NavigationContainer } from '@react-navigation/native';
-// import { createStackNavigator } from '@react-navigation/stack';
-// import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-// import Icon from 'react-native-vector-icons/Ionicons';
+import * as React from 'react';
+import { View, Button } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-// import HomeScreen from "../../Screens/HomeScreen/index";
-// import TestScreen from "../../Screens/TestScreen/index";
+function FeedScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Button
+        title="Go to Settings"
+        onPress={() => navigation.navigate('Settings')}
+      />
+    </View>
+  );
+}
 
-// const Tab = createMaterialBottomTabNavigator();
+function ProfileScreen() {
+  return <View />;
+}
 
-// const MyTabs = () => {
-//   return (
-//     <Tab.Navigator>
-//       <Tab.Screen
-//         name="Home"
-//         component={HomeScreen}
-//         options={{
-//           tabBarIcon: ({ color, focused }) => (
-//             <Icon name="home" size={focused ? 25 : 20} color={color} />
-//           ),
-//         }}
-//       />
-//     </Tab.Navigator>
-//   );
-// };
+function AccountScreen() {
+  return <View />;
+}
 
-// const Stack = createStackNavigator();
+function SettingsScreen() {
+  return <View />;
+}
 
-// const App = () => {
-//   return (
-//     <NavigationContainer>
-//       <Stack.Navigator
-//         initialRouteName="Tabs"
-//         screenOptions={{
-//           headerTitle: "Logo",
-//         }}>
-//         <Stack.Screen
-//           name="Test"
-//           component={TestScreen}
-//           options={{
-//             headerShown: true,
-//             headerTitle: "Test",
-//           }}
-//         />
-//         <Stack.Screen name="Tabs" component={MyTabs} />
-//       </Stack.Navigator>
-//     </NavigationContainer>
-//   );
-// };
+const Tab = createBottomTabNavigator();
 
-// export default App;
+function HomeTabs() {
+  return (
+    <Tab.Navigator screenOptions={{ headerShown: false }}>
+      <Tab.Screen name="Feed" component={FeedScreen} />
+      <Tab.Screen name="Profile" component={ProfileScreen} />
+      <Tab.Screen name="Account" component={AccountScreen} />
+    </Tab.Navigator>
+  );
+}
+
+const Stack = createNativeStackNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeTabs} />
+        <Stack.Screen name="Settings" component={SettingsScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
