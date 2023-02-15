@@ -6,6 +6,8 @@ import {Ionicons} from "@expo/vector-icons";
 import Button from "../../../Components/Buttons"
 import SearchField from "../../../Components/SearchField";
 import { useNavigation } from "@react-navigation/native";
+import PersonalDetail from "../../../Screens/Details/PersonalDetail/index"
+import CommonDetail from "../../../Screens/Details/CommonDetail/index"
 import {
   FontAwesome5,
   MaterialIcons,
@@ -79,8 +81,7 @@ function Feed() {
             />
             <Text
               onPress={() => {
-                navigation.navigate("CommonDetail");
-                
+                navigation.navigate("Agenda");
               }}
               style={styles.itemsViewText}
             >
@@ -92,7 +93,7 @@ function Feed() {
           <Entypo name="calendar" size={24}  style={styles.itemsIconReverse}  />
             <Text
               onPress={() => {
-                navigation.navigate("CommonDetail");
+                navigation.goBack(CommonDetail);
                 
               }}
               style={styles.itemsViewTextReverse}
@@ -105,7 +106,7 @@ function Feed() {
           <MaterialIcons name="public" size={24} style={styles.itemsIconReverse} />
             <Text
               onPress={() => {
-                navigation.navigate("PersonalDetail");
+                navigation.goBack(PersonalDetail);
               
               }}
               style={styles.itemsViewTextReverse}
@@ -120,7 +121,7 @@ function Feed() {
             />
             <Text
               onPress={() => {
-                navigation.navigate("CommonDetail");
+                navigation.goBack("CommonDetail");
                
               }}
               style={styles.itemsViewText}

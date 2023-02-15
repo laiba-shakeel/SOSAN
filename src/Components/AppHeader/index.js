@@ -27,7 +27,9 @@ const defaultStyles = StyleSheet.create({
         backgroundColor: baseColors.gradientsucessColor, 
         height: 50, 
         marginTop: 35, 
-        width: deviceWidth/1
+        width: deviceWidth / 1,
+        borderBottomEndRadius: 30,
+        borderBottomStartRadius: 30
     },
     header:{
         

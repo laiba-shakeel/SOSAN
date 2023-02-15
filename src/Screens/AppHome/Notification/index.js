@@ -1,63 +1,163 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
+  ScrollView,
+  Image,
+  FlatList,
+  TouchableOpacity,
   Dimensions,
-  StyleSheet,
-
 } from "react-native";
 import AppHeader from "../../../Components/AppHeader";
+import { NotificationData } from "../../../Config/Data/index";
+import Button from "../../../Components/Buttons";
+import { styles } from "./style";
 import baseColors from "../../../Theme/Colors/Colors";
+import { Ionicons } from "@expo/vector-icons";
+
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
-const Document = () => {
+
+function Notification() {
   return (
-    <View style={styles.MainContainer}>
-      <AppHeader styles={styles.headerContainer}>
-        <View
-          style={{
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "center",
-            paddingVertical: 15,
-            backgroundColor: baseColors.sucessColor,
-            borderBottomEndRadius: 7,
-            borderBottomStartRadius: 7
-          }}>
+    <View style={styles.screenContainer}>
+      <View>
+        <AppHeader styles={styles.headerContainer}>
           <View
             style={{
-              width: deviceWidth / 3,
               flexDirection: "row",
-              justifyContent: "center",
-            }}>
-            <Text style={{ fontWeight: 'bold', color: baseColors.lightTextColor }}>Notification</Text>
+              alignItems: "center",
+              paddingVertical: 5,
+            }}
+          >
+            <View
+              style={{
+                width: deviceWidth / 3,
+                flexDirection: "row",
+                justifyContent: "flex-start",
+              }}
+            >
+              <TouchableOpacity>
+                <Ionicons
+                  name="chevron-back-sharp"
+                  size={30}
+                  style={{ color: baseColors.lightTextColor }}
+                />
+              </TouchableOpacity>
+            </View>
+            <View
+              style={{
+                width: deviceWidth / 3,
+                flexDirection: "row",
+                justifyContent: "center",
+              }}
+            >
+              <Text
+                style={{ fontWeight: "bold", color: baseColors.lightTextColor }}
+              >
+                Notification
+              </Text>
+            </View>
           </View>
+        </AppHeader>
+      </View>
+      {/* <ScrollView> */}
+      <View
+        style={{
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          paddingHorizontal:10
+        }}
+      >
+        <View style={styles.screenMiddle}>
+          <FlatList
+            data={NotificationData}
+            renderItem={({ item }) => (
+              <View
+                style={{
+                  flexDirection: "row",
+                  justifyContent:'flex-start',
+                  alignItems: "center",
+                  padding: 5,
+                }}
+                key={item?.key}
+              >
+                <Image
+                  source={item?.image}
+                  style={{ height: 45, width: 45, borderRadius: 50,  marginHorizontal:20}}
+                ></Image>
+
+                <View style={{ flexDirection: "column" }}>
+                  <Text>
+                    {item?.message}
+                    <Text style={{ color: baseColors.sucessColor, }}>
+                      {item?.ConfirmSucess}
+                    </Text>
+                    <Text style={{ color: baseColors.dangerTextColor, }}>
+                      {item?.ConfirmReject}
+                    </Text>
+                  </Text>
+
+                  <View style={{ flexDirection: "row" }}>
+                    {item?.Sucess ? (
+                      <Button
+                        styles={{
+                          elevation: 0,
+                          backgroundColor: baseColors.sucessColor,
+                          width: 70,
+                          height: 27,
+                          borderRadius: 5,
+                          margin:5,
+                          justifyContent: "center",
+                          alignItems: "center",
+                          color: baseColors.lightColor,
+                          
+                        }}
+                      >
+                        <Text
+                        style={{
+                          color: baseColors.lightColor,
+                          
+                          
+                        }}
+                        >{item?.Sucess}</Text>
+                      </Button>
+                    ) : null}
+
+                    {item?.Reject ? (
+                      <Button
+                        styles={{
+                          elevation: 0,
+                          backgroundColor: baseColors.dangerTextColor,
+                          width: 70,
+                          height: 27,
+                          borderRadius: 5,
+                          margin:5,
+                          justifyContent: "center",
+                          alignItems: "center",
+                          color: baseColors.lightColor,
+                        }}
+                      >
+                        <Text
+                        style={{
+                          color: baseColors.lightColor,
+                          
+                          
+                        }}
+                        >{item?.Reject}</Text>
+                      </Button>
+                    ) : null}
+                  </View>
+                </View>
+              </View>
+            )}
+          />
         </View>
-      </AppHeader>
-      <View style={styles.ListItem}>
-       
       </View>
-      </View>
+      {/* </ScrollView> */}
+    </View>
   );
-};
-
-const styles = StyleSheet.create({
-  MainContainer:{
-    height: deviceHeight / 1,
-    flex: 1,
-    flexDirection: "column",
-    border: 1,
-    borderColor: "#000"
-  },
-  headerContainer: {
-    backgroundColor: baseColors.lightColor,
-    height: 50,
-    marginTop: 35,
-    width: deviceWidth / 1,
-  },
-ListItem:{
-  flexDirection: "column"
 }
-});
 
-export default Document;
+export default Notification;

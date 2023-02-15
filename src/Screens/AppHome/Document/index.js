@@ -9,8 +9,6 @@ import {
 import AppHeader from "../../../Components/AppHeader";
 import baseColors from "../../../Theme/Colors/Colors";
 import RequestCard from "../../../Components/Cards/RequestCard";
-
-
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 const Document = () => {
