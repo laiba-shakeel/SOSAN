@@ -4,7 +4,7 @@ import Dummy1 from "../Images/dummy1.webp";
 import dommy from "../Images/dummy.webp";
 import FlagButtonOne from "../Images/FlagButtonOne.png";
 import FlagButtonTwo from "../Images/FlagButtonTwo.png";
-import LogoR from "../Images/LogoR.png";
+import LogoR from "../Images/logoR.png";
 import map from "../Images/map.png";
 import vector from "../Images/vector.png";
 import AvatarPerson1 from "../Images/AvatarPerson1.jpg";

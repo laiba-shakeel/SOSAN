@@ -10,40 +10,40 @@ import {
 export const RequestCardData = [
   {
     id: 1,
-    image: Dummy,
-    title: "my title",
+    image: AvatarPerson1,
+    title: "Alfanso Vetros",
     location: "North Karachi",
-    dateDay: "Wednesday 15-2-2023",
+    dateDay: "Wednesday 15-2-23",
     time: "07:32",
     Sucess: "Accepts",
     Reject: "Delete"
   },
   {
     id: 2,
-    image: Dummy,
-    title: "my title",
+    image: AvatarPerson2,
+    title: "Alfanso Vetros",
     location: "North Karachi",
-    dateDay: "Wednesday 15-2-2023",
+    dateDay: "Wednesday 15-2-23",
     time: "07:32",
     Sucess: "Accepts",
     Reject: "Delete"
   },
   {
     id: 3,
-    image: Dummy,
-    title: "my title",
+    image: AvatarPerson3,
+    title: "Alfanso Vetros",
     location: "North Karachi",
-    dateDay: "Wednesday 15-2-2023",
+    dateDay: "Wednesday 15-2-23",
     time: "07:32",
     Sucess: "Accepts",
     Reject: "Delete"
   },
   {
     id: 4,
-    image: Dummy,
-    title: "my title",
+    image: AvatarPerson4,
+    title: "Alfanso Vetros",
     location: "North Karachi",
-    dateDay: "Wednesday 15-2-2023",
+    dateDay: "Wednesday 15-2-23",
     time: "07:32",
     Sucess: "Accepts",
     Reject: "Delete"

@@ -3,11 +3,11 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
-import Chat from "../../Screens/AppHome/Chat";
-import Notification from "../../Screens/AppHome/Notification";
-import Document from "../../Screens/AppHome/Document";
-import Feed from "../../Screens/AppHome/Feed";
-import Profile from "../../Screens/AppHome/Profile";
+import Chat from "../../Screens/Common/AppHome/Chat";
+import Notification from "../../Screens/Common/AppHome/Notification";
+import Document from "../../Screens/Common/AppHome/Document";
+import Feed from "../../Screens/Common/AppHome/Feed";
+import Profile from "../../Screens/Common/AppHome/Profile";
 import baseColors from "../../Theme/Colors/Colors";
 
 function MyTabs() {

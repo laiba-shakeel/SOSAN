@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View } from "react-native";
 import { styles } from "./style";
 import SwitchButton from "./Switch";
-import TimePicker from "./TImePicker";
+import TimePicker from "./TimePicker";
 
 function Schedule() {
   return (
