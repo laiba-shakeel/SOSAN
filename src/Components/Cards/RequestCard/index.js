@@ -13,7 +13,7 @@ import { Entypo } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import {styles} from './style.js';
 import baseColors from '../../../Theme/Colors/Colors';
-const App = () => {
+const RequestCard = () => {
   return (
     <View style={styles.Container}>
       <FlatList
@@ -44,4 +44,4 @@ const App = () => {
     </View>
   );
 };
-export default App;
+export default RequestCard;
