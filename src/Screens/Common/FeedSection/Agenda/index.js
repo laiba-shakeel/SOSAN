@@ -14,7 +14,7 @@ import baseColors from "../../../../Theme/Colors/Colors";
 import { Ionicons } from "@expo/vector-icons";
 import {useNavigation} from '@react-navigation/native';
 import Calender from "../../../../Components/Calender";
-
+import Button from '../../../../Components/Buttons'
 // import { Entypo } from "@expo/vector-icons";
 // import { FontAwesome5 } from "@expo/vector-icons";
 
@@ -79,6 +79,12 @@ const Agenda = () => {
            <ScrollView>
             <View style={styles.screenMiddle}>
               <Calender/>
+              <View style={{flexDirection:'row'}}>
+            <Button/>
+            <Button/>
+            <Button/>
+            <Button/>
+            </View>
             {/* <FlatList
         data={ListOfSchedule}
         renderItem={({ item }) => (
