@@ -22,7 +22,7 @@ const Calender = () => {
   return (
     <View style={{ flexDirection: 'row', justifyContent: 'space-between',}}>
       <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={{ fontWeight: 'bold', paddingHorizontal: 4 }}>August,2022</Text>
+        <Text style={{ fontWeight: 'bold', paddingHorizontal: 4 , fontSize: 20}}>August,2022</Text>
         <AntDesign name="down" size={20} color="black" onPress={showDatePicker} />
         <DateTimePickerModal
           isVisible={isDatePickerVisible}

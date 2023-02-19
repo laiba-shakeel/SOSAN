@@ -18,7 +18,7 @@ import { useNavigation } from "@react-navigation/native";
 import Calender from "../../../../Components/Calender";
 import { Entypo } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
-
+import { MaterialIcons } from '@expo/vector-icons';
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 
@@ -62,7 +62,7 @@ const Agenda = () => {
               }}
             >
               <Text
-                style={{ fontWeight: "bold", color: baseColors.lightTextColor }}
+                style={{ fontWeight: "bold", color: baseColors.lightTextColor , fontSize: 20}}
               >
                 Consultation
               </Text>
@@ -200,74 +200,36 @@ const Agenda = () => {
                 </Text>
               </TouchableOpacity>
             </View>
-            <FlatList
-              data={ListOfSchedule}
-              renderItem={({ item }) => (
-                <View style={styles.CardStyling}>
-                  <View style={styles.item} key={item.key}>
-                    {item?.image ? (
-                      <Image source={item?.image} style={styles.img} />
-                    ) : null}
-
-                    <View style={styles.TitleHead}>
-                      <Text style={styles.title}>{item?.title}</Text>
-                      <View style={styles.ItemDisc}>
-                        <Entypo
-                          name="location"
-                          size={14}
-                          style={{
-                            color: baseColors.dangerTextColor,
-                            paddingRight: 6,
-                          }}
-                        />
-                        <Text style={styles.discp}>{item?.location}</Text>
-                      </View>
-                      <View style={styles.ItemDisc}>
-                        <FontAwesome5
-                          name="calendar-week"
-                          size={14}
-                          style={{
-                            color: baseColors.primaryColor,
-                            paddingRight: 6,
-                          }}
-                        />
-                        <Text style={styles.discp}>{item?.dateDay}</Text>
-                      </View>
-                      <View style={styles.ItemDisc}>
-                        <Ionicons
-                          name="time"
-                          size={14}
-                          style={{
-                            color: baseColors.sucessColor,
-                            paddingRight: 6,
-                          }}
-                        />
-                        <Text style={styles.discp}>{item?.time}</Text>
-                      </View>
-                    </View>
-                    <View>
-                      <Ionicons
-                        name="settings"
-                        size={24}
-                        style={{ color: baseColors.primaryColor }}
-                      />
-                    </View>
-                  </View>
-                  <View style={styles.ButtonView}>
-                    {item?.Sucess ? (
-                      <Button styles={styles.ButtonSucess}>
-                        <Text style={styles.ButtonText}>{item?.Sucess}</Text>
-                      </Button>
-                    ) : null}
-                    {item?.Reject ? (
-                      <Button styles={styles.ButtonReject}>
-                        <Text style={styles.ButtonText}>{item?.Reject}</Text>
-                      </Button>
-                    ) : null}
-                  </View>
-                </View>
-              )}
-            />
+          {/* {Card Wrok} */}
+            <View style={{flexDirection:'row',}}>
+            <Text style={{fontWeight:'bold', fontSize:20}}>List of Schedule</Text>
+            </View>
+            <View style={{
+              flexDirection:'row',
+              alignItems:'flex-end',
+              justifyContent:'flex-end',
+              width: deviceWidth / 1 - 30,
+            }}>
+            <TouchableOpacity 
+             onPress={() => {
+              navigation.navigate("WorkingDetail");
+            }}
+            style={{
+              elevation: 8,
+              backgroundColor: baseColors.sucessColor,
+              borderRadius: 50,
+              paddingVertical: 10,
+              // paddingHorizontal: 12,
+              width: 80,
+              justifyContent: "center",
+              alignItems: "center",
+              height:80,
+              // marginVertical: 20,
+            }}>
+              <MaterialIcons name="add" size={60} color="black" />
+            </TouchableOpacity>
+            </View>
+            
           </View>
         </ScrollView>
       </View>

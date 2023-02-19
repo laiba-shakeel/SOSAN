@@ -7,6 +7,7 @@ import Individuals from '../../Screens/Common/Individuals';
 import Services from '../../Screens/Common/Services';
 import AppHome from "../../Screens/Common/AppHome"
 import Agenda from '../../Screens/Common/FeedSection/Agenda';
+import WorkingDetail from '../../Screens/Common/FeedSection/Agenda/WorkingDetail';
 import MyTabs from "../TabBottomNavigation"
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -25,6 +26,7 @@ const StackNavigation = () => {
         <Stack.Screen name="AppHome" component={AppHome} />
         <Stack.Screen name="Agenda" component={Agenda} />
         <Stack.Screen name="Tab" component={MyTabs} />
+        <Stack.Screen name="WorkingDetail" component={WorkingDetail} />
       </Stack.Navigator>
   
 </>
