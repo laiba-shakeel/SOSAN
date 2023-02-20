@@ -229,8 +229,21 @@ export const NotificationData = [
     
   },
 ];
-export const ListOfSchedule = [{
+export const ListOfSchedule = [
+  {
   location: "North Karachi",
     dateDay: "Wednesday 15-2-23",
     time: "07:32",
-}]
+},
+{
+  location: "North Karachi",
+    dateDay: "Wednesday 15-2-23",
+    time: "07:32",
+},
+{
+  location: "North Karachi",
+    dateDay: "Wednesday 15-2-23",
+    time: "07:32",
+},
+
+]

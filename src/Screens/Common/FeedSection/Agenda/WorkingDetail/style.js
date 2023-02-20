@@ -84,6 +84,7 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 50,
     padding: 10,
+    width: 150
   },
   WebAbout: {
     margin: 12,
@@ -129,7 +130,7 @@ export const styles = StyleSheet.create({
     marginVertical: 5
   },
   institutionText:{
-    fontSize: 18,
+    fontSize: 16,
     fontWeight:'bold',
 
   }

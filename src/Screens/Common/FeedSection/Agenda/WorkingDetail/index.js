@@ -4,7 +4,6 @@ import { View, Text, Image , TouchableOpacity,} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { styles } from "./style";
 import InputField from "../../../../../Components/InputFiled";
-import Gallary from "../../../../../Components/Gallary";
 import Schedule from "../../../../../Components/Schedule";
 import Button from "../../../../../Components/Buttons";
 import { Entypo } from '@expo/vector-icons';
@@ -91,15 +90,104 @@ function WorkingDetail() {
         <InputField placeholder="Institution Email(if any) " styles={styles.InputStyling} />
         <View style={styles.institutionView}>
             <Text style={styles.institutionText}>Appointment Type</Text>
-<CheckBtn/>
+        </View>
+        <View style={{
+          flexDirection:'row',
+          justifyContent:'space-around',
+          alignItems:'center',
+          textAlign:'center'
+        }}>
+       <View style={{
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center'
+       }}>
+          <CheckBtn/>
+          <Text style={{
+            fontSize:16
+          }}>Clinic Visit</Text>
+       </View>
+       <View style={{
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center'
+       }}>
+          <CheckBtn/>
+          <Text style={{
+            fontSize:16
+          }}>Tale Communication</Text>
+       </View>
         </View>
         <View>
-          <Schedule />
+          <Schedule>Availibility</Schedule>
         </View>
         <View>
-          <Gallary />
+          <Text style={{
+            fontSize:16, 
+            fontWeight:'bold',
+            marginHorizontal: 5
+          }}>Consultation Fee</Text>
+          <InputField placeholder="$ 15"  styles={styles.WebText} >
+        </InputField>
         </View>
-        <Text style={styles.TextPrimary}>Owner Detail</Text>
+        <View style={styles.institutionView}>
+            <Text style={styles.institutionText}>Payment Method</Text>
+        </View>
+        <View style={{
+          flexDirection:'row',
+          justifyContent:'space-around',
+          alignItems:'center',
+          textAlign:'center'
+        }}>
+       <View style={{
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center'
+       }}>
+          <CheckBtn/>
+          <Text style={{
+            fontSize:16
+          }}>Instant Cash</Text>
+       </View>
+       <View style={{
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center'
+       }}>
+          <CheckBtn/>
+          <Text style={{
+            fontSize:16
+          }}>Mobile money</Text>
+       </View>
+        </View>
+        <View style={{
+          flexDirection:'row',
+          justifyContent:'space-evenly',
+          alignItems:'center',
+          textAlign:'center'
+        }}>
+       <View style={{
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center'
+       }}>
+          <CheckBtn/>
+          <Text style={{
+            fontSize:16
+          }}>Credit card</Text>
+       </View>
+       <View style={{
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center'
+       }}>
+          <CheckBtn/>
+          <Text style={{
+            fontSize:16
+          }}>MFS</Text>
+       </View>
+        </View>
+        {/* <Text style={styles.TextPrimary}>Owner Detail</Text>
         <Text style={styles.formText}>Website</Text>
         <InputField placeholder="Type Here" styles={styles.WebText} />
         <Text style={styles.formText}>Website</Text>
@@ -110,7 +198,9 @@ function WorkingDetail() {
           multiline={true}
           numberOfLines={6}
           styles={styles.AboutSty}
-        />
+        /> */}
+
+
         <View style={{justifyContent:'center', alignItems:'center'}}>
           <Button
             styles={styles.LoginBtn}

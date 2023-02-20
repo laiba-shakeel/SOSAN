@@ -5,21 +5,18 @@ import {
   ScrollView,
   TouchableOpacity,
   Dimensions,
-  StyleSheet,
+ 
   FlatList,
 } from "react-native";
 import AppHeader from "../../../../Components/AppHeader/index";
 import { ListOfSchedule } from "../../../../Config/Data/index";
-import Button from "../../../../Components/Buttons/index";
+import List from "../../../../Components/List/ListSchedule";
 import { styles } from "./style";
 import baseColors from "../../../../Theme/Colors/Colors";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import Calender from "../../../../Components/Calender";
-import { Entypo } from "@expo/vector-icons";
-import { FontAwesome5 } from "@expo/vector-icons";
 import { MaterialIcons } from '@expo/vector-icons';
-const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 
 const Agenda = () => {
@@ -62,7 +59,7 @@ const Agenda = () => {
               }}
             >
               <Text
-                style={{ fontWeight: "bold", color: baseColors.lightTextColor , fontSize: 20}}
+                style={{ fontWeight: "bold", color: baseColors.lightTextColor, fontSize: 20 }}
               >
                 Consultation
               </Text>
@@ -199,37 +196,53 @@ const Agenda = () => {
                   Wed 13
                 </Text>
               </TouchableOpacity>
+            
             </View>
-          {/* {Card Wrok} */}
-            <View style={{flexDirection:'row',}}>
-            <Text style={{fontWeight:'bold', fontSize:20}}>List of Schedule</Text>
+            <View style={{ flexDirection: 'row',}}>
+              <Text style={{ fontWeight: 'bold', fontSize: 20 , }}>List of Schedule</Text>
             </View>
+              <View style={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                <View style={{
+                  flexDirection: 'column',
+                  width: deviceWidth / 1,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  borderRadius: 10,
+                  
+                }}>
+                  <FlatList
+                    data={ListOfSchedule}
+                    renderItem={({ item }) => <List data={item} />
+                    }
+                  />
+                </View>
+              </View>
             <View style={{
-              flexDirection:'row',
-              alignItems:'flex-end',
-              justifyContent:'flex-end',
+              flexDirection: 'row',
+              alignItems: 'flex-end',
+              justifyContent: 'flex-end',
               width: deviceWidth / 1 - 30,
             }}>
-            <TouchableOpacity 
-             onPress={() => {
-              navigation.navigate("WorkingDetail");
-            }}
-            style={{
-              elevation: 8,
-              backgroundColor: baseColors.sucessColor,
-              borderRadius: 50,
-              paddingVertical: 10,
-              // paddingHorizontal: 12,
-              width: 80,
-              justifyContent: "center",
-              alignItems: "center",
-              height:80,
-              // marginVertical: 20,
-            }}>
-              <MaterialIcons name="add" size={60} color="black" />
-            </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate("WorkingDetail");
+                }}
+                style={{
+                  elevation: 8,
+                  backgroundColor: baseColors.sucessColor,
+                  borderRadius: 50,
+                  paddingVertical: 10,
+                  // paddingHorizontal: 12,
+                  width: 50,
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: 50,
+                  // marginVertical: 20,
+                }}>
+                <MaterialIcons name="add" size={45} color="black" />
+              </TouchableOpacity>
             </View>
-            
+
           </View>
         </ScrollView>
       </View>

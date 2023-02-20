@@ -19,12 +19,16 @@ export const styles = StyleSheet.create({
         elevation: 3,
     },
     item: {
-        alignItems: 'center',
+        alignItems: 'flex-start',
         width: 300,
         flexDirection: 'row',
-        justifyContent: 'space-evenly',
+        justifyContent: 'space-around',
         borderRadius: 15,
-        paddingVertical:4,
+        paddingVertical:18,
+        elevation: 3,
+        backgroundColor: '#fff',
+        borderColor: baseColors.sucessColor,
+        borderWidth: 1
     },
     TitleHead: {
         flexDirection: "column"

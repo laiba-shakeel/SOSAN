@@ -1,13 +1,17 @@
-import React from "react";
+import React, { Children } from "react";
 import { Text, View } from "react-native";
 import { styles } from "./style";
 import SwitchButton from "./Switch";
 import TimePicker from "./TimePicker";
 
-function Schedule() {
+function Schedule({children}) {
   return (
     <View style={styles.screenContainer}>
-      <Text>Schedule</Text>
+      <Text style={{
+        marginVertical: 5,
+        fontSize: 16,
+        fontWeight:'bold'
+      }}>{children}</Text>
 
       <View style={styles.scheduleMain}>
         <View style={styles.schedulecolumn}>

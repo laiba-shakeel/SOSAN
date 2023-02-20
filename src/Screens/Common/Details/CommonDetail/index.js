@@ -37,7 +37,7 @@ function CommonDetail() {
           styles={styles.AboutSty}
         />
         <View>
-          <Schedule />
+          <Schedule>Schedule</Schedule>
         </View>
         <View>
           <Gallary />
