@@ -109,6 +109,16 @@ ButtonReject: {
     justifyContent: "center",
     alignItems: "center",
     color: baseColors.lightColor,
+},
+  FirstView: {
+    flexDirection: "row",
+              alignItems: "center",
+              paddingVertical: 5,
+  },
+SecondView: {
+  width: deviceWidth / 3,
+                flexDirection: "row",
+                justifyContent: "flex-start",
 }
-  
+
 });

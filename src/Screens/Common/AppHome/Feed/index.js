@@ -90,10 +90,9 @@ function Feed() {
           <View style={styles.itemsViewReverse}>
           <Entypo name="calendar" size={24}  style={styles.itemsIconReverse}  />
             <Text
-              onPress={() => {
-                navigation.goBack(CommonDetail);
-                
-              }}
+            onPress={() => {
+              navigation.navigate("Agenda");
+            }}
               style={styles.itemsViewTextReverse}
             >
              APPOINMENT
@@ -103,10 +102,9 @@ function Feed() {
           <View style={styles.itemsViewReverse}>
           <MaterialIcons name="public" size={24} style={styles.itemsIconReverse} />
             <Text
-              onPress={() => {
-                navigation.goBack(PersonalDetail);
-              
-              }}
+             onPress={() => {
+              navigation.navigate("CreatePost");
+            }}
               style={styles.itemsViewTextReverse}
             >
              PUBLICITY
@@ -118,10 +116,9 @@ function Feed() {
               style={styles.itemsIcon}
             />
             <Text
-              onPress={() => {
-                navigation.goBack("CommonDetail");
-               
-              }}
+             onPress={() => {
+              navigation.navigate("Epargne");
+            }}
               style={styles.itemsViewText}
             >
               EARNING

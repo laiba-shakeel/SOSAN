@@ -1,14 +1,15 @@
 import React from "react";
 import { ScrollView } from "react-native";
-import { View, Text, Image , TouchableOpacity,} from "react-native";
+import { View, Text, TouchableOpacity,} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { styles } from "./style";
-import InputField from "../../../../../Components/InputFiled";
-import Schedule from "../../../../../Components/Schedule";
-import Button from "../../../../../Components/Buttons";
+import InputField from "../../../../Components/InputFiled";
+import Schedule from "../../../../Components/Schedule";
+import Button from "../../../../Components/Buttons";
 import { Entypo } from '@expo/vector-icons';
-import CheckBtn from '../../../../../Components/CheckboxButton'
-import baseColors from "../../../../../Theme/Colors/Colors";
+import CheckBtn from '../../../../Components/CheckboxButton'
+import baseColors from "../../../../Theme/Colors/Colors";
+import Map from '../../../../Components/Map';
 function WorkingDetail() {
   const navigation = useNavigation();
   return (
@@ -78,12 +79,7 @@ function WorkingDetail() {
               </TouchableOpacity>
         </View>
        </View>
-        <View style={styles.Mapping}>
-          <Image
-            style={styles.ImgSty}
-            source={require("../../../../../Assets/Images/map.png")}
-          />
-        </View>
+      <Map/>
         <Text style={styles.formText}>Institution Phone</Text>
         <InputField placeholder="0215229035" styles={styles.InputStyling} />
         <Text style={styles.formText}>Institution Email</Text>

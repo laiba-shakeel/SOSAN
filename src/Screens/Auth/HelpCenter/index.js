@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, Dimensions, Pressable,} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import styles from "./style";
-import GradientBackground from "../../../Components/Background";
+import GradientBackground from "../../../Components/Gradient/Background";
 import AppHeader from "../../../Components/AppHeader";
 import { Ionicons,} from "@expo/vector-icons";
 import baseColors from "../../../Theme/Colors/Colors";

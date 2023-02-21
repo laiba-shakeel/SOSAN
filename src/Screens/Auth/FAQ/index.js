@@ -1,17 +1,19 @@
 import React from "react";
-import { View, Text, Dimensions, Pressable } from "react-native";
+import { View, Text, Dimensions, Pressable,} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import styles from "./style";
 import GradientBackground from "../../../Components/Gradient/Background";
-import AppHeader from "../../../Components/AppHeader"
-import Description  from "../../../Components/Description";
-import { Ionicons } from "@expo/vector-icons";
-import baseColors from "../../../Theme/Colors/Colors";
+import AppHeader from "../../../Components/AppHeader/index";
 
-// const deviceHeight = Dimensions.get("window").height;
+import { Ionicons,} from "@expo/vector-icons";
+import baseColors from "../../../Theme/Colors/Colors";
+import Description from "../../../Components/Description";
+
+
+const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 
-function TermsAndConditions() {
+const Faq = () => {
   const Navigation = useNavigation();
 
   return (
@@ -80,14 +82,16 @@ function TermsAndConditions() {
                 ></View>
               </View>
             </View>
+            
+            
             <Description>
-              Term And Conditions
+              FAQ
             </Description>
+            
           </View>
         </View>
       </GradientBackground>
     </View>
   );
-}
-
-export default TermsAndConditions
+};
+export default Faq;

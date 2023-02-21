@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import TouchableButton from "../../../Components/Buttons";
 import Boxes from "../../../Components/BoxVerify";
-import Background from "../../../Components/Background";
+import Background from "../../../Components/Gradient/Background";
 import styles from "./style";
 const Individuals = () => {
   const navigation = useNavigation();

@@ -7,7 +7,7 @@ import InputField from "../../../../Components/InputFiled/index";
 import Gallary from "../../../../Components/Gallary";
 import Schedule from "../../../../Components/Schedule";
 import Button from "../../../../Components/Buttons";
-
+import Map from '../../../../Components/Map';
 function CommonDetail() {
   const navigation = useNavigation();
   return (
@@ -18,13 +18,14 @@ function CommonDetail() {
         <InputField placeholder="Type Here" styles={styles.InputStyling} />
         <Text style={styles.formText}>Set Location</Text>
         <InputField placeholder="Type Here" styles={styles.InputStyling} />
-        <Text style={styles.lightText}>Set on map</Text>
+        <Map/>
+        {/* <Text style={styles.lightText}>Set on map</Text>
         <View style={styles.Mapping}>
           <Image
             style={styles.ImgSty}
             source={require("../../../../Assets/Images/map.png")}
           />
-        </View>
+        </View> */}
         <Text style={styles.formText}>Phone</Text>
         <InputField placeholder="Type Here" styles={styles.InputStyling} />
         <Text style={styles.formText}>Website (if any) </Text>

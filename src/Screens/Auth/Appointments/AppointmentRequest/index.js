@@ -1,11 +1,11 @@
 import React from "react";
-import { View, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView ,Image, FlatList} from "react-native";
 import GradientBackground from "../../../../Components/Gradient/Background";
 import AppHeader from "../../../../Components/AppHeader";
 import SearchField from "../../../../Components/SearchField";
-import styles from "./style";
+import styles from "./style.js"
 
-function CancelledAppointment() {
+function AppointmentRequest() {
   return (
     <View style={styles.screenContainer}>
       <View>
@@ -39,4 +39,4 @@ function CancelledAppointment() {
   );
 }
 
-export default CancelledAppointment;
+export default  AppointmentRequest

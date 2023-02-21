@@ -11,7 +11,10 @@ import AvatarPerson1 from "../Images/AvatarPerson1.jpg";
 import AvatarPerson2 from "../Images/AvatarPerson2.jpg";
 import AvatarPerson3 from "../Images/AvatarPerson3.jpg";
 import AvatarPerson4 from "../Images/AvatarPerson4.jpg";
-import SuccessImage from '../Images/success.png';
+import SuccessImage from "../Images/success.png";
+import bluebtn from "../Images/bluebtn.png";
+import orgBtn from '../Images/orgBtn.png';
+
 export {
     bgHero,
     Dummy,
@@ -26,5 +29,7 @@ export {
     AvatarPerson2,
     AvatarPerson3,
     AvatarPerson4,
-    SuccessImage
+    SuccessImage,
+    bluebtn,
+    orgBtn
 }

@@ -246,4 +246,60 @@ export const ListOfSchedule = [
     time: "07:32",
 },
 
+];
+export const EpargneListData = [
+   
+  {
+    message: "Previous appointment",
+    Sucess:"+ $ 52.16"
+  },
+  {
+    message: "Previous appointment",
+    Reject: "- $ 52.16",
+  },
+  {
+    message: "Previous appointment",
+    Sucess:"+ $ 52.16"
+    
+  },
+  {
+    message: "Previous appointment",
+    Reject:"- $ 52.16",
+  },
+  {
+    message: "Previous appointment",
+    Reject:"- $ 52.16"
+    
+  },
+  {
+    message: "Previous appointment",
+    Reject:"- $ 52.16"
+  },
+  {
+    message: "Previous appointment",
+    Reject:"- $ 52.16"
+  },
+  {
+    message: "Previous appointment",
+    Sucess: "+ $ 52.16",
+    
+    
+  },
+  
+];
+export const CreatePostData = [
+  {
+    title:"free camp",
+    description:"Lorem Ipsum is that it has a more-or-lessnormal distribution of letters.",
+    location:"North Karachi",
+    time: "10:00 Am to 5:00 pm",
+    
+  },
+  {
+    title:"free camp",
+    description:"Lorem Ipsum is that it has a more-or-lessnormal distribution of letters.",
+    location:"North Karachi",
+    time: "10:00 Am to 5:00 pm",
+    
+  },
 ]

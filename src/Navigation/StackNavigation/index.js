@@ -7,7 +7,19 @@ import Individuals from '../../Screens/Common/Individuals';
 import Services from '../../Screens/Common/Services';
 import AppHome from "../../Screens/Common/AppHome"
 import Agenda from '../../Screens/Common/FeedSection/Agenda';
-import WorkingDetail from '../../Screens/Common/FeedSection/Agenda/WorkingDetail';
+import WorkingDetail from '../../Screens/Common/Details/WorkingDetail';
+import Appointment from "../../Screens/Auth/Appointments/Appointment";
+import AppointmentRequest from "../../Screens/Auth/Appointments/AppointmentRequest";
+import CancelledAppointment from "../../Screens/Auth/Appointments/CancelledAppointment";
+import Earning from "../../Screens/Saving/Earning";
+import ChangePassword from "../../Screens/Auth/ChnagePassword";
+import HelpCenter from "../../Screens/Auth/HelpCenter";
+import TermsAndConditions  from "../../Screens/Auth/TermsAndConditions";
+import Epargne from "../../Screens/Saving/Epargne";
+import CreatePost from "../../Screens/Auth/Post/CreatePost";
+import PostDetail from "../../Screens/Common/Details/PostDetail";
+import Faq from "../../Screens/Auth/FAQ/index";
+import Privacy from "../../Screens/Auth/Privacy"
 import MyTabs from "../TabBottomNavigation"
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -27,6 +39,18 @@ const StackNavigation = () => {
         <Stack.Screen name="Agenda" component={Agenda} />
         <Stack.Screen name="Tab" component={MyTabs} />
         <Stack.Screen name="WorkingDetail" component={WorkingDetail} />
+        <Stack.Screen name="Appointment" component={Appointment} />
+        <Stack.Screen name="AppointmentRequest" component={AppointmentRequest} />
+        <Stack.Screen name="CancelledAppointment" component={CancelledAppointment} />
+        <Stack.Screen name="Earning" component={Earning} />
+        <Stack.Screen name="ChangePassword" component={ChangePassword} />
+        <Stack.Screen name="HelpCenter" component={HelpCenter} />
+        <Stack.Screen name="TermsAndConditions" component={TermsAndConditions} />
+        <Stack.Screen name="Epargne" component={Epargne} />
+        <Stack.Screen name="CreatePost" component={CreatePost} />
+        <Stack.Screen name="PostDetail" component={PostDetail} />
+        <Stack.Screen name="Faq" component={Faq} />
+        <Stack.Screen name="Privacy" component={Privacy} />
       </Stack.Navigator>
   
 </>

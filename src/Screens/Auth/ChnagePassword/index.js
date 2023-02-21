@@ -2,11 +2,11 @@ import React from "react";
 import { View, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import styles from "./style";
-import GradientBackground from "../../../Components/Background";
+import GradientBackground from "../../../Components/Gradient/Background";
 import Button from "../../../Components/Buttons";
 import InputField from "../../../Components/InputFiled";
 import baseColors from "../../../Theme/Colors/Colors";
-import SucessAlert from "../../../Components/Modal/SucessAlert";
+import SucessAlert from "../../../Components/Modal/SuccessAlert";
 
 const ChangePassword = () => {
   const Navigation = useNavigation();

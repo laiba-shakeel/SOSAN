@@ -1,5 +1,6 @@
 import baseColors from "../../../Theme/Colors/Colors"
 import { Dimensions , StyleSheet } from "react-native"
+
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 const styles = StyleSheet.create({
@@ -27,9 +28,6 @@ const styles = StyleSheet.create({
     backgroundColor: baseColors.lightColor,
     flexDirection: "column",
     paddingVertical:5
-
-    
-   
   },
   headerContainer: {
     width: deviceWidth / 1,
@@ -39,6 +37,5 @@ const styles = StyleSheet.create({
     color: baseColors.lightTextColor,
     fontWeight: "bold",
   },
-    
   })
 export default styles

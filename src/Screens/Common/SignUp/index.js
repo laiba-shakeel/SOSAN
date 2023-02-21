@@ -7,7 +7,7 @@ import styles from "./style";
 import TextInputField from "../../../Components/InputFiled";
 import CheckBtn from "../../../Components/CheckboxButton";
 import ModalTester from "../../../Components/Modal/SectionModal";
-import Background from "../../../Components/Background";
+import Background from "../../../Components/Gradient/Background";
 const SignUp = () => {
   const navigation = useNavigation();
   return (

@@ -2,7 +2,7 @@ import React from "react";
 import { View, Dimensions,StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import _ from "lodash";
-import baseColors from "../../Theme/Colors/Colors";
+import baseColors from "../../../Theme/Colors/Colors";
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;

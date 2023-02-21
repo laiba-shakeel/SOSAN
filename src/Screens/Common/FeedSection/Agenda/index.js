@@ -5,7 +5,6 @@ import {
   ScrollView,
   TouchableOpacity,
   Dimensions,
- 
   FlatList,
 } from "react-native";
 import AppHeader from "../../../../Components/AppHeader/index";
@@ -17,6 +16,8 @@ import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import Calender from "../../../../Components/Calender";
 import { MaterialIcons } from '@expo/vector-icons';
+import DarkGradient from '../../../../Components/Gradient/DarkGradient'
+const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 
 const Agenda = () => {
@@ -26,18 +27,10 @@ const Agenda = () => {
       <View>
         <AppHeader styles={styles.headerContainer}>
           <View
-            style={{
-              flexDirection: "row",
-              alignItems: "center",
-              paddingVertical: 5,
-            }}
+            style={styles.FirstView}
           >
             <View
-              style={{
-                width: deviceWidth / 3,
-                flexDirection: "row",
-                justifyContent: "flex-start",
-              }}
+              style={styles.SecondView}
             >
               <TouchableOpacity
                 onPress={() => {
@@ -222,25 +215,26 @@ const Agenda = () => {
               alignItems: 'flex-end',
               justifyContent: 'flex-end',
               width: deviceWidth / 1 - 30,
+
             }}>
-              <TouchableOpacity
-                onPress={() => {
-                  navigation.navigate("WorkingDetail");
-                }}
-                style={{
+
+              <DarkGradient
+                styles={{
                   elevation: 8,
                   backgroundColor: baseColors.sucessColor,
                   borderRadius: 50,
-                  paddingVertical: 10,
+                 padding: 10,
                   // paddingHorizontal: 12,
-                  width: 50,
+                  width: 60,
                   justifyContent: "center",
                   alignItems: "center",
-                  height: 50,
+                  height: 60,
                   // marginVertical: 20,
                 }}>
-                <MaterialIcons name="add" size={45} color="black" />
-              </TouchableOpacity>
+                <MaterialIcons name="add" size={40} color="#fff"  onPress={() => {
+                  navigation.navigate("WorkingDetail");
+                }}/>
+              </DarkGradient>
             </View>
 
           </View>
