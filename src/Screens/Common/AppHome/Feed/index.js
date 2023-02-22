@@ -91,7 +91,7 @@ function Feed() {
           <Entypo name="calendar" size={24}  style={styles.itemsIconReverse}  />
             <Text
             onPress={() => {
-              navigation.navigate("Agenda");
+              navigation.navigate("Appointment");
             }}
               style={styles.itemsViewTextReverse}
             >

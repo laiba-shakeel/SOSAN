@@ -20,6 +20,7 @@ import CreatePost from "../../Screens/Auth/Post/CreatePost";
 import PostDetail from "../../Screens/Common/Details/PostDetail";
 import Faq from "../../Screens/Auth/FAQ/index";
 import Privacy from "../../Screens/Auth/Privacy"
+import AppointmentDetail from "../../Screens/Common/Details/AppointmentDetail"
 import MyTabs from "../TabBottomNavigation"
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -51,6 +52,7 @@ const StackNavigation = () => {
         <Stack.Screen name="PostDetail" component={PostDetail} />
         <Stack.Screen name="Faq" component={Faq} />
         <Stack.Screen name="Privacy" component={Privacy} />
+        <Stack.Screen name="AppointmentDetail" component={AppointmentDetail} />
       </Stack.Navigator>
   
 </>

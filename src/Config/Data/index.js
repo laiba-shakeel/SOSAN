@@ -48,7 +48,45 @@ export const RequestCardData = [
     Sucess: "Accepts",
     Reject: "Delete"
   }
-]
+];
+export const AppointmentCardData = [
+  {
+    id: 1,
+    image: AvatarPerson1,
+    title: "Alfanso Vetros",
+    location: "North Karachi",
+    dateDay: "Wednesday 15-2-23",
+    time: "07:32",
+   
+  },
+  {
+    id: 2,
+    image: AvatarPerson2,
+    title: "Alfanso Vetros",
+    location: "North Karachi",
+    dateDay: "Wednesday 15-2-23",
+    time: "07:32",
+   
+  },
+  {
+    id: 3,
+    image: AvatarPerson3,
+    title: "Alfanso Vetros",
+    location: "North Karachi",
+    dateDay: "Wednesday 15-2-23",
+    time: "07:32",
+  
+  },
+  {
+    id: 4,
+    image: AvatarPerson4,
+    title: "Alfanso Vetros",
+    location: "North Karachi",
+    dateDay: "Wednesday 15-2-23",
+    time: "07:32",
+   
+  }
+];
 export const ChatData = [
   {
     id: "1",
@@ -302,4 +340,15 @@ export const CreatePostData = [
     time: "10:00 Am to 5:00 pm",
     
   },
-]
+];
+export const ScheduledCardData = [
+  {
+  id: 1 ,
+  title:"free camp",
+  dateDay: 'Wednesday, 1- Aug - 2022 ',
+  time: '12:50 PM',
+  location: 'Islamabad Hospital, Islamabad',
+ 
+},
+
+];
