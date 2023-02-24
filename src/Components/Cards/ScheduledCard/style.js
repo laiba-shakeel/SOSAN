@@ -2,28 +2,21 @@ import { Dimensions, StyleSheet } from 'react-native';
 import baseColors from '../../../Theme/Colors/Colors';
 const deviceWidth = Dimensions.get("window").width;
 export const styles = StyleSheet.create({
-    Container: {
-        flexDirection: 'column',
-        width: deviceWidth / 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-       
-    },
+   
     CardStyling: {
         backgroundColor: '#fff',
-        padding: 10,
-        borderRadius: 15,
+        // padding: 5,
+        borderRadius: 5,
         paddingVertical: 10,
         marginVertical: 5,
         elevation: 3,
-        borderWidth: 1,
-        borderColor: baseColors.LightSecondaryColor
+        width: deviceWidth / 1 - 25,
     },
     item: {
         alignItems: 'center',
         width: 300,
         flexDirection: 'row',
-        justifyContent: 'space-evenly',
+        justifyContent: 'space-around',
         borderRadius: 15,
         paddingVertical:4,
     },
@@ -32,14 +25,17 @@ export const styles = StyleSheet.create({
     },
     title: {
         fontWeight: 'bold',
+        fontSize: 18
     },
     ItemDisc: {
         flexDirection: "row",
     },
     img: {
-        height: 50,
-        width: 50,
-        borderRadius: 50,
+       height:30,
+       width:120,
+        justifyContent: 'center',
+     
+        // borderRadius: 50,
     },
     ButtonView: {
         flexDirection: "row",
@@ -74,5 +70,27 @@ export const styles = StyleSheet.create({
     iconsSty:{
         flexDirection:'column',
        
-    }
+    },
+    LoginBtn: {
+        elevation: 8,
+        backgroundColor: baseColors.dangerTextColor,
+        borderRadius: 5,
+     width: 130,
+     height: 25,
+        justifyContent: "center",
+        alignItems: "center",
+      },
+      NextBtn:{
+        elevation: 8,
+        backgroundColor: baseColors.sucessColor,
+        borderRadius: 5,
+     width: 130,
+     height: 25,
+        justifyContent: "center",
+        alignItems: "center",
+      },
+      LoginTextSty:{
+        color: "#fff",
+        textAlign:'center'
+      },
 });

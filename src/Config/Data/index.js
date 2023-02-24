@@ -49,6 +49,15 @@ export const RequestCardData = [
     Reject: "Delete"
   }
 ];
+export const AppoinmentIdData = [
+  {
+    id: 1,
+    image: AvatarPerson3,
+    title: "Alfanso Vetros",
+    gmail: 'jane20@gmail.com',
+    sosanId: '25ln55'
+  }
+];
 export const AppointmentCardData = [
   {
     id: 1,
@@ -344,7 +353,7 @@ export const CreatePostData = [
 export const ScheduledCardData = [
   {
   id: 1 ,
-  title:"free camp",
+  title:"Scheduled",
   dateDay: 'Wednesday, 1- Aug - 2022 ',
   time: '12:50 PM',
   location: 'Islamabad Hospital, Islamabad',

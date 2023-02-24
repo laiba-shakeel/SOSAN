@@ -115,11 +115,9 @@ ButtonReject: {
               alignItems: "center",
               paddingVertical: 5,
   },
-// SecondView: {
-//   width: deviceWidth / 1,
-//                 flexDirection: "row",
-//                 justifyContent: "center",
-//                 alignItems:'center'
-// }
-
+  FollowTitle:{
+    fontSize: 16,
+    color: baseColors.primaryColor,
+    marginHorizontal: 10
+  }
 });
