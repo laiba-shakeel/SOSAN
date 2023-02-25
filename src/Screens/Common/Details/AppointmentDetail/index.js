@@ -16,6 +16,8 @@ import { useNavigation } from "@react-navigation/native";
 import AppointmentAccount from '../../../../Components/Cards/AppointmentID'
 import ScheduledCard from "../../../../Components/Cards/ScheduledCard";
 import AppointmentList from '../../../../Components/List/AppointmentList'
+import TestList from '../../../../Components/List/TestList'
+import Button from '../../../../Components/Buttons'
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 const AppointmentDetail = () => {
@@ -67,8 +69,9 @@ const AppointmentDetail = () => {
                     paddingHorizontal: 10,
                 }}
             >
-                <AppointmentAccount />
+
                 <ScrollView>
+                    <AppointmentAccount />
                     <View style={styles.screenMiddle}>
                         <View style={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
 
@@ -87,8 +90,20 @@ const AppointmentDetail = () => {
                         </View>
                         <View>
                             <Text style={styles.FollowTitle}>Following Up</Text>
-                        <AppointmentList />
-                        <Text style={styles.FollowTitle}>Text Report</Text>
+                            <AppointmentList />
+                            <Text style={styles.FollowTitle}>Test Report </Text>
+                            <TestList />
+                            <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+                                <Button
+                                    styles={styles.LoginBtn}
+                                    >
+                                    <Text style={styles.LoginTextSty}>Add Prescribtion/Test</Text>
+                                </Button>
+                            </View>
+                            <Text style={styles.FollowTitle}>Prescribed Medicine</Text>
+                            <AppointmentList />
+                            <Text style={styles.FollowTitle}>Prescribed Test</Text>
+                            <TestList />
                         </View>
                     </View>
                 </ScrollView>

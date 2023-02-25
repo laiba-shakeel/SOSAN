@@ -8,6 +8,7 @@ import { useNavigation } from "@react-navigation/native";
 import { AppointmentCardData } from '../../../../Config/Data';
 import styles from "./style.js"
 import baseColors from "../../../../Theme/Colors/Colors";
+
 import AppointmentCard from "../../../../Components/Cards/AppointmentCard";
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;

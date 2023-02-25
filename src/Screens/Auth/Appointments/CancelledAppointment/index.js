@@ -12,7 +12,7 @@ function CancelledAppointment() {
         <AppHeader styles={styles.headerContainer}>
           <GradientBackground styles={styles.LinearGradient}>
             <View>
-              <Text style={styles.HeadingText}>Chat</Text>
+              <Text style={styles.HeadingText}></Text>
             </View>
             <View>
               <SearchField placeholder="Search" styles={styles.SearchField} />

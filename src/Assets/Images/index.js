@@ -14,6 +14,7 @@ import AvatarPerson4 from "../Images/AvatarPerson4.jpg";
 import SuccessImage from "../Images/success.png";
 import bluebtn from "../Images/bluebtn.png";
 import orgBtn from '../Images/orgBtn.png';
+import alert from '../Images/alert.png';
 
 export {
     bgHero,
@@ -31,5 +32,6 @@ export {
     AvatarPerson4,
     SuccessImage,
     bluebtn,
-    orgBtn
+    orgBtn,
+    alert
 }

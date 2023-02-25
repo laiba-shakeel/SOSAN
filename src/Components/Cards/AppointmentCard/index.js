@@ -9,6 +9,7 @@ import { Entypo } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import {styles} from './style.js';
 import baseColors from '../../../Theme/Colors/Colors';
+import AppointmentCancelModal from '../../../Components/Modal/AppointmentCancleModal';
 import { useNavigation } from '@react-navigation/native';
 const AppointmentCard = ({data}) => {
   const navigation = useNavigation();
@@ -26,7 +27,7 @@ const AppointmentCard = ({data}) => {
              <FontAwesome5 onPress={() => {
                 navigation.navigate("AppointmentDetail");
               }} name="house-user" size={24} style={{ color: baseColors.sucessColor , paddingTop: 10}}/>
-              <Ionicons name="trash-bin-sharp" size={24}  style={{ color: baseColors.dangerTextColor,  paddingTop: 10 }}/>
+             <AppointmentCancelModal/>
               </View>
             </View>
           </View>

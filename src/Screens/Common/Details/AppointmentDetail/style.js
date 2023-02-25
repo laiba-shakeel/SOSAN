@@ -118,6 +118,24 @@ ButtonReject: {
   FollowTitle:{
     fontSize: 16,
     color: baseColors.primaryColor,
-    marginHorizontal: 10
-  }
+    marginHorizontal: 10,
+   top: 5,
+    fontWeight: 'bold'
+  },
+  LoginBtn: {
+    elevation: 8,
+    backgroundColor: baseColors.primaryColor,
+    borderRadius: 50,
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+    marginVertical: 20,
+    width: deviceWidth / 1 - 90,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  LoginTextSty:{
+    color: "#fff",
+    fontWeight: "bold",
+    fontSize:20
+  },
 });

@@ -5,29 +5,37 @@ const AppointmentList = () => {
   return (
     <View style={styles.Container}>
       <View style={styles.List}>
-        <View style={styles.ListItems}>
+        <View style={styles.firstRow}>
           <Text style={styles.title}>Name</Text>
-          <Text>Lorem Spam</Text>
-          <Text>Lorem Spam</Text>
-          <Text>Lorem Spam</Text>
-          <Text>Lorem Spam</Text>
-        </View>
-        <View style={styles.ListItems}>
           <Text style={styles.title}>Time</Text>
-          <Text>2 Times a day</Text>
-          <Text>3 Times a day</Text>
-          <Text>Every 6 Hours</Text>
-          <Text>Once a day</Text>
-        </View>
-        <View style={styles.ListItems}>
           <Text style={styles.title}>When or How</Text>
-          <Text>After Meal</Text>
-          <Text>After Meal</Text>
-          <Text>After Meal</Text>
-          <Text>After Meal</Text>
+        </View>
+        <View style={styles.secondRow}>
+          <View style={styles.ListItems}>
+
+            <Text style={styles.textStyling}>Lorem Spam</Text>
+            <Text style={styles.textStyling}>Lorem Spam</Text>
+            <Text style={styles.textStyling}>Lorem Spam</Text>
+            <Text style={styles.textStyling}>Lorem Spam</Text>
+          </View>
+          <View style={styles.ListItems}>
+
+            <Text style={styles.textStyling}>2 Times a day</Text>
+            <Text style={styles.textStyling}>3 Times a day</Text>
+            <Text style={styles.textStyling}>Every 6 Hours</Text>
+            <Text style={styles.textStyling}>Once a day</Text>
+          </View>
+          <View style={styles.ListItems}>
+
+            <Text style={styles.textStyling}>After Meal</Text>
+            <Text style={styles.textStyling}>After Meal</Text>
+            <Text style={styles.textStyling}>After Meal</Text>
+            <Text style={styles.textStyling}>After Meal</Text>
+          </View>
         </View>
       </View>
     </View>
+    
   )
 }
 
