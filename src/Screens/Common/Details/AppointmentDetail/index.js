@@ -17,7 +17,8 @@ import AppointmentAccount from '../../../../Components/Cards/AppointmentID'
 import ScheduledCard from "../../../../Components/Cards/ScheduledCard";
 import AppointmentList from '../../../../Components/List/AppointmentList'
 import TestList from '../../../../Components/List/TestList'
-import Button from '../../../../Components/Buttons'
+
+import SelectServiceModal from "../../../../Components/Modal/SelectServiceModal";
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 const AppointmentDetail = () => {
@@ -61,20 +62,14 @@ const AppointmentDetail = () => {
                     </View>
                 </AppHeader>
             </View>
-            <View
-                style={{
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    paddingHorizontal: 10,
-                }}
-            >
+            
 
                 <ScrollView>
-                    <AppointmentAccount />
+                    
                     <View style={styles.screenMiddle}>
-                        <View style={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-
+                   
+                        
+                        <AppointmentAccount />
                             <View style={{
                                 flexDirection: 'column',
                                 width: deviceWidth / 1,
@@ -87,27 +82,25 @@ const AppointmentDetail = () => {
                                     }
                                 />
                             </View>
-                        </View>
-                        <View>
+
+                            <View>
                             <Text style={styles.FollowTitle}>Following Up</Text>
                             <AppointmentList />
                             <Text style={styles.FollowTitle}>Test Report </Text>
                             <TestList />
                             <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                                <Button
-                                    styles={styles.LoginBtn}
-                                    >
-                                    <Text style={styles.LoginTextSty}>Add Prescribtion/Test</Text>
-                                </Button>
+                               <SelectServiceModal/>
                             </View>
                             <Text style={styles.FollowTitle}>Prescribed Medicine</Text>
                             <AppointmentList />
                             <Text style={styles.FollowTitle}>Prescribed Test</Text>
                             <TestList />
-                        </View>
+                        
                     </View>
+                </View>
+                        
                 </ScrollView>
-            </View>
+            
         </View>
     )
 }

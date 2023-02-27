@@ -15,7 +15,7 @@ import SuccessImage from "../Images/success.png";
 import bluebtn from "../Images/bluebtn.png";
 import orgBtn from '../Images/orgBtn.png';
 import alert from '../Images/alert.png';
-
+import alertImg from '../Images/alertImg.png';
 export {
     bgHero,
     Dummy,
@@ -33,5 +33,6 @@ export {
     SuccessImage,
     bluebtn,
     orgBtn,
-    alert
+    alert,
+    alertImg
 }

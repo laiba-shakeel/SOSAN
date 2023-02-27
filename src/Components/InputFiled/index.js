@@ -33,6 +33,8 @@ const defaultStyles = StyleSheet.create({
     borderRadius: 50,
     borderColor: baseColors.sucessTextColor,
     textAlignVertical: "top",
+    fontSize:20,
+    paddingStart: 10
   },
 });
 

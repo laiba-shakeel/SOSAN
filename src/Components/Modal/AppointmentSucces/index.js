@@ -2,15 +2,12 @@ import React, { useState } from "react";
 import { Text, View, Dimensions, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { styles } from "./style.js"
-import { alertImg } from "../../../Assets/Images/index";
-import Modal from "react-native-modal";
 import { Ionicons } from '@expo/vector-icons';
-import baseColors from "../../../Theme/Colors/Colors.js";
-import AppointmentSuccessModal from "../AppointmentSucces/index.js";
+import Modal from "react-native-modal";
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 
-function AppointmentCancelModal() {
+function AppointmentSuccessModal() {
   const Navigation = useNavigation();
   const [isModalVisible, setModalVisible] = useState(false);
 
@@ -21,7 +18,7 @@ function AppointmentCancelModal() {
   const navigation = useNavigation();
   return (
     <View style={{ flex: 1 }}>
-      <Ionicons name="trash-bin-sharp" size={24} onPress={toggleModal} style={{ color: baseColors.dangerTextColor, paddingTop: 10 }} />
+    <Text onPress={toggleModal}>Yes</Text>
 
       <Modal isVisible={isModalVisible}>
         <View
@@ -35,18 +32,18 @@ function AppointmentCancelModal() {
         >
           <View style={styles.modal}>
             <View style={styles.modalView}>
-              <View style={styles.ImgView}><Image source={alertImg} style={styles.ImageStyling}
-              ></Image></View>
+              <View style={styles.ImgView}>
+                <Ionicons name="trash-bin-sharp" size={60} color="red" /></View>
               <Text style={styles.Text}
                 onPress={() => {
                   Navigation.navigate("SignIn");
                   toggleModal();
                 }} >Success!</Text>
               <Text style={styles.modalViewText}>Are you sure to cancel Appointment ?</Text>
-              <View style={{ width: deviceWidth / 2.5, flexDirection: 'row',}}>
-                <AppointmentSuccessModal/>
+              <View style={{ width: deviceWidth / 1, flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'center' }}>
+                <Text>Yes</Text>
                 <Text  onPress={() => {
-                  navigation.navigate("AppointmentDetail");
+                  navigation.goBack("");
                 }}>No</Text>
               </View>
             </View>
@@ -58,4 +55,4 @@ function AppointmentCancelModal() {
   );
 }
 
-export default AppointmentCancelModal
+export default AppointmentSuccessModal

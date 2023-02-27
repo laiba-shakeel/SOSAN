@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
         paddingVertical: 10,
         marginVertical: 5,
         elevation: 3,
-        width: deviceWidth / 1 - 25,
+        width: deviceWidth / 1 - 30,
     },
     item: {
         alignItems: 'center',
