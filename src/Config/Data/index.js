@@ -98,23 +98,24 @@ export const AppointmentCardData = [
 ];
 export const ChatData = [
   {
-    id: "1",
+    key: 0,
     image: AvatarPerson1,
     title: "Jack",
     message: "hi EveryOne I'm Jack",
     time: "10:00 Am",
+    goTo: "ChatScreen"
 
   },
   {
-    id: "2",
+    key: 1,
     image: AvatarPerson2,
     title: "Lizza",
     message: "hi EveryOne I'm Lizza",
     time: "09:57 Am",
-
+    goTo: "ChatScreen"
   },
   {
-    id: "3",
+    key: 2,
     image: AvatarPerson3,
     title: "Johnn",
     message: "hi EveryOne I'm Johnn",
@@ -122,7 +123,7 @@ export const ChatData = [
 
   },
   {
-    id: "4",
+    key: 3,
     image: AvatarPerson4,
     title: "Bella",
     message: "hi EveryOne I'm Bella",
@@ -130,7 +131,7 @@ export const ChatData = [
 
   },
   {
-    id: "5",
+    key: 4,
     image: AvatarPerson1,
     title: "David",
     message: "hi EveryOne I'm David",

@@ -41,7 +41,7 @@ function SelectServiceModal() {
                     <View style={styles.modal}>
                         <View style={styles.modalView}>
                             <Text style={styles.Text}>Select Services</Text>
-                            <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', width: deviceWidth / 1 - 50, borderWidth: 2 }}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', width: deviceWidth / 1 - 50, }}>
                                 <View style={styles.ImgView}>
                                     <View style={styles.ImgViewLittle}>
                                         <FontAwesome5 name="pills" size={24} color="blue" />

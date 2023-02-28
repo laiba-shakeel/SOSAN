@@ -34,7 +34,8 @@ const defaultStyles = StyleSheet.create({
     borderColor: baseColors.sucessTextColor,
     textAlignVertical: "top",
     fontSize:20,
-    paddingStart: 10
+    paddingStart: 10,
+    
   },
 });
 

@@ -6,9 +6,10 @@ import SearchField from "../../../../Components/SearchField";
 import { Entypo } from '@expo/vector-icons';
 import { ChatData } from "../../../../Config/Data";
 import { styles } from "./style";
-import baseColors from "../../../../Theme/Colors/Colors";
-import { AvatarPerson3 } from "../../../../Assets/Images";
+import { useNavigation } from "@react-navigation/native";
+import ChatListCard from "../../../../Components/List/ChatList";
 function Chat() {
+  const navigation = useNavigation();
   return (
     <View style={styles.screenContainer}>
       <View>
@@ -31,33 +32,11 @@ function Chat() {
         }}
       >
         <View style={styles.screenMiddle}>
-          <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 5 }}
-
-          >
-            <Image source={AvatarPerson3} style={{ height: 50, width: 50, borderRadius: 50 }}></Image>
-            <View style={{ flexDirection: 'column' }}>
-              <Text>Jack</Text>
-              <Text>hi EveryOne I'm Jack</Text>
-            </View>
-            <View style={{ flexDirection: 'column', }}>
-              <Text>10:00 Am</Text>
-              <Entypo name="mail-with-circle" size={20} style={{ color: baseColors.dangerTextColor }} />
-            </View>
-          </View>
+          
           <FlatList
             data={ChatData}
             renderItem={({ item }) => (
-              <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 5 }} key={item?.key}>
-                <Image source={item?.image} style={{ height: 50, width: 50, borderRadius: 50 }}></Image>
-                <View style={{ flexDirection: 'column' }}>
-                  <Text>{item?.title}</Text>
-                  <Text>{item?.message}</Text>
-                </View>
-                <View style={{ flexDirection: 'column', }}>
-                  <Text>{item?.time}</Text>
-                  <Entypo name="mail-with-circle" size={20} style={{ color: baseColors.dangerTextColor }} />
-                </View>
-              </View>
+              <ChatListCard data={item}/>
             )}
           />
         </View>

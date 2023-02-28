@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Dimensions,StyleSheet } from "react-native";
+import { View, Dimensions, StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import _ from "lodash";
 import baseColors from "../../../Theme/Colors/Colors";
@@ -26,8 +26,8 @@ function DarkGradient({ children, styles: customStyles, }) {
           x: 1,
           y: 0.5,
         }}
-        locations={[0.1, 0.9,0.9]}
-        
+        locations={[0.1, 0.9, 0.9]}
+
         style={styles}
       >
         {children}
@@ -41,8 +41,11 @@ const defaultStyles = StyleSheet.create({
     flex: 1,
     width: deviceWidth / 1,
     height: deviceHeight / 1,
-    borderBottomLeftRadius:30,
-    borderBottomRightRadius:30,
+    borderBottomLeftRadius: 30,
+    borderBottomRightRadius: 30,
+    borderTopLeftRadius: 20,
+    borderBottomRightRadius: 20,
+    marginVertical: 20
   },
 });
 

@@ -43,6 +43,12 @@ const defaultStyles = StyleSheet.create({
     height: deviceHeight / 1,
     borderBottomLeftRadius:30,
     borderBottomRightRadius:30,
+    borderTopRightRadius:10,
+     borderBottomLeftRadius:10,
+     marginLeft:10,
+     
+  justifyContent:'flex-start',
+  marginVertical: 20
   },
 });
 
