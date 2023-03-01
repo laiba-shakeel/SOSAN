@@ -23,7 +23,9 @@ import Privacy from "../../Screens/Auth/Privacy"
 import AppointmentDetail from "../../Screens/Common/Details/AppointmentDetail"
 import ChatScreen from "../../Screens/Common/ChatScreen"
 import MyTabs from "../TabBottomNavigation"
-
+import Assurances from '../../Screens/User/Assurances';
+import AvaialblePlan from '../../Screens/User/AvaialblePlan';
+import UserAbout from '../../Screens/User/UserAbout'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
@@ -54,7 +56,10 @@ const StackNavigation = () => {
         <Stack.Screen name="Faq" component={Faq} />
         <Stack.Screen name="Privacy" component={Privacy} />
         <Stack.Screen name="AppointmentDetail" component={AppointmentDetail} />
+        <Stack.Screen name="Assurances" component={Assurances} />
+        <Stack.Screen name="AvaialblePlan" component={AvaialblePlan} />
         <Stack.Screen name="ChatScreen" component={ChatScreen} />
+        <Stack.Screen name="UserAbout" component={UserAbout} />
       </Stack.Navigator>
   
 </>

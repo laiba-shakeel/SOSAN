@@ -17,7 +17,6 @@ import AppointmentAccount from '../../../../Components/Cards/AppointmentID'
 import ScheduledCard from "../../../../Components/Cards/ScheduledCard";
 import AppointmentList from '../../../../Components/List/AppointmentList'
 import TestList from '../../../../Components/List/TestList'
-
 import SelectServiceModal from "../../../../Components/Modal/SelectServiceModal";
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;

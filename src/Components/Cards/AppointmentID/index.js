@@ -3,7 +3,7 @@ import { View , Image } from 'react-native'
 import {styles} from './style.js';
 import { AvatarPerson1 } from '../../../Assets/Images';
 import { Text } from 'react-native';
-const AppointmentAccount = () => {
+const AppointmentAccountID = () => {
   return (
     <View style={styles.Container}>
       <View style= {styles.item}>
@@ -23,4 +23,4 @@ const AppointmentAccount = () => {
   )
 }
 
-export default AppointmentAccount
+export default AppointmentAccountID

@@ -80,7 +80,9 @@ const SignIn = () => {
           </TouchableButton>
         </View>
         <View style={styles.OptionScreen}>
-          <Text style={styles.textColorDanger}>Forget Password</Text>
+          <Text onPress={()=>{
+            navigation.navigate("Assurances")
+          }} style={styles.textColorDanger}>Forget Password</Text>
           <Text>create a new account</Text>
           <Text
             style={styles.textColorSuccess}
