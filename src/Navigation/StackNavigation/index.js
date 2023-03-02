@@ -23,9 +23,10 @@ import Privacy from "../../Screens/Auth/Privacy"
 import AppointmentDetail from "../../Screens/Common/Details/AppointmentDetail"
 import ChatScreen from "../../Screens/Common/ChatScreen"
 import MyTabs from "../TabBottomNavigation"
-import Assurances from '../../Screens/User/Assurances';
-import AvaialblePlan from '../../Screens/User/AvaialblePlan';
-import UserAbout from '../../Screens/User/UserAbout'
+import Assurances from '../../Screens/Assurances/OrderList';
+import AvaialblePlan from '../../Screens/Assurances/AvaialblePlan';
+import AssurancesAbout from '../../Screens/Assurances/AssuranceAbout'
+import MedicalHistory from "../../Screens/Assurances/MedicalHistory"
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
@@ -59,7 +60,8 @@ const StackNavigation = () => {
         <Stack.Screen name="Assurances" component={Assurances} />
         <Stack.Screen name="AvaialblePlan" component={AvaialblePlan} />
         <Stack.Screen name="ChatScreen" component={ChatScreen} />
-        <Stack.Screen name="UserAbout" component={UserAbout} />
+        <Stack.Screen name="AssurancesAbout" component={AssurancesAbout} />
+        <Stack.Screen name="MedicalHistory" component={MedicalHistory} />
       </Stack.Navigator>
   
 </>

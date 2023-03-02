@@ -7,6 +7,8 @@ import { Ionicons, AntDesign } from "@expo/vector-icons";
 import baseColors from '../../../Theme/Colors/Colors';
 import AppointmentAccountID from '../../../Components/Cards/AppointmentID';
 import { bluebtn } from '../../../Assets/Images/index'
+import DarkGradient from "../../../Components/Gradient/DarkGradient"
+import Description from '../../../Components/Description';
 const deviceWidth = Dimensions.get("window").width;
 export default function UserAbout() {
     const navigation = useNavigation();
@@ -67,7 +69,7 @@ export default function UserAbout() {
                     </View>
                 </AppHeader>
             </View>
-
+            <ScrollView>
             <View
                 style={{
                     flexDirection: "column",
@@ -77,11 +79,13 @@ export default function UserAbout() {
 
                 }}
             >
+             
                 <View style={styles.screenMiddle}>
 
                     <View style={{
                         flexDirection: 'column'
                     }}>
+                        <View style={{ marginTop: 10, backgroundColor: baseColors.lightColor}}>
                         <View>
                             <AppointmentAccountID />
 
@@ -129,6 +133,7 @@ export default function UserAbout() {
                                 </Text>
                             </View>
                         </View>
+                        </View>
                         <View style={{ borderWidth: 2, paddingVertical: 10, marginTop: 20, width: deviceWidth / 1 - 30, marginHorizontal: 10 , backgroundColor:baseColors.lightColor , elevation: 6 , borderColor: baseColors.lightColor}}>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                                 <View style={{ flexDirection: 'column' }}>
@@ -143,9 +148,42 @@ export default function UserAbout() {
                             </View>
                         </View>
                     </View>
+                    <View style={{height: 80, marginTop: 10}}>
+                      <DarkGradient
+                          styles={{ elevation: 8,
+                            backgroundColor: baseColors.primaryColor,
+                            borderRadius: 50,
+                            paddingVertical: 10,
+                            marginVertical: 10,
+                            width: deviceWidth / 1 - 60,
+                            marginHorizontal: 15,
+                            justifyContent: "center",
+                            alignItems: "center"}}
+                      >
+                          <Text 
+                          onPress={()=> {
+                            navigation.navigate("MedicalHistory")
+                          }}
+                          style={{
+                              color: "#fff",
+                              fontSize: 20
+                          }}>Subscribe Now</Text>
+                      </DarkGradient>
+                  </View>
+                  <View style={{backgroundColor: baseColors.lightColor, paddingVertical:15, borderWidth: 1 , borderRadius: 15,borderColor:baseColors.lightColor , elevation:6}}>
+                    <Description>
+                        <Text style={{fontSize:18,}}>Coverage Detail</Text>
+                    </Description>
+                  </View>
+                  <View style={{backgroundColor: baseColors.lightColor, paddingVertical:15, borderWidth: 1 , borderRadius: 15,borderColor:baseColors.lightColor , elevation:6 , marginTop:40}}>
+                    <Description>
+                        <Text style={{fontSize:18,}}>Terms and Condition</Text>
+                    </Description>
+                  </View>
                 </View>
+               
             </View>
-
+            </ScrollView>
         </View>
     )
 }

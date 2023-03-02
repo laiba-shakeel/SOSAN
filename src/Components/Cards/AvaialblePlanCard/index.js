@@ -75,7 +75,7 @@ export default function AvaialblePlanCard() {
                       >
                           <Text 
                           onPress={()=> {
-                            navigation.navigate("UserAbout")
+                            navigation.navigate("AssurancesAbout")
                           }}
                           style={{
                               color: "#fff",

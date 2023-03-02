@@ -32,12 +32,13 @@ export const styles = StyleSheet.create({
         width: deviceWidth / 1 - 10,
         height: deviceHeight / 1,
         flexDirection: 'column',
+        marginBottom: 900
 
     },
     textHeading: {
         color: baseColors.lightColor,
         height: 30,
-        fontSize: 20,
+        fontSize: 18,
         fontWeight: 'bold'
     },
     LoginBtn: {

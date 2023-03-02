@@ -6,14 +6,14 @@ function Description({ children}) {
     <View
               style={{
                 flexDirection: "column",
-                paddingHorizontal: 20,
+                paddingHorizontal: 10,
                 justifyContent: "flex-start",
                 alignItems: "flex-start",
               }}
             >
               <Text
                 style={{
-                  paddingHorizontal: 10,
+                  paddingHorizontal:10,
                   paddingVertical: 5,
                   fontWeight: "bold",
                 }}
