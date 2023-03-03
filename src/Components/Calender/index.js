@@ -4,10 +4,10 @@ import DateTimePickerModal from "react-native-modal-datetime-picker";
 import { AntDesign } from '@expo/vector-icons';
 import { AvatarPerson1 } from "../../Assets/Images/index"
 const Calender = () => {
-  const [isDatePickerVisible, setDatePickerVisibility] = useState(true);
+  const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
 
   const showDatePicker = () => {
-    setDatePickerVisibility(false);
+    setDatePickerVisibility(true);
   };
 
   const hideDatePicker = () => {

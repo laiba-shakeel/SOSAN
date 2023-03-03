@@ -189,27 +189,27 @@ const Agenda = () => {
                   Wed 13
                 </Text>
               </TouchableOpacity>
-            
+
             </View>
-            <View style={{ flexDirection: 'row',}}>
-              <Text style={{ fontWeight: 'bold', fontSize: 20 , }}>List of Schedule</Text>
+            <View style={{ flexDirection: 'row', }}>
+              <Text style={{ fontWeight: 'bold', fontSize: 20, }}>List of Schedule</Text>
             </View>
-              <View style={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                <View style={{
-                  flexDirection: 'column',
-                  width: deviceWidth / 1,
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  borderRadius: 10,
-                  
-                }}>
-                  <FlatList
-                    data={ListOfSchedule}
-                    renderItem={({ item }) => <List data={item} />
-                    }
-                  />
-                </View>
+            <View style={{ flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+              <View style={{
+                flexDirection: 'column',
+                width: deviceWidth / 1,
+                justifyContent: 'center',
+                alignItems: 'center',
+                borderRadius: 10,
+
+              }}>
+                <FlatList
+                  data={ListOfSchedule}
+                  renderItem={({ item }) => <List data={item} />
+                  }
+                />
               </View>
+            </View>
             <View style={{
               flexDirection: 'row',
               alignItems: 'flex-end',
@@ -223,7 +223,7 @@ const Agenda = () => {
                   elevation: 8,
                   backgroundColor: baseColors.sucessColor,
                   borderRadius: 50,
-                 padding: 10,
+                  padding: 10,
                   // paddingHorizontal: 12,
                   width: 60,
                   justifyContent: "center",
@@ -231,9 +231,9 @@ const Agenda = () => {
                   height: 60,
                   // marginVertical: 20,
                 }}>
-                <MaterialIcons name="add" size={40} color="#fff"  onPress={() => {
+                <MaterialIcons name="add" size={40} color="#fff" onPress={() => {
                   navigation.navigate("WorkingDetail");
-                }}/>
+                }} />
               </DarkGradient>
             </View>
 

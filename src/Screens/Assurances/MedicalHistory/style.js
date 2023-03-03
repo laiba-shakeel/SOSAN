@@ -56,4 +56,10 @@ export const styles = StyleSheet.create({
         color: "#fff",
         fontSize: 20
     },
+    appViewContainer:{
+        width: deviceWidth / 1,
+        flexDirection: 'column',
+        borderWidth: 1,
+        backgroundColor: baseColors.sucessTextColor
+    }
 })

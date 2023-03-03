@@ -4,8 +4,11 @@ import { View, TouchableOpacity, Dimensions, Text, ScrollView, } from 'react-nat
 import AppHeader from "../../../Components/AppHeader";
 import { styles } from "./style";
 import { Ionicons, AntDesign } from "@expo/vector-icons";
+import MedicalHistoryID from "../../../Components/Cards/MedicalHistory"
 import baseColors from '../../../Theme/Colors/Colors';
-import AppointmentAccountID from '../../../Components/Cards/AppointmentID';
+import { InformationDetailList } from '../../../Components/List/InformationDetail';
+import InformationDetailCard from '../../../Components/Cards/InformationCards/InformationDetailCard';
+import InformationHistoryCard from '../../../Components/Cards/InformationCards/InformationHistoryCard';
 const deviceWidth = Dimensions.get("window").width;
 export default function MedicalHistory() {
     const navigation = useNavigation();
@@ -76,7 +79,6 @@ export default function MedicalHistory() {
 
                     }}
                 >
-
                     <View style={styles.screenMiddle}>
 
                         <View style={{
@@ -84,13 +86,14 @@ export default function MedicalHistory() {
                         }}>
                             <View style={{ marginTop: 10, backgroundColor: baseColors.lightColor }}>
                                 <View>
-                                    <AppointmentAccountID/>
-
+                                    <MedicalHistoryID />
                                 </View>
-
                             </View>
-                            <View style={{borderWidth: 1 , marginTop: 30, backgroundColor:baseColors.lightColor}}>
-
+                            <View style={{ marginTop: 30,backgroundColor: baseColors.lightColor  }}>
+                                <InformationDetailCard />
+                            </View>
+                            <View style={{ marginTop: 10, backgroundColor: baseColors.lightColor }}>
+                                <InformationHistoryCard/>
                             </View>
                         </View>
                     </View>

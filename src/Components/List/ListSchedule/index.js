@@ -8,7 +8,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import {styles} from './style.js';
-import baseColors from '../../../Theme/Colors/Colors';
+import baseColors from '../../../Theme/Colors/Colors'
 
 
 // const dateDay = [

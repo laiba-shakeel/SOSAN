@@ -93,8 +93,6 @@ function CreatePost() {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              
-              
             }}
           >
             <FlatList
