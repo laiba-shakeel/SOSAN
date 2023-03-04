@@ -27,6 +27,10 @@ import Assurances from '../../Screens/Assurances/OrderList';
 import AvaialblePlan from '../../Screens/Assurances/AvaialblePlan';
 import AssurancesAbout from '../../Screens/Assurances/AssuranceAbout'
 import MedicalHistory from "../../Screens/Assurances/MedicalHistory"
+import PaymentSuccessFull from '../../Screens/Auth/Payment/PaymentSuccessFull';
+import PaymentDone from '../../Screens/Auth/Payment/PaymentDone';
+import AssurancePaymentDone from "../../Screens/Assurances/AssurancePaymentDone"
+import Payment from "../../Screens/Auth/Payment/Payment"
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
@@ -62,6 +66,10 @@ const StackNavigation = () => {
         <Stack.Screen name="ChatScreen" component={ChatScreen} />
         <Stack.Screen name="AssurancesAbout" component={AssurancesAbout} />
         <Stack.Screen name="MedicalHistory" component={MedicalHistory} />
+        <Stack.Screen name="PaymentSuccessFull" component={PaymentSuccessFull} />
+        <Stack.Screen name="PaymentDone" component={PaymentDone} />
+        <Stack.Screen name="Payment" component={Payment} />
+        <Stack.Screen name="AssurancePaymentDone" component={AssurancePaymentDone} />
       </Stack.Navigator>
   
 </>

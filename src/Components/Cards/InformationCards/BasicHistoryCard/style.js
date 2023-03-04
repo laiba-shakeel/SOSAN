@@ -4,36 +4,37 @@ const deviceWidth = Dimensions.get("window").width;
 export const styles = StyleSheet.create({
     Container: {
         paddingVertical: 5,
-        flexDirection: 'column',
-        alignItems:'center'
-        // borderWidth: 1,
+        elevation: 3,
+        width: deviceWidth / 1 - 25,
     },
     item: {
+        alignItems: 'flex-start',
+        width: deviceWidth / 1 - 30,
         flexDirection: 'column',
-        // borderWidth: 1
+        justifyContent: 'space-between',
+        marginHorizontal: 5,
     },
     listItem: {
-        borderWidth: 1,
-        borderColor: "blue",
-        width: deviceWidth / 1 - 40
+        flexDirection: 'column',
+        justifyContent: 'space-around',
+        alignItems: 'flex-start',
+
     },
     title: {
         fontWeight: 'bold',
         fontSize: 18,
         color: baseColors.sucessColor,
-        marginBottom: 10,
+        marginBottom: 10
     },
-    MainDiv: {
+    TextSty: {
         width: deviceWidth / 1 - 30,
-        
-
+        paddingVertical: 5,
     },
     idName: {
+        fontSize: 16,
         borderBottomWidth: 1,
-        borderBottomColor: "gray",
-        flexDirection: 'row',
-        justifyContent:'space-between', 
-        alignItems:'center',
-        width: deviceWidth / 1 - 30,
-    },
+        marginBottom: 10,
+        color: "gray",
+        borderBottomColor: "gray"
+    }
 })

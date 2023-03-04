@@ -6,7 +6,10 @@ import { styles } from "./style";
 import { Ionicons } from "@expo/vector-icons";
 import baseColors from '../../../Theme/Colors/Colors';
 import AvaialblePlanCard from '../../../Components/Cards/AvaialblePlanCard';
+import DarkGradient from '../../../Components/Gradient/DarkGradient';
+
 const deviceWidth = Dimensions.get("window").width;
+
 export default function AvaialblePlan() {
     const navigation = useNavigation();
     return (
@@ -68,9 +71,81 @@ export default function AvaialblePlan() {
                         flexDirection: 'column'
                     }}>
                         <Text style={{ paddingHorizontal: 20, marginTop: 20, fontSize: 18, fontWeight: 'bold' }}>Avaialble Plans</Text>
-                        <AvaialblePlanCard/>
-                        <AvaialblePlanCard/>
-                        <AvaialblePlanCard/>
+                        <AvaialblePlanCard>
+                        <View style={{height: 80,}}>
+                      <DarkGradient
+                          styles={{ elevation: 8,
+                            backgroundColor: baseColors.primaryColor,
+                            borderRadius: 50,
+                            paddingVertical: 10,
+                            marginVertical: 10,
+                            width: deviceWidth / 1 - 60,
+                            marginHorizontal: 15,
+                            justifyContent: "center",
+                            alignItems: "center"}}
+                      >
+                          <Text 
+                            onPress={()=> {
+                                navigation.navigate("MedicalHistory")
+                              }}
+                        
+                          style={{
+                              color: "#fff",
+                              fontSize: 20
+                          }}>Subscribe Now</Text>
+                      </DarkGradient>
+                  </View>
+                        </AvaialblePlanCard>
+                        <AvaialblePlanCard>
+                        <View style={{height: 80,}}>
+                      <DarkGradient
+                          styles={{ elevation: 8,
+                            backgroundColor: baseColors.primaryColor,
+                            borderRadius: 50,
+                            paddingVertical: 10,
+                            marginVertical: 10,
+                            width: deviceWidth / 1 - 60,
+                            marginHorizontal: 15,
+                            justifyContent: "center",
+                            alignItems: "center"}}
+                      >
+                          <Text 
+                            onPress={()=> {
+                                navigation.navigate("MedicalHistory")
+                              }}
+                        
+                          style={{
+                              color: "#fff",
+                              fontSize: 20
+                          }}>Subscribe Now</Text>
+                      </DarkGradient>
+                  </View>
+                        </AvaialblePlanCard>
+                        <AvaialblePlanCard>
+                        <View style={{height: 80,}}>
+                      <DarkGradient
+                          styles={{ elevation: 8,
+                            backgroundColor: baseColors.primaryColor,
+                            borderRadius: 50,
+                            paddingVertical: 10,
+                            marginVertical: 10,
+                            width: deviceWidth / 1 - 60,
+                            marginHorizontal: 15,
+                            justifyContent: "center",
+                            alignItems: "center"}}
+                      >
+                          <Text 
+                            onPress={()=> {
+                                navigation.navigate("MedicalHistory")
+                              }}
+                        
+                          style={{
+                              color: "#fff",
+                              fontSize: 20
+                          }}>Subscribe Now</Text>
+                      </DarkGradient>
+                  </View>
+                        </AvaialblePlanCard>
                     </View>
              
                     

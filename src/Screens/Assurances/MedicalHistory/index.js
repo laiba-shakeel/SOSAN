@@ -9,6 +9,8 @@ import baseColors from '../../../Theme/Colors/Colors';
 import { InformationDetailList } from '../../../Components/List/InformationDetail';
 import InformationDetailCard from '../../../Components/Cards/InformationCards/InformationDetailCard';
 import InformationHistoryCard from '../../../Components/Cards/InformationCards/InformationHistoryCard';
+import DarkGradient from '../../../Components/Gradient/DarkGradient';
+import BasicHistoryCard from '../../../Components/Cards/InformationCards/BasicHistoryCard';
 const deviceWidth = Dimensions.get("window").width;
 export default function MedicalHistory() {
     const navigation = useNavigation();
@@ -94,6 +96,33 @@ export default function MedicalHistory() {
                             </View>
                             <View style={{ marginTop: 10, backgroundColor: baseColors.lightColor }}>
                                 <InformationHistoryCard/>
+                            </View>
+                            <View style={{ marginTop: 10, backgroundColor: baseColors.lightColor }}>
+                                <BasicHistoryCard/>
+                            </View>
+                            <View style={{marginVertical: 8 , width:deviceWidth / 1 , backgroundColor: baseColors.lightColor}}>
+                           
+                      <DarkGradient
+                          styles={{ elevation: 8,
+                            backgroundColor: baseColors.primaryColor,
+                            borderRadius: 50,
+                            paddingVertical: 10,
+                            marginVertical: 10,
+                            width: deviceWidth / 1 - 60,
+                            marginHorizontal: 15,
+                            justifyContent: "center",
+                            alignItems: "center"}}
+                      >
+                          <Text 
+                          onPress={()=> {
+                            navigation.navigate("PaymentDone")
+                          }}
+                          style={{
+                              color: "#fff",
+                              fontSize: 20
+                          }}>Done</Text>
+                      </DarkGradient>
+               
                             </View>
                         </View>
                     </View>

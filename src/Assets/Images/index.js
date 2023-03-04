@@ -16,6 +16,10 @@ import bluebtn from "../Images/bluebtn.png";
 import orgBtn from '../Images/orgBtn.png';
 import alert from '../Images/alert.png';
 import alertImg from '../Images/alertImg.png';
+import Visa from "../Images/Visa.png";
+import Mtn from "../Images/Mtn.jpg";
+import Mastercard from "../Images/Mastercard.png";
+import Paypal from "../Images/Paypal.png";
 export {
     bgHero,
     Dummy,
@@ -34,5 +38,9 @@ export {
     bluebtn,
     orgBtn,
     alert,
-    alertImg
+    alertImg,
+    Visa,
+    Mtn,
+Mastercard,
+Paypal
 }

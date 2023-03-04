@@ -8,12 +8,12 @@ export const styles = StyleSheet.create({
         width: deviceWidth / 1,
         flex: 1,
         flexDirection: "column",
-        backgroundColor: "#effef9",
+        backgroundColor: baseColors.lightColor,
     },
     headerContainer: {
         backgroundColor: baseColors.sucessColor,
         height: 60,
-        marginTop: 29,
+        marginTop: 35,
         width: deviceWidth / 1,
         borderBottomLeftRadius: 15,
         borderBottomRightRadius: 15,
@@ -28,16 +28,16 @@ export const styles = StyleSheet.create({
         borderBottomRightRadius: 27
     },
     screenMiddle: {
+
         width: deviceWidth / 1 - 10,
         height: deviceHeight / 1,
         flexDirection: 'column',
-        marginBottom: 100
 
     },
     textHeading: {
         color: baseColors.lightColor,
         height: 30,
-        fontSize: 18,
+        fontSize: 20,
         fontWeight: 'bold'
     },
     LoginBtn: {
@@ -55,10 +55,4 @@ export const styles = StyleSheet.create({
         color: "#fff",
         fontSize: 20
     },
-    appViewContainer:{
-        width: deviceWidth / 1,
-        flexDirection: 'column',
-        borderWidth: 1,
-        backgroundColor: baseColors.sucessTextColor
-    }
 })

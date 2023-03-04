@@ -5,8 +5,10 @@ import DarkGradient from "../../../Components/Gradient/DarkGradient"
 import baseColors from '../../../Theme/Colors/Colors';
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from '@react-navigation/native';
+
 const deviceWidth = Dimensions.get("window").width;
-export default function AvaialblePlanCard() {
+
+export default function AvaialblePlanCard({children}) {
   const navigation = useNavigation();
   return (
   <View>
@@ -58,10 +60,15 @@ export default function AvaialblePlanCard() {
               </View>
               <View>
                   <View style={{height: 40,justifyContent: 'center', alignItems: 'center', flexDirection: 'row', paddingHorizontal: 5 }}>
-                      <Text style={{fontSize: 16 , color: "gray"}}>View Details</Text>
+                      <Text style={{fontSize: 16 , color: "gray"}}
+                        onPress={()=> {
+                            navigation.navigate("AssurancesAbout")
+                          }}
+                      >View Details</Text>
                       <Ionicons name="chevron-forward" size={30} color="gray" />
                   </View>
-                  <View style={{height: 80,}}>
+                  {children}
+                  {/* <View style={{height: 80,}}>
                       <DarkGradient
                           styles={{ elevation: 8,
                             backgroundColor: baseColors.primaryColor,
@@ -74,15 +81,16 @@ export default function AvaialblePlanCard() {
                             alignItems: "center"}}
                       >
                           <Text 
-                          onPress={()=> {
-                            navigation.navigate("AssurancesAbout")
-                          }}
+                            onPress={()=> {
+                                navigation.navigate("MedicalHistory")
+                              }}
+                        
                           style={{
                               color: "#fff",
                               fontSize: 20
                           }}>Subscribe Now</Text>
                       </DarkGradient>
-                  </View>
+                  </View> */}
               </View>
           </View>
       </View>
