@@ -7,7 +7,7 @@ import Feed from "../../Screens/User/AppHome/Feed/index";
 import Notification from "../../Screens/Common/AppHome/Notification/index";
 import Profile from "../../Screens/User/AppHome/Profile/index";
 import Document from "../../Screens/User/AppHome/Document/index";
-import baseColors from "../../Constant/color";
+import baseColors from "../../Theme/Colors/Colors";
 
 
 function UserTabBottomNavigation() {

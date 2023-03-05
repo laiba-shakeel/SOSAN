@@ -6,6 +6,7 @@ import SearchField from "../../../../Components/SearchField";
 import { useNavigation } from "@react-navigation/native";
 import PersonalDetail from "../../../../Screens/Common/Details/PersonalDetail"
 import CommonDetail from "../../../../Screens/Common/Details/CommonDetail"
+import { FlagButtonOne } from "../../../../Assets/Images";
 import {
   FontAwesome5,
   MaterialIcons,
@@ -50,9 +51,10 @@ function Feed() {
               alignItems: "center",
             }}
           >
-            <TouchableOpacity>
+             <TouchableOpacity
+            onPress={()=>navigation.navigate('UserAppHome')}>
               <Image
-                source={require("../../../../Assets/Images/FlagButtonOne.png")}
+                source={FlagButtonOne}
                 style={{ height: 20, width: 35 }}
               />
             </TouchableOpacity>

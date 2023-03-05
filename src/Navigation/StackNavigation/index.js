@@ -22,7 +22,6 @@ import Faq from "../../Screens/Auth/FAQ/index";
 import Privacy from "../../Screens/Auth/Privacy"
 import AppointmentDetail from "../../Screens/Common/Details/AppointmentDetail"
 import ChatScreen from "../../Screens/Common/ChatScreen"
-import MyTabs from "../TabBottomNavigation"
 import Assurances from '../../Screens/Assurances/OrderList';
 import AvaialblePlan from '../../Screens/Assurances/AvaialblePlan';
 import AssurancesAbout from '../../Screens/Assurances/AssuranceAbout'
@@ -31,7 +30,13 @@ import PaymentSuccessFull from '../../Screens/Auth/Payment/PaymentSuccessFull';
 import PaymentDone from '../../Screens/Auth/Payment/PaymentDone';
 import AssurancePaymentDone from "../../Screens/Assurances/AssurancePaymentDone"
 import Payment from "../../Screens/Auth/Payment/Payment"
+import UserAppHome from "../../Screens/User/AppHome/index"
+
+
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import MyTabs from "../TabBottomNavigation"
+import UserTabBottomNavigation from "../UserTabBottomNavigation";
 
 const Stack = createNativeStackNavigator();
 const StackNavigation = () => {
@@ -46,7 +51,6 @@ const StackNavigation = () => {
         <Stack.Screen name="Services" component={Services} />
         <Stack.Screen name="AppHome" component={AppHome} />
         <Stack.Screen name="Agenda" component={Agenda} />
-        <Stack.Screen name="Tab" component={MyTabs} />
         <Stack.Screen name="WorkingDetail" component={WorkingDetail} />
         <Stack.Screen name="Appointment" component={Appointment} />
         <Stack.Screen name="AppointmentRequest" component={AppointmentRequest} />
@@ -70,6 +74,10 @@ const StackNavigation = () => {
         <Stack.Screen name="PaymentDone" component={PaymentDone} />
         <Stack.Screen name="Payment" component={Payment} />
         <Stack.Screen name="AssurancePaymentDone" component={AssurancePaymentDone} />
+        <Stack.Screen name="UserAppHome" component={UserAppHome} />
+
+        <Stack.Screen name="UserTabs" component={UserTabBottomNavigation} />
+        <Stack.Screen name="Tab" component={MyTabs} />
       </Stack.Navigator>
   
 </>
