@@ -49,9 +49,8 @@ import NearbyDonation from "../../Screens/Donation/NearByDonation";
 import AddDonation from "../../Screens/Donation/AddDonation";
 import SelectDateAppointment from "../../Screens/Hospital/SelectDateAppointment";
 import ProtecteeDetail from "../../Screens/Common/Details/ProtecteeDetail";
-
+import AssociationDetail from "../../Screens/Common/Details/AssosiationDetail"
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
 import MyTabs from "../TabBottomNavigation";
 import UserTabBottomNavigation from "../UserTabBottomNavigation";
 
@@ -111,6 +110,7 @@ const StackNavigation = () => {
         <Stack.Screen name="AddDonation" component={AddDonation} />
         <Stack.Screen name="SelectDateAppointment" component={SelectDateAppointment} />
         <Stack.Screen name="ProtecteeDetail" component={ProtecteeDetail} />
+        <Stack.Screen name= "AssociationDetail" component={AssociationDetail} />
         <Stack.Screen name="UserTabs" component={UserTabBottomNavigation} />
         <Stack.Screen name="Tab" component={MyTabs} />
       </Stack.Navigator>

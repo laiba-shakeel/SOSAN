@@ -42,14 +42,19 @@ const styles = StyleSheet.create({
     fontSize:18
   },
   BottomBtn:{
-    height: deviceHeight / 1,
+    height: deviceHeight / 1, 
+    // borderWidth: 1, 
+    marginVertical: 375,
+    paddingVertical:10,
+    backgroundColor: baseColors.lightColor,
+    elevation: 6,
   },
   LoginBtn: {
     elevation: 8,
     backgroundColor: baseColors.primaryColor,
-    borderRadius: 50,
+    borderRadius:20,
     paddingVertical: 10,
-    paddingHorizontal: 12,
+    // paddingHorizontal: 12,
     marginVertical: 10,
     width: deviceWidth / 1 - 40,
     justifyContent: "center",
@@ -58,7 +63,8 @@ const styles = StyleSheet.create({
   LoginBtnTextSty: {
     color: "#fff",
     fontWeight: "bold",
-    
-  }
+    fontSize: 18
+  },
+
 });
 export default styles;

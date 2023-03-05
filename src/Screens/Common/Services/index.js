@@ -34,7 +34,7 @@ const Services = () => {
             // Navigate using the `navigation` prop that you received
             navigation.navigate('SignIn');
           }}>
-          <Text style={styles.LoginBtnTextSty}>Login</Text>
+          <Text style={styles.LoginBtnTextSty}>Continue</Text>
         </Button>
       </View>
     </View>

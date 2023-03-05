@@ -49,7 +49,7 @@ function ModalTester() {
                 />
                 <Text
                   onPress={() => {
-                    Navigation.navigate("CommonDetail");
+                    Navigation.navigate("AssociationDetail");
                     toggleModal();
                   }}
                   style={styles.modalViewText}>
