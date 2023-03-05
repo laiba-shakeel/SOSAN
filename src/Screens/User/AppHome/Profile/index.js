@@ -10,7 +10,7 @@ import {
 import AppHeader from "../../../../Components/AppHeader";
 import { Ionicons, FontAwesome, MaterialIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
-import { AvatarPerson3 } from "../../../../Assets/images/index";
+import { AvatarPerson3 } from "../../../../Assets/Images/index";
 import Button from "../../../../Components/Buttons";
 import SwitchButton from "../../../../Components/Schedule/Switch";
 import baseColors from "../../../../Theme/Colors/Colors";

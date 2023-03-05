@@ -19,7 +19,7 @@ import {
 import { styles } from "./style";
 import DarkGradient from "../../../Components/Gradient/DarkGradient";
 import { useNavigation } from "@react-navigation/native";
-import { AvatarPerson2 } from "../../../Assets/images";
+import { AvatarPerson2 } from "../../../Assets/Images/index";
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;

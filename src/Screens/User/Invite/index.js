@@ -9,10 +9,10 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import styles from "./style";
-import GradientBackground from "../../../Components/Gradient/LinearBackground";
+import GradientBackground from "../../../Components/Gradient/Background"
 import AppHeader from "../../../Components/AppHeader";
 import { Ionicons, Entypo, FontAwesome5, Fontisto, EvilIcons,AntDesign } from "@expo/vector-icons";
-import { EmailGif } from "../../../Assets/images/index";
+import { EmailGif } from "../../../Assets/Images/index"
 import baseColors from "../../../Theme/Colors/Colors";
 
 

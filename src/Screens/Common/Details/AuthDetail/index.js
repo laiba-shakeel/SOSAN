@@ -1,12 +1,12 @@
 import React from "react";
 import { Text, View, ScrollView, Image,Dimensions, TouchableOpacity } from "react-native";
 import { styles } from "./style";
-import InputField from "../../../../Components/InputField";
-import SelectDropdown from "../../../../Components/SelectDropdown";
+import InputField from "../../../../Components/InputFiled";
+import SelectDropdown from "../../../../Components/SelectDropDown/index";
 import Button from "../../../../Components/Buttons";
 import AppHeader from "../../../../Components/AppHeader";
 import { Ionicons } from "@expo/vector-icons";
-import { DummyPerson } from "../../../../Assets/images";
+import { DummyPerson } from "../../../../Assets/Images/index";
 import { useNavigation } from "@react-navigation/native";
 
 

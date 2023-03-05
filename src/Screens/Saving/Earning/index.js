@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity, Dimensions, Image } from "react-native";
-import { Logo, AvatarPerson1,} from "../../../Assets/Images/index";
+import { LogoR, AvatarPerson1,} from "../../../Assets/Images/index";
 import AppHeader from "../../../Components/AppHeader";
 import { styles } from "./style";
 import baseColors from "../../../Theme/Colors/Colors";
@@ -51,7 +51,7 @@ function Earning() {
                 marginTop:10
               }}
             >
-              <Image source={Logo} style={{ height: 45, width: 140,  }} />
+              <Image source={LogoR} style={{ height: 45, width: 140,  }} />
             </View>
           </View>
         </AppHeader>

@@ -6,7 +6,7 @@ import baseColors from "../../../Theme/Colors/Colors";
 import { useNavigation } from "@react-navigation/native";
 import SearchField from "../../../Components/SearchField/index";
 import { Ionicons } from "@expo/vector-icons";
-import { AvatarPerson3 } from "../../../Assets/images/index";
+import { AvatarPerson3 } from "../../../Assets/Images/index";
 import GradientBackground from "../../../Components/Gradient/DarkGradient/index";
 import Quantity from "../../../Components/Modal/Quantity";
 

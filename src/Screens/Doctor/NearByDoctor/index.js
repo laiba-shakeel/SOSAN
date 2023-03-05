@@ -8,7 +8,7 @@ import {
   FlatList,
   ScrollView,
 } from "react-native";
-import { Logo, AvatarPerson1, AvatarPerson2 } from "../../../Assets/images";
+import { LogoR, AvatarPerson1, AvatarPerson2 } from "../../../Assets/Images/index";
 import AppHeader from "../../../Components/AppHeader/index";
 import { styles } from "./style";
 import baseColors from "../../../Theme/Colors/Colors";
@@ -16,7 +16,7 @@ import { useNavigation } from "@react-navigation/native";
 import { Ionicons, Entypo } from "@expo/vector-icons";
 import SearchField from "../../../Components/SearchField/index";
 import BookAnAppointment from "../../../Components/Cards/BookAnAppointment/index";
-import { MedicineDoctorData, ForgeinDoctorData } from "../../../Config";
+import { MedicineDoctorData, ForgeinDoctorData } from "../../../Config/Data/index";
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
@@ -56,7 +56,7 @@ function NearByDoctor() {
               marginTop: 10,
             }}
           >
-            <Image source={Logo} style={{ height: 30, width: 120 }} />
+            <Image source={LogoR} style={{ height: 30, width: 120 }} />
           </View>
         </View>
       </AppHeader>

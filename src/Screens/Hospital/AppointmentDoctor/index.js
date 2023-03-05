@@ -12,7 +12,7 @@ import {
 import DarkGradient from "../../../Components/Gradient/DarkGradient";
 import { useNavigation } from "@react-navigation/native";
 import Button from "../../../Components/Buttons/index";
-import { AvatarPerson2 } from "../../../Assets/images";
+import { AvatarPerson2 } from "../../../Assets/Images/index";
 import AppointmentID from "../../../Components/Cards/AppointmentID/index";
 import { useState } from "react";
 

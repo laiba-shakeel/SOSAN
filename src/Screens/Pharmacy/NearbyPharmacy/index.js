@@ -7,7 +7,7 @@ import {
   ScrollView,
 } from "react-native";
 import LayoutNearby from "../../../Components/LayoutNearby/index";
-import { PharmacyNearbyData } from "../../../Config/index";
+import { PharmacyNearbyData } from "../../../Config/Data/index";
 import SearchField from "../../../Components/SearchField/index";
 import NearByCard from "../../../Components/Cards/NearByCard/index";
 import { styles } from "./style";

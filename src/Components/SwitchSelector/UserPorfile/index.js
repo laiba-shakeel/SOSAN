@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import { View, StyleSheet,Text, Image, Dimensions } from "react-native";
 import SwitchSelector from "react-native-switch-selector";
-import baseColors from "../../../Constant/color";
-import { AvatarPerson2 } from "../../../Assets/images/index";
+import baseColors from "../../../Theme/Colors/Colors";
+import { AvatarPerson2 } from "../../../Assets/Images/index";
 import { MaterialIcons,Entypo } from '@expo/vector-icons';
 
 

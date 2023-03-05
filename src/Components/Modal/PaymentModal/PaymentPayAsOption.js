@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Text, View, Dimensions, Image, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { Logo } from "../../../Assets/images/index";
+import { LogoR } from "../../../Assets/Images/index";
 import baseColors from "../../..//Theme/Colors/Colors";
 import Modal from "react-native-modal";
 import PaymentOption from "../../PaymentOption";
@@ -37,7 +37,7 @@ function PaymentPayAsOption() {
         >
           <View style={styles.modal}>
             <View style={styles.modalView}>
-              <Image source={Logo} style={{ height: 30, width: 125 }} />
+              <Image source={LogoR} style={{ height: 30, width: 125 }} />
               <Text style={styles.Text}>Edit Amount</Text>
               <View style={styles.TextAmountView}>
                 <Text style={styles.TextAmount}>$ 200</Text>

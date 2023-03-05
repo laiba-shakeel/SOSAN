@@ -13,7 +13,7 @@ import {
   AntDesign,
 } from "@expo/vector-icons";
 import Button from "../../../Components/Buttons/index";
-import SwitchSelector from '../../../Components/SwitchSelector/PharmacyRequestAndReserved/index';
+import SwitchSelector from '../../../Components/SwitchSelector/PharmacyRequestAndReversed';
 import { useNavigation } from "@react-navigation/native";
 
 const deviceHeight = Dimensions.get("window").height;

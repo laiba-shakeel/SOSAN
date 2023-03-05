@@ -6,7 +6,7 @@ import SearchField from "../../../../Components/SearchField";
 import DarkGradient from "../../../../Components/Gradient/DarkGradient";
 import ReverseDarkGradient from "../../../../Components/Gradient/ReverseGradient";
 import { useNavigation } from "@react-navigation/native";
-import { Logo,  BottomImage, FlagButtonTwo } from "../../../../Assets/Images/index";
+import { LogoR,  bgHero, FlagButtonTwo } from "../../../../Assets/Images/index";
 import {
   FontAwesome5,
   Fontisto,
@@ -53,7 +53,7 @@ const navigation = useNavigation();
             }}
           >
             <Image
-              source={Logo}
+              source={LogoR}
               style={{ height: 30, width: 125 }}
             />
           </View>
@@ -136,7 +136,9 @@ const navigation = useNavigation();
           <View style={styles.itemsView}>
           <Foundation name="dollar" size={36} style={styles.itemsIcon} />
             <Text
-              onPress={()=>navigation.navigate('Agenda')}
+             onPress={()=>{
+              navigation.navigate("Assurances")
+            }} 
               style={styles.itemsViewText}
             >
               ASSURANCES
@@ -174,7 +176,7 @@ const navigation = useNavigation();
       </View>
 
       <Image
-        source={BottomImage}
+        source={bgHero}
         style={{ height: 155, width:480,resizeMode: "contain" }}
       />
     </View>

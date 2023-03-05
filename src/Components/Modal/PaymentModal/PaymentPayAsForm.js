@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Text, View, Dimensions, Image, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { SuccessImage } from "../../../Assets/images";
+import { SuccessImage } from "../../../Assets/Images/index";
 import baseColors from "../../../Theme/Colors/Colors";
 import Modal from "react-native-modal";
 import PaymentPayAsOption from "./PaymentPayAsOption";

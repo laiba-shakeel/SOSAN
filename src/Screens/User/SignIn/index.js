@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../../../Components/Buttons";
-import InputField from "../../../Components/InputField";
-import { Logo, BottomImage } from "../../../Assets/images/index"
+import InputField from "../../../Components/InputFiled";
+import { LogoR, bgHero,} from "../../../Assets/Images/index"
 import { styles } from "./style";
 import { View, Text, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
@@ -24,7 +24,7 @@ const UserSignIn = () => {
           }}
         >
           <Image
-            source={Logo}
+            source={LogoR}
             style={{ height: 50 }}
           />
         </View>
@@ -66,7 +66,7 @@ const UserSignIn = () => {
           </Text>
         </View>
         <Image
-          source={BottomImage}
+          source={bgHero}
           style={{ height: 270,resizeMode: 'contain'}}
         />
       </View>
