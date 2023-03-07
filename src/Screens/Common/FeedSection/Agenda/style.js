@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     backgroundColor: baseColors.lightColor,
+    marginBottom:50
   },
   headerContainer:{ 
     backgroundColor:baseColors.sucessColor,
@@ -37,6 +38,7 @@ export const styles = StyleSheet.create({
     width: deviceWidth / 1-10,
     height: deviceHeight / 1,
     flexDirection:'column',
+    backgroundColor: baseColors.lightColor,
     
   
   },
@@ -119,6 +121,15 @@ SecondView: {
   width: deviceWidth / 3,
                 flexDirection: "row",
                 justifyContent: "flex-start",
+},
+ActiveBtn:{
+color:baseColors.lightTextColor,
+backgroundColor:"#ADD8E6",
+},
+DefaultBtn:{
+  color:baseColors.lightColor,
+backgroundColor:baseColors.secondaryTextColor,
+
 }
 
 });

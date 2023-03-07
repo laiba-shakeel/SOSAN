@@ -40,6 +40,7 @@ export const styles = StyleSheet.create({
   screenMiddle: {
     width: deviceWidth / 1 - 20,
     flexDirection: "column",
+    marginBottom: 100
   },
   items: {
     backgroundColor: baseColors.lightColor,

@@ -53,7 +53,10 @@ import AssociationDetail from "../../Screens/Common/Details/AssosiationDetail"
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MyTabs from "../TabBottomNavigation";
 import UserTabBottomNavigation from "../UserTabBottomNavigation";
-
+import InsuranceTabBottomNavigation from "../InsuranceTabBottomNavigation"
+import AssuranceAppHome from "../../Screens/Assurances/AppHome";
+import AssuranceDetail from "../../Screens/Assurances/AssuranceDetail"
+import AssuranceServices from "../../Screens/Assurances/AssuranceServices"
 const Stack = createNativeStackNavigator();
 const StackNavigation = () => {
   return (
@@ -111,8 +114,12 @@ const StackNavigation = () => {
         <Stack.Screen name="SelectDateAppointment" component={SelectDateAppointment} />
         <Stack.Screen name="ProtecteeDetail" component={ProtecteeDetail} />
         <Stack.Screen name= "AssociationDetail" component={AssociationDetail} />
+        <Stack.Screen name="AssuranceTab" component={InsuranceTabBottomNavigation}/>
         <Stack.Screen name="UserTabs" component={UserTabBottomNavigation} />
         <Stack.Screen name="Tab" component={MyTabs} />
+        <Stack.Screen name="AssuranceAppHome" component={AssuranceAppHome}/>
+        <Stack.Screen name ="AssuranceDetail" component={AssuranceDetail}/>
+        <Stack.Screen name = "AssuranceServices" component={AssuranceServices}/>
       </Stack.Navigator>
     </>
   );

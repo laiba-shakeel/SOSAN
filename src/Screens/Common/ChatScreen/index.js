@@ -53,7 +53,8 @@ const ChatScreen = () => {
                                         style={styles.ActivityImage}
                                     ></Image>
                                     <View style={styles.Listitems}>
-                                        <Text style={styles.textHeading}>Dr. Umair Rana</Text>
+                                        <Text 
+                                        style={styles.textHeading}>Dr. Umair Rana</Text>
                                         <Text style={styles.text}>Online</Text>
                                     </View>
                                 </View>

@@ -8,7 +8,7 @@ import {
   FlatList,
 } from "react-native";
 import AppHeader from "../../../../Components/AppHeader/index";
-import { ListOfSchedule } from "../../../../Config/Data/index";
+import { ListOfSchedule , ListOfScheduleTwo} from "../../../../Config/Data/index";
 import List from "../../../../Components/List/ListSchedule";
 import { styles } from "./style";
 import baseColors from "../../../../Theme/Colors/Colors";
@@ -21,6 +21,7 @@ const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 
 const Agenda = () => {
+  const [switchValue, setswitchValue] = React.useState(false);
   const navigation = useNavigation();
   return (
     <View style={styles.screenContainer}>
@@ -69,9 +70,9 @@ const Agenda = () => {
           paddingHorizontal: 10,
         }}
       >
-        <ScrollView>
+        <ScrollView  showsVerticalScrollIndicator={false}>
           <View style={styles.screenMiddle}>
-            <Calender />
+            <Calender/>
             <View
               style={{
                 flexDirection: "row",
@@ -80,9 +81,7 @@ const Agenda = () => {
               }}
             >
               <TouchableOpacity
-                onPress={() => {
-                  navigation.goBack("Feed");
-                }}
+                  onPress={(value) => setswitchValue(true)} 
                 style={{
                   elevation: 8,
                   backgroundColor: "#ADD8E6",
@@ -109,9 +108,7 @@ const Agenda = () => {
                 </Text>
               </TouchableOpacity>
               <TouchableOpacity
-                onPress={() => {
-                  navigation.goBack("Feed");
-                }}
+                    onPress={(value) => setswitchValue(false)}
                 style={{
                   elevation: 8,
                   backgroundColor: baseColors.secondaryColor,
@@ -203,11 +200,19 @@ const Agenda = () => {
                 borderRadius: 10,
 
               }}>
+                   {switchValue !== true ? (
                 <FlatList
-                  data={ListOfSchedule}
+                  data={ListOfScheduleTwo}
                   renderItem={({ item }) => <List data={item} />
                   }
-                />
+                /> 
+                   ) : (
+                    <FlatList
+                    data={ListOfSchedule}
+                    renderItem={({ item }) => <List data={item} />
+                    }
+                  /> 
+                    )}
               </View>
             </View>
             <View style={{

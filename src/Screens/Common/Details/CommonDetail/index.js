@@ -8,7 +8,7 @@ import Gallary from "../../../../Components/Gallary";
 import Schedule from "../../../../Components/Schedule";
 import Button from "../../../../Components/Buttons";
 import Map from '../../../../Components/Map';
-function CommonDetail() {
+function CommonDetail({children}) {
   const navigation = useNavigation();
   return (
     <ScrollView style={styles.screenContainer}>
@@ -57,11 +57,12 @@ function CommonDetail() {
         />
         <View>
           <Button
-            styles={styles.LoginBtn}
-            onPress={() => {
-              navigation.navigate("Services");
-            }}>
-            <Text style={styles.LoginTextSty}>Login</Text>
+            // styles={styles.LoginBtn}
+            // onPress={() => {
+            //   navigation.navigate("Services");
+            // }} 
+            >{children}
+            {/* <Text style={styles.LoginTextSty}>Login</Text> */}
           </Button>
         </View>
       </View>

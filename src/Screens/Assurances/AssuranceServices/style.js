@@ -8,12 +8,13 @@ export const styles = StyleSheet.create({
         width: deviceWidth / 1,
         flex: 1,
         flexDirection: "column",
-        backgroundColor: "#effef9",
+        alignItems:'center',
+        backgroundColor: baseColors.lightColor,
     },
     headerContainer: {
-        backgroundColor: baseColors.sucessColor,
+        backgroundColor: baseColors.lightColor,
         height: 60,
-        marginTop: 29,
+        marginTop: 25,
         width: deviceWidth / 1,
         borderBottomLeftRadius: 15,
         borderBottomRightRadius: 15,
@@ -28,17 +29,17 @@ export const styles = StyleSheet.create({
         borderBottomRightRadius: 27
     },
     screenMiddle: {
-        width: deviceWidth / 1 - 10,
+// borderWidth:1,
+        width: deviceWidth / 1 -10,
         height: deviceHeight / 1,
         flexDirection: 'column',
-        marginBottom: 100
+       alignItems:'center'
 
     },
     textHeading: {
-        color: baseColors.lightColor,
-        height: 30,
+        color: baseColors.darkTextColor,
+        // height: 30,
         fontSize: 20,
-        fontWeight: 'bold'
     },
     LoginBtn: {
         elevation: 8,
@@ -55,10 +56,28 @@ export const styles = StyleSheet.create({
         color: "#fff",
         fontSize: 20
     },
-    appViewContainer:{
-        width: deviceWidth / 1,
-        flexDirection: 'column',
-        borderWidth: 1,
-        backgroundColor: baseColors.sucessTextColor
-    }
+    BottomBtn:{
+        height: deviceHeight / 1, 
+        // borderWidth: 1, 
+        marginVertical: 160,
+        paddingVertical:10,
+        backgroundColor: baseColors.lightColor,
+        elevation: 6,
+      },
+      LoginBtn: {
+        elevation: 8,
+        backgroundColor: baseColors.primaryColor,
+        borderRadius:20,
+        paddingVertical: 10,
+        // paddingHorizontal: 12,
+        marginVertical: 10,
+        width: deviceWidth / 1 - 40,
+        justifyContent: "center",
+        alignItems: "center",
+      },
+      LoginBtnTextSty: {
+        color: "#fff",
+        fontWeight: "bold",
+        fontSize: 18
+      },
 })

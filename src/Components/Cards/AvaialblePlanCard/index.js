@@ -68,29 +68,6 @@ export default function AvaialblePlanCard({children}) {
                       <Ionicons name="chevron-forward" size={30} color="gray" />
                   </View>
                   {children}
-                  {/* <View style={{height: 80,}}>
-                      <DarkGradient
-                          styles={{ elevation: 8,
-                            backgroundColor: baseColors.primaryColor,
-                            borderRadius: 50,
-                            paddingVertical: 10,
-                            marginVertical: 10,
-                            width: deviceWidth / 1 - 60,
-                            marginHorizontal: 15,
-                            justifyContent: "center",
-                            alignItems: "center"}}
-                      >
-                          <Text 
-                            onPress={()=> {
-                                navigation.navigate("MedicalHistory")
-                              }}
-                        
-                          style={{
-                              color: "#fff",
-                              fontSize: 20
-                          }}>Subscribe Now</Text>
-                      </DarkGradient>
-                  </View> */}
               </View>
           </View>
       </View>

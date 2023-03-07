@@ -2,15 +2,15 @@ import React from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Chat from "../../Screens/Assurances/AppHome/Chat";
-import Feed from "../../Screens/Assurances/AppHome/Feed";
-import Notification from "../../Screens/Assurances/AppHome/Notification";
-import Profile from "../../Screens/Assurances/AppHome/Profile";
-import Document from "../../Screens/Assurances/AppHome/Document";
-import baseColors from "../../Theme/Colors/Colors";
+import Chat from "../../Screens/Common/AppHome/Chat/index";
+import Feed from "../../Screens/Pharmacy/AppHome/Feed/index";
+import Notification from "../../Screens/Common/AppHome/Notification/index";
+import Profile from "../../Screens/Hospital/AppHome/Profile/index";
+import Document from "../../Screens/Pharmacy/AppHome/Document/index";
+import baseColors from "../../Constant/color";
 
 
-function InsuranceTabBottomNavigation() {
+function PharmacyTabBottomNavigation() {
   const Tab = createBottomTabNavigator();
 
   return (
@@ -97,4 +97,5 @@ function InsuranceTabBottomNavigation() {
 }
 
 
-export default InsuranceTabBottomNavigation;
+export default PharmacyTabBottomNavigation;
+

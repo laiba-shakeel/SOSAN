@@ -22,10 +22,6 @@ function SearchDrug() {
   const Navigation = useNavigation();
 
 
-  const showModal = () => {
-    setShow(true);
-}
-
   return (
     <View style={styles.screenContainer}>
       <View>
@@ -120,7 +116,6 @@ function SearchDrug() {
               </View>
             </Quantity>
             </GradientBackground>
-            {/* <Quantity show={show} /> */}
           </View>
         </View>
       </View>
