@@ -62,6 +62,8 @@ import AssuranceReportDetail from "../../Screens/Assurances/AssuranceReportDetai
 import AssuranceTracking from "../../Screens/Assurances/Tracking"
 import AssuranceEditDetail from "../../Screens/Assurances/AssuranceEditDetail"
 import RegisteredClientsAssurance from "../../Screens/Assurances/RegisteredClients"
+import AssurancePlanDetail from "../../Screens/Assurances/AssurancePlanDetail"
+import AssuranceTermsAndCondition from "../../Screens/Assurances/AssuranceTermsAndCondition"
 const Stack = createNativeStackNavigator();
 const StackNavigation = () => {
   return (
@@ -130,6 +132,8 @@ const StackNavigation = () => {
         <Stack.Screen name = "AssuranceTracking" component={AssuranceTracking}/>
         <Stack.Screen name="AssuranceEditDetail" component={AssuranceEditDetail}/>
         <Stack.Screen name="RegisteredClientsAssurance" component={RegisteredClientsAssurance}/>
+        <Stack.Screen name="AssurancePlanDetail" component={AssurancePlanDetail}/>
+        <Stack.Screen name="AssuranceTermsAndCondition" component={AssuranceTermsAndCondition}/>
       </Stack.Navigator>
     </>
   );

@@ -105,7 +105,7 @@ function Feed() {
             />
             <Text
              onPress={() => {
-              navigation.navigate("CreatePost");
+              navigation.navigate("Epargne");
             }}
               style={styles.itemsViewTextReverse}
             >

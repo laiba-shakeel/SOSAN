@@ -14,7 +14,7 @@ function Description({ children}) {
               <Text
                 style={{
                   paddingHorizontal:10,
-                  paddingVertical: 5,
+                  // paddingVertical: 5,
                   fontWeight: "bold",
                 }}
               >
@@ -23,7 +23,7 @@ function Description({ children}) {
               <Text
                 style={{
                   paddingHorizontal: 10,
-                  paddingVertical: 10,
+                  // paddingVertical: 10,
                   textAlign: "justify",
                 }}
               >

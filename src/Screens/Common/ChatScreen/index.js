@@ -9,10 +9,12 @@ import SendMessage from '../../../Components/Cards/ChattingCard/SendMessage/inde
 import ReceiveMessage from "../../../Components/Cards/ChattingCard/ReceiveMessage"
 import TextInputField from '../../../Components/InputFiled';
 import { ScrollView } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 const deviceWidth = Dimensions.get("window").width;
 const deviceHeight = Dimensions.get("window").height;
 
 const ChatScreen = () => {
+    const navigation = useNavigation();
     return (
         <View style={styles.screenContainer}>
             <View>
@@ -34,6 +36,9 @@ const ChatScreen = () => {
                         >
                             <TouchableOpacity>
                                 <Ionicons
+                                onPress={()=>{
+                                    navigation.navigate("Chat")
+                                }}
                                     name="chevron-back-sharp"
                                     size={45}
                                     style={{ color: baseColors.lightTextColor, justifyContent: 'center', alignItems: 'center' }}

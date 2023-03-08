@@ -6,7 +6,7 @@ import Chat from "../../Screens/Common/AppHome/Chat";
 import Feed from "../../Screens/Assurances/AppHome/Feed";
 import Notification from "../../Screens/Common/AppHome/Notification";
 import Profile from "../../Screens/Common/AppHome/Profile";
-import Document from "../../Screens/Common/AppHome/Document";
+import Document from "../../Screens/Assurances/AppHome/Document";
 import baseColors from "../../Theme/Colors/Colors";
 
 
