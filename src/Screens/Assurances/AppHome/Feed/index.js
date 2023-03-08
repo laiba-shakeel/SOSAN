@@ -79,7 +79,7 @@ function Feed() {
             />
             <Text
               onPress={() => {
-                navigation.navigate("Agenda");
+                navigation.navigate("AssuranceAgenda");
               }}
               style={styles.itemsViewText}
             >
@@ -95,24 +95,28 @@ function Feed() {
             }}
               style={styles.itemsViewTextReverse}
             >
-             APPOINMENT
+            Tracking
             </Text>
           </View>
 
           <View style={styles.itemsViewReverse}>
-          <MaterialIcons name="public" size={24} style={styles.itemsIconReverse} />
+          <Entypo name="wallet" size={24}
+              style={styles.itemsIconReverse}
+            />
             <Text
              onPress={() => {
               navigation.navigate("CreatePost");
             }}
               style={styles.itemsViewTextReverse}
             >
-             PUBLICITY
+            EARNING
             </Text>
           </View>
 
           <View style={styles.itemsView}>
-          <Entypo name="wallet" size={24}
+          <FontAwesome5
+              name="clinic-medical"
+              size={26}
               style={styles.itemsIcon}
             />
             <Text
@@ -121,7 +125,7 @@ function Feed() {
             }}
               style={styles.itemsViewText}
             >
-              EARNING
+              PLANS
             </Text>
           </View>
         </View>

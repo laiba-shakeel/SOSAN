@@ -33,5 +33,9 @@ const defaultStyles = StyleSheet.create({
     borderRadius: 50,
     borderColor: baseColors.sucessTextColor,
     textAlignVertical: "top",
+    marginHorizontal:10,
+    marginVertical:10,
+    backgroundColor: baseColors.lightColor,
+    color:baseColors.lightGreyColor
   },
 });
