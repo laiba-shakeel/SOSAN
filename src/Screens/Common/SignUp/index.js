@@ -1,13 +1,14 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View,Dimensions, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import TouchableButton from "../../../Components/Buttons";
 import baseColors from "../../../Theme/Colors/Colors";
 import styles from "./style";
 import TextInputField from "../../../Components/InputFiled";
-import CheckBtn from "../../../Components/CheckboxButton";
+import CheckButton from "../../../Components/CheckboxButton";
 import ModalTester from "../../../Components/Modal/SectionModal";
 import Background from "../../../Components/Gradient/Background";
+const deviceWidth = Dimensions.get("window").width;
 const SignUp = () => {
   const navigation = useNavigation();
   return (
@@ -56,30 +57,59 @@ const SignUp = () => {
           placeholder="*************" />
           <Text>What are you</Text>
           <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "space-evenly",
-              alignItems: "center",
-            }}>
-            <CheckBtn />
-            <Text
-              onPress={() => {
-                navigation.navigate("Individuals");
-              }}>
-              Individual
-            </Text>
-            <CheckBtn />
-             <ModalTester />
-          </View>
+              style={{
+                flexDirection: "row",
+                justifyContent: 'space-between',
+                width:deviceWidth/1.1,
+                alignItems: "center",
+              }}
+            >
+              <View
+              style={{
+                flexDirection: "row",
+                justifyContent: 'space-between',
+                width:deviceWidth/2.5,
+                alignItems: "center",
+                paddingVertical: 5,
+                paddingHorizontal: 15,
+              }}
+              >
+              <CheckButton />
+              <Text
+                onPress={() => {
+                  navigation.navigate("Verification");
+                }}
+              >
+                Individual
+              </Text>
+              </View>
+              <View
+              style={{
+                flexDirection: "row",
+                justifyContent: 'space-between',
+                width:deviceWidth/2.3,
+                alignItems: "center",
+                paddingVertical: 5,
+                paddingHorizontal: 10,
+                
+              }}
+              >
+              <CheckButton />
+              <ModalTester />
 
-          <View
-            style={{
-              flexDirection: "row",
-              alignItems: "center",
-            }}>
-            <CheckBtn />
-            <Text>i agree with the terms and agreements</Text>
-          </View>
+              </View>
+            </View>
+
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: 'space-evenly',
+                width:deviceWidth/1-50,
+              }}
+            >
+              <CheckButton />
+              <Text>i agree with the terms and agreements</Text>
+            </View>
           <View
             style={{ flexDirection: "row", justifyContent: "space-evenly" }}>
             <TouchableButton

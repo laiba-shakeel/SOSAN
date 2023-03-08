@@ -32,6 +32,7 @@ import PharmacieCard5 from "./PharmacieCard5.jpg";
 import PharmacieCard6 from "./PharmacieCard6.jpg";
 import PharmacieCard7 from "./PharmacieCard7.jpg";
 import PharmacieCard8 from "./PharmacieCard8.jpg";
+import keyboardImg from "./keyboard.png";
 export {
   bgHero,
   Dummy,
@@ -67,4 +68,5 @@ export {
   PharmacieCard6,
   PharmacieCard7,
   PharmacieCard8,
+  keyboardImg
 };

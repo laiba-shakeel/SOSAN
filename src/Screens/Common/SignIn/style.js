@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
       flexDirection: "column",
       padding: 20,
       backgroundColor: baseColors.lightColor,
+      paddingVertical:10
     },
     screenTop: {
       flexDirection: "row",
@@ -51,7 +52,8 @@ const styles = StyleSheet.create({
     },
     OptionScreen: {
       justifyContent: "center",
-      alignItems: "center"
+      alignItems: "center",
+      paddingVertical:10
     }
 });
 export default styles;

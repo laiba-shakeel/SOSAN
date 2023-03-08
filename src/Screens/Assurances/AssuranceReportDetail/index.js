@@ -11,6 +11,9 @@ import AppHeader from "../../../Components/AppHeader";
 import { styles } from "./style";
 import { Ionicons, AntDesign } from "@expo/vector-icons";
 import baseColors from "../../../Theme/Colors/Colors";
+import AppointmentAccountID from "../../../Components/Cards/AppointmentID";
+import { Entypo } from '@expo/vector-icons';
+import PreciptionList from "../../../Components/List/PrecriptionList";
 
 const deviceWidth = Dimensions.get("window").width;
 export default function AssuranceReportDetail() {
@@ -41,7 +44,7 @@ export default function AssuranceReportDetail() {
                   name="chevron-back-sharp"
                   size={37}
                   style={{
-                    color: baseColors.lightTextColor,
+                    color: baseColors.darkColor,
                     justifyContent: "center",
                     alignItems: "center",
                   }}
@@ -55,7 +58,7 @@ export default function AssuranceReportDetail() {
                 justifyContent: "center",
               }}
             >
-              <Text style={styles.textHeading}>Reports</Text>
+              <Text style={styles.textHeading}> Detail Report</Text>
             </View>
             <View
               style={{
@@ -82,11 +85,34 @@ export default function AssuranceReportDetail() {
                 flexDirection: "column",
               }}
             >
-
+              <AppointmentAccountID />
+              <View style={{ flexDirection: 'column', justifyContent: 'space-around', }}>
+                <Text style={styles.title}>Plan Subcribe</Text>
+                <Text style={styles.BlueText}>ASCOMA</Text>
+                <View style={{ flexDirection: 'column', justifyContent: 'space-around', marginHorizontal: 45, marginBottom: 6, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', }}>
+                    <AntDesign name="heart" size={12} color="green" />
+                    <Text style={styles.IconText}>Coverage 60%</Text>
+                  </View>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', }}>
+                    <Entypo name="lock" size={12} color="blue" />
+                    <Text style={styles.IconText}>15 years</Text>
+                  </View>
+                </View>
+              </View>
+              <View>
+                <Text style={styles.title}>Claims</Text>
+              </View>
+              <View>
+              <PreciptionList/>
+              </View>
+              <View>
+              <PreciptionList/>
+              </View>
             </View>
-            </View>
+          </View>
         </View>
       </ScrollView>
     </View>
-     );
-    }
+  );
+}

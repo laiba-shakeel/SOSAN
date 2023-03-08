@@ -69,9 +69,7 @@ export default function AssurancePaymentDone() {
                     }}>
                         <Text style={{ paddingHorizontal: 20, marginTop: 20, fontSize: 18, fontWeight: 'bold' }}>Avaialble Plans</Text>
                         <AvaialblePlanCard/>
-                    </View>
-             
-                    
+                    </View>       
                 </View>
             </View>
             </ScrollView>

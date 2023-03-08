@@ -1,13 +1,14 @@
 import React from 'react'
-import { View, TouchableOpacity, Dimensions, Text , Image} from 'react-native'
+import { View, TouchableOpacity, Dimensions, Text, Image } from 'react-native'
 import AppHeader from "../../../Components/AppHeader";
 import { styles } from "./style";
 import baseColors from '../../../Theme/Colors/Colors';
 import { Ionicons } from "@expo/vector-icons";
-import { AvatarPerson1 } from '../../../Assets/Images';
+import { AvatarPerson1, keyboardImg } from '../../../Assets/Images';
 import SendMessage from '../../../Components/Cards/ChattingCard/SendMessage/index';
 import ReceiveMessage from "../../../Components/Cards/ChattingCard/ReceiveMessage"
 import TextInputField from '../../../Components/InputFiled';
+import { ScrollView } from 'react-native';
 const deviceWidth = Dimensions.get("window").width;
 const deviceHeight = Dimensions.get("window").height;
 
@@ -35,7 +36,7 @@ const ChatScreen = () => {
                                 <Ionicons
                                     name="chevron-back-sharp"
                                     size={45}
-                                    style={{ color: baseColors.lightTextColor , justifyContent:'center', alignItems:'center' }}
+                                    style={{ color: baseColors.lightTextColor, justifyContent: 'center', alignItems: 'center' }}
                                 />
                             </TouchableOpacity>
                         </View>
@@ -53,8 +54,8 @@ const ChatScreen = () => {
                                         style={styles.ActivityImage}
                                     ></Image>
                                     <View style={styles.Listitems}>
-                                        <Text 
-                                        style={styles.textHeading}>Dr. Umair Rana</Text>
+                                        <Text
+                                            style={styles.textHeading}>Dr. Umair Rana</Text>
                                         <Text style={styles.text}>Online</Text>
                                     </View>
                                 </View>
@@ -68,26 +69,29 @@ const ChatScreen = () => {
                     flexDirection: "column",
                     justifyContent: "center",
                     alignItems: "center",
-                    paddingHorizontal: 10
+                    // paddingHorizontal: 10
                 }}
-            >
-   <View style={styles.screenMiddle}>
-<View style={{
-    flexDirection:'column'
-}}>
-<SendMessage/>
-<ReceiveMessage/>
-<SendMessage/>
-<ReceiveMessage/>
-<SendMessage/>
-<ReceiveMessage/>
-</View>
+            > 
+                <View style={styles.screenMiddle}>
+               
+                    <View style={{
+                        flexDirection: 'column'
+                    }}>
+                       
+                        <SendMessage />
+                        <ReceiveMessage />
+                        <SendMessage />
+                        <ReceiveMessage />
+                        <SendMessage />
+                        <ReceiveMessage />
+                    </View>
+                    <ScrollView>
+                    <View style={{  justifyContent: 'flex-end', alignItems: 'center' }}>
+                        <Image source={keyboardImg} style={{ height: 250, width: 350 }} />
+                    </View>
+                    </ScrollView>
 
-
-<View>
-
-</View>
-   </View>
+                </View>
             </View>
         </View>
     )

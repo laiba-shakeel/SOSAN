@@ -10,23 +10,21 @@ import TestNameModal from "../TestNameModal/index.js";
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 
-function SelectServiceModal() {
-    const Navigation = useNavigation();
+function SelectServiceAssurance() {
+    const navigation = useNavigation();
     const [isModalVisible, setModalVisible] = useState(false);
 
 
     const toggleModal = () => {
         setModalVisible(!isModalVisible);
     };
-    const navigation = useNavigation();
     return (
         <View style={{ flex: 1 }}>
-            <Button
-                onPress={toggleModal}
-                styles={styles.LoginBtn}
-            >
-                <Text style={styles.LoginTextSty}>Add Prescribtion/Test</Text>
-            </Button>
+            
+                <Text style={{
+
+                }}onPress={toggleModal}>Cleared</Text>
+           
 
             <Modal isVisible={isModalVisible} onBackdropPress={toggleModal}>
                 <View
@@ -52,7 +50,7 @@ function SelectServiceModal() {
                                     <View style={styles.ImgViewLittle}>
                                         <Ionicons name="document-text-sharp" size={24} color="brown" />
                                     </View>
-                                  <Text>
+                                  <Text style={{alignItems:'center', justifyContent:'center'}}>
                                    <TestNameModal>
                                    Prescribed Test
                                    </TestNameModal>
@@ -69,4 +67,4 @@ function SelectServiceModal() {
     );
 }
 
-export default SelectServiceModal
+export default SelectServiceAssurance

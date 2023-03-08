@@ -5,8 +5,8 @@ import { AvatarPerson1 } from '../../../Assets/Images';
 import { Text } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-const navigation = useNavigation();
 const ReportCard = () => {
+    const navigation = useNavigation();
     return (
         <>
         <View style={styles.Container}>
@@ -14,13 +14,21 @@ const ReportCard = () => {
                 <View style={styles.imgDiv}>
                     <Image  source={AvatarPerson1} style={styles.imageSty} />
                     <View style={{ flexDirection: 'column' }}>
-                        <Text style={styles.title}>Alfonso Vetrovs</Text>
+                        <Text 
+                        onPress={()=>{
+                            navigation.navigate("AssuranceReportDetail")
+                        }}
+                        style={styles.title}>Alfonso Vetrovs</Text>
                         <Text style={styles.id}>23years` Male</Text>
                     </View>
 
                 </View>
                 <View style={styles.DivTwo}>
-             <Ionicons name="chatbubble-ellipses" size={39} color="green" />
+             <Ionicons 
+             onPress={()=>{
+                navigation.navigate("ChatScreen")
+             }}
+             name="chatbubble-ellipses" size={39} color="green" />
                 </View>
             </View>
          </View>

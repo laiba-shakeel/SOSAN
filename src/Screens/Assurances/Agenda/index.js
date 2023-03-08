@@ -14,6 +14,7 @@ import baseColors from "../../../Theme/Colors/Colors";
 import Calender from "../../../Components/Calender";
 import SearchField from "../../../Components/SearchField";
 import ReportCard from "../../../Components/Cards/ReportCard";
+import Switch from "../../../Components/SwitchSelector/ClearAndPending"
 const deviceWidth = Dimensions.get("window").width;
 export default function AssuranceAgenda() {
   const navigation = useNavigation();
@@ -106,7 +107,9 @@ export default function AssuranceAgenda() {
                     color: baseColors.lightGreyColor,
                   }}
                 />
+              
               </View>
+            <Text style={{marginHorizontal:15 , marginBottom:10}}> <Switch/></Text>
               <View style={{ width: deviceWidth / 2, alignItems: "center" }}>
                 <Text style={styles.textHeading}>List of client</Text>
               </View>

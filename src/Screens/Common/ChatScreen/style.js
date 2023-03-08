@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
   headerContainer:{ 
     backgroundColor:baseColors.sucessColor,
     height: 60, 
-    marginTop: 30, 
+    marginTop: 25, 
     width: deviceWidth/1,
     borderBottomLeftRadius:15,
     borderBottomRightRadius:15,
@@ -38,7 +38,8 @@ export const styles = StyleSheet.create({
     height: deviceHeight / 1,
     flexDirection:'column',
     paddingVertical:10,
-    // borderWidth: 2
+    // borderWidth: 2,
+    marginBottom:100
   
   },
   Listmain: {

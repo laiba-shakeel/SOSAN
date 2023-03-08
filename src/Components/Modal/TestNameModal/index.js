@@ -22,7 +22,10 @@ function TestNameModal() {
     const navigation = useNavigation();
     return (
         <View style={{ flex: 1 }}>
-            <Text onPress={toggleModal} style={styles.ImgText}>Prescribed Test</Text>
+          <View style={{flexDirection:'column' , justifyContent:'center' }}>
+          <Text onPress={toggleModal} style={{fontSize:18 , color:baseColors.primaryColor}}>Prescribed</Text>
+          <Text onPress={toggleModal} style={{fontSize:18 ,textAlign:'center', color:baseColors.primaryColor}}>Test </Text>
+            </View> 
 
             <Modal isVisible={isModalVisible}>
                 <View

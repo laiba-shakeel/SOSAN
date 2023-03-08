@@ -8,7 +8,7 @@ import { useNavigation } from '@react-navigation/native';
 
 const deviceWidth = Dimensions.get("window").width;
 
-export default function AvaialblePlanCard({children}) {
+export default function AvaialblePlanCard(props) {
   const navigation = useNavigation();
   return (
   <View>
@@ -61,13 +61,14 @@ export default function AvaialblePlanCard({children}) {
               <View>
                   <View style={{height: 40,justifyContent: 'center', alignItems: 'center', flexDirection: 'row', paddingHorizontal: 5 }}>
                       <Text style={{fontSize: 16 , color: "gray"}}
-                        onPress={()=> {
-                            navigation.navigate("AssurancesAbout")
-                          }}
+                      onPress={props.onPress}
+                        // onPress={()=> {
+                        //     navigation.navigate("AssurancesAbout")
+                        //   }}
                       >View Details</Text>
                       <Ionicons name="chevron-forward" size={30} color="gray" />
                   </View>
-                  {children}
+                  {props.children}
               </View>
           </View>
       </View>

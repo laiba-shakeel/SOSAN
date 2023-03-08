@@ -8,7 +8,7 @@ import {
     FlatList,
 } from "react-native";
 import AppHeader from "../../../../Components/AppHeader/index";
-import { ScheduledCardData } from "../../../../Config/Data/index";
+import { ScheduledCardData } from "../../../../Config/Data/index"; 
 import { styles } from "./style";
 import { Ionicons } from '@expo/vector-icons';
 import baseColors from "../../../../Theme/Colors/Colors";

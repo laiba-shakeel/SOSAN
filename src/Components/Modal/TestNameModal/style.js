@@ -85,9 +85,10 @@ export const styles = StyleSheet.create({
         fontSize: 20
     },
     ImgText: {
-        fontSize: 20,
+        fontSize: 18,
         textAlign: 'center',
-        paddingBottom: 20,
-        color: baseColors.primaryColor
+        // paddingBottom: 20,
+        color: baseColors.primaryColor,
+        alignItems:'center',
     }
 });

@@ -14,10 +14,10 @@ export default function AvaialblePlan() {
     const navigation = useNavigation();
     return (
         <View style={styles.screenContainer}>
-            
+
             <View>
                 <AppHeader styles={styles.headerContainer}>
-                    
+
                     <View
                         style={{
                             flexDirection: "row",
@@ -56,101 +56,113 @@ export default function AvaialblePlan() {
                 </AppHeader>
             </View>
             <ScrollView>
-            <View
-                style={{
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    paddingHorizontal: 10,
-                    marginBottom: 150
-                }}
-            >
-                <View style={styles.screenMiddle}>
-                    
-                <View style={{
-                        flexDirection: 'column'
-                    }}>
-                        <Text style={{ paddingHorizontal: 20, marginTop: 20, fontSize: 18, fontWeight: 'bold' }}>Avaialble Plans</Text>
-                        <AvaialblePlanCard>
-                        <View style={{height: 80,}}>
-                      <DarkGradient
-                          styles={{ elevation: 8,
-                            backgroundColor: baseColors.primaryColor,
-                            borderRadius: 50,
-                            paddingVertical: 10,
-                            marginVertical: 10,
-                            width: deviceWidth / 1 - 60,
-                            marginHorizontal: 15,
-                            justifyContent: "center",
-                            alignItems: "center"}}
-                      >
-                          <Text 
-                            onPress={()=> {
-                                navigation.navigate("MedicalHistory")
-                              }}
-                        
-                          style={{
-                              color: "#fff",
-                              fontSize: 20
-                          }}>Subscribe Now</Text>
-                      </DarkGradient>
-                  </View>
-                        </AvaialblePlanCard>
-                        <AvaialblePlanCard>
-                        <View style={{height: 80,}}>
-                      <DarkGradient
-                          styles={{ elevation: 8,
-                            backgroundColor: baseColors.primaryColor,
-                            borderRadius: 50,
-                            paddingVertical: 10,
-                            marginVertical: 10,
-                            width: deviceWidth / 1 - 60,
-                            marginHorizontal: 15,
-                            justifyContent: "center",
-                            alignItems: "center"}}
-                      >
-                          <Text 
-                            onPress={()=> {
-                                navigation.navigate("MedicalHistory")
-                              }}
-                        
-                          style={{
-                              color: "#fff",
-                              fontSize: 20
-                          }}>Subscribe Now</Text>
-                      </DarkGradient>
-                  </View>
-                        </AvaialblePlanCard>
-                        <AvaialblePlanCard>
-                        <View style={{height: 80,}}>
-                      <DarkGradient
-                          styles={{ elevation: 8,
-                            backgroundColor: baseColors.primaryColor,
-                            borderRadius: 50,
-                            paddingVertical: 10,
-                            marginVertical: 10,
-                            width: deviceWidth / 1 - 60,
-                            marginHorizontal: 15,
-                            justifyContent: "center",
-                            alignItems: "center"}}
-                      >
-                          <Text 
-                            onPress={()=> {
-                                navigation.navigate("MedicalHistory")
-                              }}
-                        
-                          style={{
-                              color: "#fff",
-                              fontSize: 20
-                          }}>Subscribe Now</Text>
-                      </DarkGradient>
-                  </View>
-                        </AvaialblePlanCard>
+                <View
+                    style={{
+                        flexDirection: "column",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        paddingHorizontal: 10,
+                        marginBottom: 150
+                    }}
+                >
+                    <View style={styles.screenMiddle}>
+
+                        <View style={{
+                            flexDirection: 'column'
+                        }}>
+                            <Text style={{ paddingHorizontal: 20, marginTop: 20, fontSize: 18, fontWeight: 'bold' }}>Avaialble Plans</Text>
+                            <AvaialblePlanCard onPress={() => {
+                                navigation.navigate("AssurancesAbout")
+                            }}>
+                                <View style={{ height: 80, }}>
+                                    <DarkGradient
+                                        styles={{
+                                            elevation: 8,
+                                            backgroundColor: baseColors.primaryColor,
+                                            borderRadius: 50,
+                                            paddingVertical: 10,
+                                            marginVertical: 10,
+                                            width: deviceWidth / 1 - 60,
+                                            marginHorizontal: 15,
+                                            justifyContent: "center",
+                                            alignItems: "center"
+                                        }}
+                                    >
+                                        <Text
+                                            onPress={() => {
+                                                navigation.navigate("MedicalHistory")
+                                            }}
+
+                                            style={{
+                                                color: "#fff",
+                                                fontSize: 20
+                                            }}>Subscribe Now</Text>
+                                    </DarkGradient>
+                                </View>
+                            </AvaialblePlanCard>
+                            <AvaialblePlanCard onPress={() => {
+                                navigation.navigate("AssurancesAbout")
+                            }}>
+                                <View style={{ height: 80, }}>
+                                    <DarkGradient
+                                        styles={{
+                                            elevation: 8,
+                                            backgroundColor: baseColors.primaryColor,
+                                            borderRadius: 50,
+                                            paddingVertical: 10,
+                                            marginVertical: 10,
+                                            width: deviceWidth / 1 - 60,
+                                            marginHorizontal: 15,
+                                            justifyContent: "center",
+                                            alignItems: "center"
+                                        }}
+                                    >
+                                        <Text
+                                            onPress={() => {
+                                                navigation.navigate("MedicalHistory")
+                                            }}
+
+                                            style={{
+                                                color: "#fff",
+                                                fontSize: 20
+                                            }}>Subscribe Now</Text>
+                                    </DarkGradient>
+                                </View>
+                            </AvaialblePlanCard>
+                            <AvaialblePlanCard onPress={() => {
+                                navigation.navigate("AssurancesAbout")
+                            }}>
+                                <View style={{ height: 80, }}>
+                                    <DarkGradient
+                                        styles={{
+                                            elevation: 8,
+                                            backgroundColor: baseColors.primaryColor,
+                                            borderRadius: 50,
+                                            paddingVertical: 10,
+                                            marginVertical: 10,
+                                            width: deviceWidth / 1 - 60,
+                                            marginHorizontal: 15,
+                                            justifyContent: "center",
+                                            alignItems: "center"
+                                        }}
+                                    >
+                                        <Text
+                                            onPress={() => {
+                                                navigation.navigate("MedicalHistory")
+                                            }}
+
+                                            style={{
+                                                color: "#fff",
+                                                fontSize: 20
+                                            }}>Subscribe Now</Text>
+                                    </DarkGradient>
+                                </View>
+                            </AvaialblePlanCard>
+                        </View>
+
+
                     </View>
-             
-                    
                 </View>
-            </View>
             </ScrollView>
         </View>
     )

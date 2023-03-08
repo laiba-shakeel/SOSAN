@@ -59,6 +59,9 @@ import AssuranceDetail from "../../Screens/Assurances/AssuranceDetail"
 import AssuranceServices from "../../Screens/Assurances/AssuranceServices"
 import AssuranceAgenda from "../../Screens/Assurances/Agenda/index"
 import AssuranceReportDetail from "../../Screens/Assurances/AssuranceReportDetail"
+import AssuranceTracking from "../../Screens/Assurances/Tracking"
+import AssuranceEditDetail from "../../Screens/Assurances/AssuranceEditDetail"
+import RegisteredClientsAssurance from "../../Screens/Assurances/RegisteredClients"
 const Stack = createNativeStackNavigator();
 const StackNavigation = () => {
   return (
@@ -124,6 +127,9 @@ const StackNavigation = () => {
         <Stack.Screen name="AssuranceServices" component={AssuranceServices}/>
         <Stack.Screen name ="AssuranceAgenda" component={AssuranceAgenda}/>
         <Stack.Screen name="AssuranceReportDetail" component={AssuranceReportDetail}/>
+        <Stack.Screen name = "AssuranceTracking" component={AssuranceTracking}/>
+        <Stack.Screen name="AssuranceEditDetail" component={AssuranceEditDetail}/>
+        <Stack.Screen name="RegisteredClientsAssurance" component={RegisteredClientsAssurance}/>
       </Stack.Navigator>
     </>
   );

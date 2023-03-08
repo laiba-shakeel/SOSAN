@@ -91,7 +91,7 @@ function Feed() {
           <Entypo name="calendar" size={24}  style={styles.itemsIconReverse}  />
             <Text
             onPress={() => {
-              navigation.navigate("Appointment");
+              navigation.navigate("AssuranceTracking");
             }}
               style={styles.itemsViewTextReverse}
             >
@@ -130,15 +130,6 @@ function Feed() {
           </View>
         </View>
       </View>
-
-      {/* <Button
-        styles={styles.Button}
-        // onPress={() => {
-        //   Navigation.navigate("Services");
-        // }}
-      >
-        <Text styles={styles.ButtonText}>Login</Text>
-      </Button> */}
       <Image
         source={require("../../../../Assets/Images/bgHero1.png")}
         style={{ height: 270,resizeMode: 'contain' }}
