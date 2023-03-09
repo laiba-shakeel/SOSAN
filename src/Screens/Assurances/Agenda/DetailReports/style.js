@@ -1,5 +1,5 @@
 import { StyleSheet, Dimensions } from "react-native";
-import baseColors from "../../../Theme/Colors/Colors";
+import baseColors from "../../../../Theme/Colors/Colors";
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 export const styles = StyleSheet.create({
@@ -11,9 +11,9 @@ export const styles = StyleSheet.create({
         backgroundColor: baseColors.lightColor,
     },
     headerContainer: {
-        backgroundColor: baseColors.sucessColor,
+        backgroundColor: baseColors.lightColor,
         height: 60,
-        marginTop: 28,
+        marginTop: 40,
         width: deviceWidth / 1,
         borderBottomLeftRadius: 15,
         borderBottomRightRadius: 15,
@@ -31,7 +31,7 @@ export const styles = StyleSheet.create({
         width: deviceWidth / 1 - 10,
         height: deviceHeight / 1,
         flexDirection: 'column',
-        // marginBottom: 100,
+        marginBottom: 50,
         // borderWidth:1
 
     },
@@ -39,7 +39,7 @@ export const styles = StyleSheet.create({
         color: baseColors.darkColor,
         height: 30,
         fontSize: 20,
-        fontWeight: '500'
+        fontWeight: 'bold'
     },
     LoginBtn: {
         elevation: 8,
@@ -61,5 +61,23 @@ export const styles = StyleSheet.create({
         flexDirection: 'column',
         borderWidth: 1,
         backgroundColor: baseColors.sucessTextColor
-    }
+    },
+    title:{
+        fontWeight: '500',
+        fontSize: 18,
+        paddingHorizontal:20,
+        marginVertical:5
+        },
+        BlueText:{
+            fontWeight: '500',
+        fontSize: 16,
+        paddingHorizontal:35,
+        color: baseColors.primaryColor,
+        marginVertical:5
+        },
+     IconText:{
+        color: "gray",
+        fontSize: 12,
+        paddingLeft:5
+     }
 })

@@ -1,14 +1,13 @@
 import React from "react";
-import { View, TouchableOpacity, Dimensions, Text, Image, ScrollView } from "react-native";
+import { View, TouchableOpacity, Dimensions, Text,  ScrollView } from "react-native";
 import AppHeader from "../../../../Components/AppHeader";
 import { styles } from "./style";
 import baseColors from "../../../../Theme/Colors/Colors";
-import Switch from "../../../../Components/SwitchSelector/RequestAndObjection";
+import NewRequestsAndObjections from "../../../../Components/SwitchSelector/NewRequestsAndObjections";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import SearchField from "../../../../Components/SearchField"
-import { AntDesign } from "@expo/vector-icons";
-import ReportCard from "../../../../Components/Cards/ReportCard";
+
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
@@ -23,13 +22,13 @@ const Document = () => {
             style={{
               flexDirection: "row",
               alignItems: "center",
-              paddingVertical: 5,
+              paddingTop: 10,
               // justifyContent:'center'
             }}
           >
             <View
               style={{
-                width: deviceWidth / 3,
+                width: deviceWidth / 6,
                 flexDirection: "row",
                 justifyContent: "flex-start",
               }}
@@ -43,6 +42,7 @@ const Document = () => {
                   size={37}
                   style={{
                     color: baseColors.lightTextColor,
+                    flexDirection: "row",
                     justifyContent: "center",
                     alignItems: "center",
                   }}
@@ -51,7 +51,7 @@ const Document = () => {
             </View>
             <View
               style={{
-                // width: deviceWidth / 3,
+                width: deviceWidth / 1.5,
                 flexDirection: "row",
                 justifyContent: "center",
               }}
@@ -67,21 +67,12 @@ const Document = () => {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          paddingHorizontal: 10,
         }}
       >
         <View style={styles.screenMiddle}>
        
-          <View
-            style={{
-              flexDirection: "column",
-              marginHorizontal: 10, 
-              marginVertical: 20,
-            //   borderWidth:1,
-              alignItems:'center'
-            }}
-          >
-             <Text> <Switch />  </Text>
+        <View style={{ height: deviceHeight / 1, }}>
+             <NewRequestsAndObjections>
              <View>
                 <SearchField
                   placeholder="Search"
@@ -97,9 +88,7 @@ const Document = () => {
                   }}
                 />
               </View>
-              <View>
-                <ReportCard/>
-              </View>
+              </NewRequestsAndObjections>
           </View>
         </View>
       </View>

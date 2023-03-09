@@ -4,10 +4,9 @@ import AppHeader from "../../../../Components/AppHeader";
 import baseColors from "../../../../Theme/Colors/Colors";
 import SearchField from "../../../../Components/SearchField";
 import { useNavigation } from "@react-navigation/native";
-import { FlagButtonOne, LogoR } from "../../../../Assets/Images";
+import { FlagButtonOne, LogoR , bgHero} from "../../../../Assets/Images/index";
 import {
   FontAwesome5,
-  MaterialIcons,
   Entypo,
 } from "@expo/vector-icons";
 import { styles } from "./style";
@@ -63,7 +62,6 @@ function Feed() {
         </View>
       </AppHeader>
       <View style={styles.items}>
-        <Text style={styles.Text}>Select Institude Type</Text>
 
         <View
           style={{
@@ -79,7 +77,7 @@ function Feed() {
             />
             <Text
               onPress={() => {
-                navigation.navigate("AssuranceAgenda");
+                navigation.navigate("AssuranceAgendaReports");
               }}
               style={styles.itemsViewText}
             >
@@ -121,7 +119,7 @@ function Feed() {
             />
             <Text
              onPress={() => {
-              navigation.navigate("Epargne");
+              navigation.navigate("Plans");
             }}
               style={styles.itemsViewText}
             >
@@ -131,7 +129,7 @@ function Feed() {
         </View>
       </View>
       <Image
-        source={require("../../../../Assets/Images/bgHero1.png")}
+        source={bgHero}
         style={{ height: 270,resizeMode: 'contain' }}
         
       />

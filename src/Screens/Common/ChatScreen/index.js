@@ -4,7 +4,7 @@ import AppHeader from "../../../Components/AppHeader";
 import { styles } from "./style";
 import baseColors from '../../../Theme/Colors/Colors';
 import { Ionicons } from "@expo/vector-icons";
-import { AvatarPerson1, keyboardImg } from '../../../Assets/Images';
+import { AvatarPerson1,  } from '../../../Assets/Images';
 import SendMessage from '../../../Components/Cards/ChattingCard/SendMessage/index';
 import ReceiveMessage from "../../../Components/Cards/ChattingCard/ReceiveMessage"
 import TextInputField from '../../../Components/InputFiled';
@@ -90,11 +90,6 @@ const ChatScreen = () => {
                         <SendMessage />
                         <ReceiveMessage />
                     </View>
-                    <ScrollView>
-                    <View style={{  justifyContent: 'flex-end', alignItems: 'center' }}>
-                        <Image source={keyboardImg} style={{ height: 250, width: 350 }} />
-                    </View>
-                    </ScrollView>
 
                 </View>
             </View>

@@ -1004,6 +1004,64 @@ export const AvailabilityPharmacyData = [
     Distance: "10-km-far",
   },
   
+];
+export const NewRequestsAndObjectionsData = [
+  {
+    image:AvatarPerson1,
+    title: "Alfonso Vetrovs",
+    year:"23years` Male",
+    goto:'IssuranceEditDetail',
+    goToChat:'Conversation'
+    
+    
+  },
+];
+export const ClearedAndPendingData = [
+  {
+    image:AvatarPerson1,
+    title: "Alfonso Vetrovs",
+    year:"23years` Male",
+    goto:'AssuranceReportDetail',
+    goToChat:'ChatScreen'
+    
+    
+  },
+  {
+    image:AvatarPerson1,
+    title: "Alfonso Vetrovs",
+    year:"23years` Male",
+    goto:'AssuranceReportDetail',
+    goToChat:'ChatScreen'
+    
+    
+  },
+  {
+    image:AvatarPerson1,
+    title: "Alfonso Vetrovs",
+    year:"23years` Male",
+    goto:'AssuranceReportDetail',
+    goToChat:'ChatScreen'
+    
+    
+  },
+  {
+    image:AvatarPerson1,
+    title: "Alfonso Vetrovs",
+    year:"23years` Male",
+    goto:'AssuranceReportDetail',
+    goToChat:'ChatScreen'
+    
+    
+  },
+  {
+    image:AvatarPerson1,
+    title: "Alfonso Vetrovs",
+    year:"23years` Male",
+    goto:'AssuranceReportDetail',
+    goToChat:'ChatScreen'
+    
+    
+  },
 ]
 
 

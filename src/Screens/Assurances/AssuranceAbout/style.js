@@ -1,7 +1,9 @@
 import { StyleSheet, Dimensions } from "react-native";
 import baseColors from "../../../Theme/Colors/Colors";
+
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
+
 export const styles = StyleSheet.create({
     screenContainer: {
         height: deviceHeight / 1,

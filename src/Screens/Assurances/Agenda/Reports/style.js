@@ -1,5 +1,5 @@
 import { StyleSheet, Dimensions } from "react-native";
-import baseColors from "../../../Theme/Colors/Colors";
+import baseColors from "../../../../Theme/Colors/Colors";
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 export const styles = StyleSheet.create({
@@ -10,15 +10,15 @@ export const styles = StyleSheet.create({
         flexDirection: "column",
         backgroundColor: baseColors.lightColor,
     },
-    headerContainer: {
-        backgroundColor: baseColors.lightColor,
-        height: 60,
-        marginTop: 40,
-        width: deviceWidth / 1,
-        borderBottomLeftRadius: 15,
-        borderBottomRightRadius: 15,
-        paddingVertical: 8
-    },
+    headerContainer:{ 
+      backgroundColor:baseColors.sucessColor,
+      height: 60, 
+      marginTop: 35, 
+      width: deviceWidth/1,
+      borderBottomLeftRadius:15,
+      borderBottomRightRadius:15,
+      paddingVertical:8,
+  },
     LinearGradient: {
         borderColor: baseColors.lightColor,
         height: 170,
@@ -28,10 +28,11 @@ export const styles = StyleSheet.create({
         borderBottomRightRadius: 27
     },
     screenMiddle: {
-        width: deviceWidth / 1 - 10,
+        width: deviceWidth / 1 ,
         height: deviceHeight / 1,
         flexDirection: 'column',
-        marginBottom: 50,
+        alignItems:'center',
+        // marginBottom: 100,
         // borderWidth:1
 
     },
@@ -39,7 +40,7 @@ export const styles = StyleSheet.create({
         color: baseColors.darkColor,
         height: 30,
         fontSize: 20,
-        fontWeight: 'bold'
+        fontWeight: '500'
     },
     LoginBtn: {
         elevation: 8,
@@ -62,22 +63,9 @@ export const styles = StyleSheet.create({
         borderWidth: 1,
         backgroundColor: baseColors.sucessTextColor
     },
-    title:{
-        fontWeight: '500',
-        fontSize: 18,
-        paddingHorizontal:20,
-        marginVertical:5
-        },
-        BlueText:{
-            fontWeight: '500',
-        fontSize: 16,
-        paddingHorizontal:35,
-        color: baseColors.primaryColor,
-        marginVertical:5
-        },
-     IconText:{
-        color: "gray",
-        fontSize: 12,
-        paddingLeft:5
-     }
+    contentContainer: {
+      width: deviceWidth/1,
+      flexDirection: "column",
+      alignItems:'center',
+    },
 })

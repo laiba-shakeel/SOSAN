@@ -4,14 +4,15 @@ const deviceWidth = Dimensions.get("window").width;
 export const styles = StyleSheet.create({
     Container: {
         flexDirection: 'column',
+        alignItems:'center',
         paddingVertical:10,
         borderWidth:1,
         backgroundColor:baseColors.LightSecondaryColor,
-        elevation:12,
+        elevation:4,
         borderRadius:10,
+        width:deviceWidth/1-25,
         borderColor: baseColors.lightColor,
-        marginHorizontal:10,
-        marginVertical:10
+        marginVertical:10,
     },
     item: {
         flexDirection: 'row',
@@ -47,7 +48,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         paddingHorizontal:10,
         // borderWidth:1,
-        width: deviceWidth / 4-10
+        width: deviceWidth / 4-10,
     },
     id: {
         color: 'gray'

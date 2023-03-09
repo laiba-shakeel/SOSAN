@@ -7,16 +7,18 @@ import {
   Text,
   ScrollView,
 } from "react-native";
-import AppHeader from "../../../Components/AppHeader";
+import AppHeader from "../../../../Components/AppHeader";
 import { styles } from "./style";
 import { Ionicons, AntDesign } from "@expo/vector-icons";
-import baseColors from "../../../Theme/Colors/Colors";
-import Calender from "../../../Components/Calender";
-import SearchField from "../../../Components/SearchField";
-import ReportCard from "../../../Components/Cards/ReportCard";
-import Switch from "../../../Components/SwitchSelector/ClearAndPending"
+import baseColors from "../../../../Theme/Colors/Colors";
+import AppointmentAccountID from "../../../../Components/Cards/AppointmentID";
+import { Entypo } from '@expo/vector-icons';
+import PreciptionList from "../../../../Components/List/PrecriptionList";
+
 const deviceWidth = Dimensions.get("window").width;
-export default function AssuranceAgenda() {
+
+export default function AssuranceReportDetail() {
+
   const navigation = useNavigation();
   return (
     <View style={styles.screenContainer}>
@@ -39,12 +41,12 @@ export default function AssuranceAgenda() {
               <TouchableOpacity>
                 <Ionicons
                   onPress={() => {
-                    navigation.goBack("AssurancesAbout");
+                    navigation.goBack("");
                   }}
                   name="chevron-back-sharp"
                   size={37}
                   style={{
-                    color: baseColors.lightTextColor,
+                    color: baseColors.darkColor,
                     justifyContent: "center",
                     alignItems: "center",
                   }}
@@ -58,7 +60,7 @@ export default function AssuranceAgenda() {
                 justifyContent: "center",
               }}
             >
-              <Text style={styles.textHeading}>Reports</Text>
+              <Text style={styles.textHeading}> Detail Report</Text>
             </View>
             <View
               style={{
@@ -85,39 +87,29 @@ export default function AssuranceAgenda() {
                 flexDirection: "column",
               }}
             >
-              <View
-                style={{
-                  borderBottomWidth: 1,
-                  borderBottomColor: baseColors.lightGreyColor,
-                }}
-              >
-                <Calender />
+              <AppointmentAccountID />
+              <View style={{ flexDirection: 'column', justifyContent: 'space-around', }}>
+                <Text style={styles.title}>Plan Subcribe</Text>
+                <Text style={styles.BlueText}>ASCOMA</Text>
+                <View style={{ flexDirection: 'column', justifyContent: 'space-around', marginHorizontal: 45, marginBottom: 6, }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', }}>
+                    <AntDesign name="heart" size={12} color="green" />
+                    <Text style={styles.IconText}>Coverage 60%</Text>
+                  </View>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', }}>
+                    <Entypo name="lock" size={12} color="blue" />
+                    <Text style={styles.IconText}>15 years</Text>
+                  </View>
+                </View>
               </View>
               <View>
-                <SearchField
-                  placeholder="Search"
-                  styles={{
-                    width: deviceWidth / 1 - 40,
-                    height: 55,
-                    borderRadius: 20,
-                    elevation: 2,
-                    marginHorizontal: 15,
-                    marginVertical: 15,
-                    backgroundColor: baseColors.lightColor,
-                    color: baseColors.lightGreyColor,
-                  }}
-                />
-              
-              </View>
-            <Text style={{marginHorizontal:15 , marginBottom:10}}> <Switch/></Text>
-              <View style={{ width: deviceWidth / 2, alignItems: "center" }}>
-                <Text style={styles.textHeading}>List of client</Text>
+                <Text style={styles.title}>Claims</Text>
               </View>
               <View>
-                <ReportCard />
-                <ReportCard />
-                <ReportCard />
-                <ReportCard />
+              <PreciptionList/>
+              </View>
+              <View>
+              <PreciptionList/>
               </View>
             </View>
           </View>

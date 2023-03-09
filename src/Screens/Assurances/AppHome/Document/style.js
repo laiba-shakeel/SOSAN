@@ -14,12 +14,12 @@ export const styles = StyleSheet.create({
   },
   headerContainer:{ 
     backgroundColor:baseColors.sucessColor,
-    height: 60, 
+    height: 70, 
     marginTop: 25, 
     width: deviceWidth/1,
     borderBottomLeftRadius:15,
     borderBottomRightRadius:15,
-    paddingVertical:8
+    paddingVertical:10
 },
 LinearGradient: {
     
@@ -38,7 +38,8 @@ LinearGradient: {
     height: deviceHeight / 1,
     flexDirection:'column',
     alignItems:'center',
-    // borderWidth: 2
+    
+    
   
   },
   textHeading:{

@@ -70,8 +70,8 @@ import InsuranceTabBottomNavigation from "../InsuranceTabBottomNavigation"
 import AssuranceAppHome from "../../Screens/Assurances/AppHome";
 import AssuranceDetail from "../../Screens/Assurances/AssuranceDetail"
 import AssuranceServices from "../../Screens/Assurances/AssuranceServices"
-import AssuranceAgenda from "../../Screens/Assurances/Agenda/index"
-import AssuranceReportDetail from "../../Screens/Assurances/AssuranceReportDetail"
+import AssuranceAgendaReports from "../../Screens/Assurances/Agenda/Reports";
+import AssuranceReportDetail from "../../Screens/Assurances/Agenda/DetailReports"
 import AssuranceTracking from "../../Screens/Assurances/Tracking"
 import AssuranceEditDetail from "../../Screens/Assurances/AssuranceEditDetail"
 import RegisteredClientsAssurance from "../../Screens/Assurances/RegisteredClients"
@@ -79,6 +79,7 @@ import AssurancePlanDetail from "../../Screens/Assurances/AssurancePlanDetail"
 import AssuranceTermsAndCondition from "../../Screens/Assurances/AssuranceTermsAndCondition"
 import PharmacyOrderList from "../../Screens/Pharmacy/OrderList";
 import SearchDrug from "../../Screens/Pharmacy/SearchDrug";
+import Plans from "../../Screens/Assurances/Plans"
 import AddDrug from "../../Screens/Pharmacy/AddDrug";
 import NearbyPharmacy from "../../Screens/Pharmacy/NearbyPharmacy";
 import AttachmentPharmacy from "../../Screens/Pharmacy/AttachmentPharmacy";
@@ -162,7 +163,7 @@ const StackNavigation = () => {
         <Stack.Screen name="AssuranceAppHome" component={AssuranceAppHome} />
         <Stack.Screen name="AssuranceDetail" component={AssuranceDetail} />
         <Stack.Screen name="AssuranceServices" component={AssuranceServices} />
-        <Stack.Screen name="AssuranceAgenda" component={AssuranceAgenda} />
+        <Stack.Screen name="AssuranceAgendaReports" component={AssuranceAgendaReports} />
         <Stack.Screen name="AssuranceReportDetail" component={AssuranceReportDetail} />
         <Stack.Screen name="AssuranceTracking" component={AssuranceTracking} />
         <Stack.Screen name="AssuranceEditDetail" component={AssuranceEditDetail} />
@@ -208,6 +209,7 @@ const StackNavigation = () => {
         <Stack.Screen name="CurrentCampaignPharmacy" component={CurrentCampaignPharmacy}/>
         <Stack.Screen name="SetCampaignPharmacy" component={SetCampaignPharmacy}/>
         <Stack.Screen name="PharmacyTabBottomNavigation" component={PharmacyTabBottomNavigation} />
+        <Stack.Screen name="Plans" component={Plans}/>
       </Stack.Navigator>
     </>
   );
