@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import CheckButton from '../../../Components/CheckButton';
+import CheckButton from '../../../Components/CheckboxButton';
 import Button from "../../../Components/Buttons";
 import {styles} from "./style"
 

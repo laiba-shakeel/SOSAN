@@ -2,7 +2,7 @@ import React, { useState  } from "react";
 import { Text, View, Dimensions,Image } from "react-native";
 import {Feather} from "@expo/vector-icons";
 import {styles} from "./style.js"
-import { SuccessImage } from "../../../Assets/images";
+import { SuccessImage } from "../../../Assets/Images";
 import Modal from "react-native-modal";
 
 const deviceHeight = Dimensions.get("window").height;

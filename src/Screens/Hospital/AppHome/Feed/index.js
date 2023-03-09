@@ -4,7 +4,7 @@ import AppHeader from "../../../../Components/AppHeader";
 import baseColors from "../../../../Theme/Colors/Colors";
 import SearchField from "../../../../Components/SearchField";
 import DarkGradient from "../../../../Components/Gradient/DarkGradient";
-import ReverseDarkGradient from "../../../../Components/Gradient/ReverseDarkGradient";
+import ReverseDarkGradient from "../../../../Components/Gradient/ReverseGradient";
 import { useNavigation } from "@react-navigation/native";
 import { Logo,  BottomImage, FlagButtonOne } from "../../../../Assets/Images/index";
 import {

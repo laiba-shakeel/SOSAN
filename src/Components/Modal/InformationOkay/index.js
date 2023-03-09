@@ -4,12 +4,14 @@ import { useNavigation } from "@react-navigation/native";
 import Button from "../../Buttons/index";
 import baseColors from "../../../Theme/Colors/Colors";
 import Modal from "react-native-modal";
-import InputField from "../../InputFiled/index"
+import InputField from "../../InputFiled"
+
+
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 
-function AccountReviewModal({isVisible, onPress,children}) {
+function InformationOkay({isVisible, onPress,children}) {
   const Navigation = useNavigation();
 
   return (
@@ -20,24 +22,26 @@ function AccountReviewModal({isVisible, onPress,children}) {
 
       <Modal 
       isVisible={isVisible}
-      backdropOpacity={0.1}
+      backdropOpacity={10}
       style={{
         flex: 1,
         height: deviceHeight / 1,
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: 'flex-end',
-        paddingVertical:60,
+        justifyContent: 'center',
+        
       }}
       >
         
               <View style={styles.modalView}>
-              <View style={styles.Text}>
-              <Text style={styles.formText}>Quantity</Text>
-              </View>
+              <Text style={styles.formText}>
+                Lorem Ipsum is that it has a more or less
+                normal distribution Lorem Ipsum is that it has a more or less
+                normal distribution 
+                </Text>
               <Button styles={styles.Button}
               onPress={() => {
-                Navigation.navigate("AddDrug");
+                Navigation.goBack("");
               }}
               >
                 <Text style={styles.ButtonText}>Done</Text>
@@ -57,24 +61,21 @@ const styles = StyleSheet.create({
         flexDirection:'column',
         backgroundColor: baseColors.lightColor,
         alignItems:'center',
-        justifyContent:'flex-end',
+        justifyContent:'center',
         width:deviceWidth/1.2,
-        height:deviceHeight/3.7,
+        height:deviceHeight/4,
         paddingVertical:30,
         borderRadius:15,
         elevation:2
         
       },
-      Text:{
-        flexDirection:'row',
-        width:deviceWidth/1.6
-      },
+      
       Button: {
         elevation: 2,
-        backgroundColor: baseColors.primaryColor,
+        backgroundColor: baseColors.sucessColor,
         borderRadius: 50,
         paddingHorizontal: 12,
-        width: deviceWidth / 2.5,
+        width: deviceWidth / 1.5,
         height: 40,
         marginVertical: 10,
         justifyContent: "center",
@@ -89,9 +90,23 @@ const styles = StyleSheet.create({
       formText: {
         color: baseColors.darkTextColor,
         fontSize: 16,
+        textAlign:'center',
+        width:deviceWidth/1.3,
         
       },
-
+      InputField: {
+        height: 40,
+        margin: 5,
+        borderColor: baseColors.sucessColor,
+        borderWidth: 1,
+        borderRadius: 50,
+        padding: 10,
+        width: deviceWidth / 1.5,
+      },
+      
+    
+        
+ 
 })
 
-export default AccountReviewModal
+export default InformationOkay

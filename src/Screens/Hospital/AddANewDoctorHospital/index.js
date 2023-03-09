@@ -1,7 +1,7 @@
 import React from 'react'
 import {Text, View, style} from 'react-native'
-import baseColors from '../../../Theme/Colors/Colorsr'
-import CommonDetail from '../../Auth/Details/CommonDetail'
+import baseColors from '../../../Theme/Colors/Colors'
+import CommonDetail from '../../Common/Details/CommonDetail'
 import { useNavigation } from '@react-navigation/native'
 
 function AddANewDoctorHospital() {

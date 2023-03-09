@@ -6,7 +6,7 @@ import { styles } from "./style";
 import baseColors from "../../../Theme/Colors/Colors";
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons,FontAwesome } from "@expo/vector-icons";
-import OverviewAmountModal from "../../../Components/Modal/OverviewAmountModal";
+import OverviewAmountModal from "../../../Components/Modal/OverViewAmountModal";
 
 
 const deviceHeight = Dimensions.get("window").height;

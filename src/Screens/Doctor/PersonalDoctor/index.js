@@ -13,7 +13,7 @@ import { useNavigation } from "@react-navigation/native";
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 
-function  AddANewDoctorPharmacy() {
+function  PersonalDetailDoctor() {
   const Navigation = useNavigation();
   return (
     
@@ -22,17 +22,17 @@ function  AddANewDoctorPharmacy() {
       <AppHeader
         styles={styles.headerContainer}
       >
-        <View style={{ flexDirection: "row", alignItems:'center', paddingTop:10 }}>
-          <View style={{ width: deviceWidth / 5,flexDirection:'row', justifyContent:'flex-start' }}>
+        <View style={{ flexDirection: "row", alignItems:'center', paddingVertical:5 }}>
+          <View style={{ width: deviceWidth / 3,flexDirection:'row', justifyContent:'flex-start' }}>
             <TouchableOpacity
              onPress={() => {
-              Navigation.goBack('');
+              Navigation.goBack('UserAppHome');
             }}>
             <Ionicons name="chevron-back-sharp" size={30} color="black" />
             </TouchableOpacity>
           </View>
-          <View style={{ width: deviceWidth / 2,flexDirection:'row', justifyContent:'center' }}>
-            <Text style={{fontWeight:'bold', fontSize:17}}>Add A New Detail</Text>
+          <View style={{ width: deviceWidth / 3,flexDirection:'row', justifyContent:'center' }}>
+            <Text style={{fontWeight:'bold'}}>Personal Detail</Text>
           </View>
           
         </View>
@@ -84,8 +84,8 @@ function  AddANewDoctorPharmacy() {
           <Button
             styles={styles.Button}
             onPress={() => {
-              Navigation.navigate("WorkingDetailPharmacy");
-            }}
+                     Navigation.navigate("AssociationDetailDoctor");
+                  }}
           >
             <Text styles={styles.ButtonText}>Login</Text>
           </Button>
@@ -98,5 +98,7 @@ function  AddANewDoctorPharmacy() {
   );
 }
 
-export default  AddANewDoctorPharmacy;
+export default  PersonalDetailDoctor;
+
+
 

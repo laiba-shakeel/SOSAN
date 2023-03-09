@@ -13,8 +13,8 @@ import baseColors from "../../Theme/Colors/Colors";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { FontAwesome, MaterialIcons } from "@expo/vector-icons";
-import { AddDrugData } from "../../Config";
-import { AvatarPerson1 } from "../../Assets/images";
+import { AddDrugData } from "../../Config/Data";
+import { AvatarPerson1 } from "../../Assets/Images";
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;

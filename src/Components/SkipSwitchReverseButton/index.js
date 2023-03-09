@@ -9,8 +9,8 @@ import {
 } from "react-native";
 import baseColors from "../../Theme/Colors/Colors";
 import { DummyPerson } from "../../Assets/Images/index";
-import InputField from "../InputField/index";
-import SelectDropdown from "../SelectDropdown/index";
+import InputField from "../InputFiled";
+import SelectDropdown from "../SelectDropDown";
 import Button from "../Buttons/index";
 import { useNavigation } from "@react-navigation/native";
 

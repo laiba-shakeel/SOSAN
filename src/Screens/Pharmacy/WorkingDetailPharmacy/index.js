@@ -1,7 +1,7 @@
 import React from 'react'
 import {Text, View, StyleSheet,ScrollView, Dimensions} from 'react-native'
 import baseColors from '../../../Theme/Colors/Colors'
-import InputField from '../../../Components/InputFiled/index'
+import InputField from '../../../Components/InputFiled'
 import MapMarkHere from '../../../Components/MapMarkHere/index'
 import Map from '../../../Components/Map/index'
 import Button from '../../../Components/Buttons/index'
@@ -11,7 +11,7 @@ import { useNavigation } from '@react-navigation/native'
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 
-function WorkingDetailHospital() {
+function WorkingDetailPharmacy() {
   const Navigation = useNavigation();
   return (
     <ScrollView style={styles.screenContainer}>
@@ -30,7 +30,7 @@ function WorkingDetailHospital() {
         <Button
             styles={styles.Button}
             onPress={() => {
-              Navigation.navigate("DoctorDetailHospital");
+              Navigation.navigate("DoctorDetailPharmacy");
             }}
           >
             <Text styles={styles.ButtonText}>Login</Text>
@@ -40,7 +40,6 @@ function WorkingDetailHospital() {
     
   )
 }
-
 const styles = StyleSheet.create({
   screenContainer: {
     height: deviceHeight / 1,
@@ -92,4 +91,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default WorkingDetailHospital
+export default WorkingDetailPharmacy

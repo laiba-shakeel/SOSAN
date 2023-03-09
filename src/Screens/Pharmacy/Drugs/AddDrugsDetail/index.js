@@ -8,12 +8,13 @@ import AppHeader from "../../../../Components/AppHeader";
 import { Ionicons } from "@expo/vector-icons";
 import { DummyPerson } from "../../../../Assets/Images/index";
 import { useNavigation } from "@react-navigation/native";
+import baseColors from "../../../../Theme/Colors/Colors";
 
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 
-function AuthDetail() {
+function AddDrugsDetailPharmacy() {
   const Navigation = useNavigation();
   return (
     
@@ -31,37 +32,33 @@ function AuthDetail() {
             <Ionicons name="chevron-back-sharp" size={30} color="black" />
             </TouchableOpacity>
           </View>
-          <View style={{ width: deviceWidth / 5,flexDirection:'row', justifyContent:'center' }}>
-            <Text style={{fontWeight:'bold'}}> Detail</Text>
+          <View style={{ width: deviceWidth / 3,flexDirection:'row', justifyContent:'center' }}>
+            <Text style={{fontWeight:'bold', fontSize:18}}>Add Drug</Text>
           </View>
           
         </View>
       </AppHeader>
       <View style={styles.screen}>
       <ScrollView showsVerticalScrollIndicator={false}>
+       <View style={{height:deviceHeight/1.3,}}>
+        <View style={styles.imageStyle}>
+          <Image
+            style={styles.image}
+            source={DummyPerson}
+          />
+          <View style={styles.ImageButtonView}>
+          <Button styles={styles.ImageButtonViewText}
+           onPress={() => {
+            Navigation.navigate("RequestANewMedicineDetail");
+          }}
+          >
+            <Text style={{color:baseColors.lightTextColor, fontSize:12}}>Request New Medicine</Text></Button>
+          </View>
+        </View>
 
         <Text style={styles.formText}>Institude Name</Text>
-        <InputField
-          placeholder="Your Email"
-          styles={styles.InputField}
-        ></InputField>
-        
-        <Text style={styles.formText}>Institude Name</Text>
-        <InputField
-          placeholder="Your Email"
-          styles={styles.InputField}
-        ></InputField>
         <SelectDropdown />
-        <Text style={styles.formText}>Phone</Text>
-        <InputField
-          placeholder="Type Here"
-          styles={styles.InputField}
-        ></InputField>
-        <Text style={styles.formText}>Website</Text>
-        <InputField
-          placeholder="Type Here"
-          styles={styles.InputField}
-        ></InputField>
+        
         <Text style={styles.formText}>About</Text>
         <InputField
           placeholder="Type Here"
@@ -69,17 +66,17 @@ function AuthDetail() {
           numberOfLines={6}
           styles={styles.InputFieldAbout}
         ></InputField>
+        </View>
         
           <Button
             styles={styles.Button}
             onPress={() => {
-              Navigation.navigate("UserAppHome");
+              Navigation.goBack("");
             }}
           >
-            <Text styles={styles.ButtonText}>Login</Text>
+            <Text style={styles.ButtonText}>Next</Text>
           </Button>
-        
-        
+
       </ScrollView>
       
       </View>
@@ -87,4 +84,4 @@ function AuthDetail() {
   );
 }
 
-export default AuthDetail;
+export default AddDrugsDetailPharmacy;

@@ -20,7 +20,7 @@ import {
 import { styles } from "./style";
 import DarkGradient from "../../../Components/Gradient/DarkGradient";
 import { useNavigation } from "@react-navigation/native";
-import { AvatarPerson2 } from "../../../Assets/images";
+import { AvatarPerson2 } from "../../../Assets/Images";
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
@@ -294,3 +294,4 @@ function SelectDateAppointment() {
   );
 }
 
+export default SelectDateAppointment;

@@ -11,7 +11,7 @@ import AppHeader from "../../../../Components/AppHeader/index";
 import { styles } from "./style";
 import baseColors from "../../../../Theme/Colors/Colors";
 import { Ionicons } from "@expo/vector-icons";
-import SpecialistAndDiagnostics from "../../../../Components/SwitchSelector/SpecialistAndDiagnostics"
+import SpecialistAndDiagnostics from "../../../../Components/SwitchSelector/SpeciaistAndDiagnostics"
 import { MaterialIcons } from '@expo/vector-icons';
 import DarkGradient from '../../../../Components/Gradient/DarkGradient'
 import { useNavigation } from "@react-navigation/native";

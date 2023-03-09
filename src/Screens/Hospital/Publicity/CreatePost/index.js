@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View, ScrollView, Image,Dimensions, TouchableOpacity } from "react-native";
 import { styles } from "./style";
-import InputField from "../../../../Components/InputField";
+import InputField from "../../../../Components/InputFiled";
 import Button from "../../../../Components/Buttons";
 import AppHeader from "../../../../Components/AppHeader";
 import { Ionicons } from "@expo/vector-icons";

@@ -126,7 +126,7 @@ const navigation = useNavigation();
           <FontAwesome5 name="hand-holding-heart" size={24} style={styles.itemsIcon} />
             <Text
               
-              onPress={()=>navigation.navigate('Epargne')}
+              onPress={()=>navigation.navigate('NearbyDonation')}
               style={styles.itemsViewText}
             >
               DONS ONG/ ASSOCIATIONS

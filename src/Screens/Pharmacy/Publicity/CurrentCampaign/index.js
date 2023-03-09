@@ -10,19 +10,18 @@ import {
 import AppHeader from "../../../../Components/AppHeader/index";
 import { styles } from "./style";
 import baseColors from "../../../../Theme/Colors/Colors";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons,EvilIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
-import { FontAwesome, MaterialIcons } from "@expo/vector-icons";
-import { AddDrugData } from "../../../../Config/Data/index";
-import { AvatarPerson1 } from "../../../../Assets/Images/index";
-import { Checkbox } from "react-native-paper";
+import { CurrentChampaignDataPharmacy } from "../../../../Config/Data";
+import { MaterialIcons } from '@expo/vector-icons';
+import DarkGradient from '../../../../Components/Gradient/DarkGradient'
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 
 let colors = [baseColors.lightColor, baseColors.LightSecondaryColor];
 
-function AgendaSendBill(props) {
+function CurrentCampaignPharmacy() {
   const Navigation = useNavigation();
   return (
     <View style={styles.screenContainer}>
@@ -67,9 +66,8 @@ function AgendaSendBill(props) {
                   color: baseColors.lightTextColor,
                   fontSize: 18,
                 }}
-                title="Reversation"
               >
-                Drugs Requests
+                 Current Champaign
               </Text>
             </View>
           </View>
@@ -81,16 +79,16 @@ function AgendaSendBill(props) {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          paddingHorizontal: 10,
         }}
       >
         <View style={styles.screenMiddle}>
-          {props.children}
+          
           <View
             style={{
               flexDirection:'column',
               alignItems:'center',
-              width: deviceWidth / 1,
+              width: deviceWidth / 1-10,
+              height:deviceHeight/1.3,
               borderTopRightRadius: 30,
               borderTopLeftRadius: 30,
               paddingTop: 10,
@@ -110,7 +108,7 @@ function AgendaSendBill(props) {
             >
               <View
                 style={{
-                  width: deviceWidth / 1.15,
+                  width: deviceWidth / 1.2,
                   flexDirection: "row",
                   justifyContent: "space-around",
                   alignItems: "center",
@@ -121,46 +119,43 @@ function AgendaSendBill(props) {
                     color: baseColors.lightTextColor,
                   }}
                 >
-                  Select
+                   Medicine
                 </Text>
                 <Text
                   style={{
                     color: baseColors.lightTextColor,
                   }}
                 >
-                  Medicine Name
+                   Old Price
                 </Text>
                 <Text
                   style={{
                     color: baseColors.lightTextColor,
                   }}
                 >
-                  Dosage
+                   New Price
                 </Text>
+                
                 <Text
                   style={{
                     color: baseColors.lightTextColor,
                   }}
                 >
-                  Qnty.
-                </Text>
-                <Text
-                  style={{
-                    color: baseColors.lightTextColor,
-                  }}
-                >
-                  Add Price
+                  Action
                 </Text>
               </View>
             </View>
-            <TouchableOpacity onPress={props.onPress}>
+            
+            <TouchableOpacity 
+            onPress={()=>{Navigation.navigate('SetCampaignPharmacy') }}
+            >
               <FlatList
-                data={AddDrugData}
+                data={CurrentChampaignDataPharmacy}
                 keyExtractor={(item, index) => index}
                 renderItem={({ item, index }) => (
                   <View
                     style={{
-                      width: deviceWidth / 1 - 40,
+                      width: deviceWidth / 1 - 25,
                       flexDirection: "row",
                       justifyContent: "space-around",
                       alignItems: "center",
@@ -169,27 +164,56 @@ function AgendaSendBill(props) {
                       backgroundColor: colors[index % colors.length],
                     }}
                   >
-                    <Checkbox
-                     
-                    />
                     <Text>{item?.title}</Text>
-                    <Text>{item?.formula}</Text>
-                    <Text>{item?.Quantity}</Text>
-                    <View style={{
-                      borderWidth:1,
-                      borderColor:baseColors.sucessColor,
-                      width:42,
-                      height:25,
-                      borderRadius:8,
-                      backgroundColor:baseColors.lightColor
-                    }}>
-
-                    </View>
+                    <Text>$ 50</Text>
+                    <Text>$ 50</Text>
+                    <View
+                    style={{
+                      flexDirection: "row",
+                      justifyContent: "space-around",
+                      alignItems: "center",
+                    }}
+                    >
+                    <Ionicons name="ios-trash-bin-sharp" size={20} color='red'  
+                   />
+                   <EvilIcons name="pencil" size={28} color="grey" 
+                   onPress={()=>{Navigation.navigate('SetCampaignPharmacy') }}
+                   />
+                   </View>
                   </View>
                 )}
               />
             </TouchableOpacity>
           </View>
+          
+          <View style={{
+              flexDirection: 'row',
+              alignItems: 'flex-end',
+              justifyContent: 'flex-end',
+              width: deviceWidth / 1 - 30,
+
+
+            }}>
+
+              <DarkGradient
+                styles={{
+                  elevation: 8,
+                  backgroundColor: baseColors.sucessColor,
+                  borderRadius: 50,
+                  padding: 10,
+                  // paddingHorizontal: 12,
+                  width: 60,
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: 60,
+                  // marginVertical: 20,
+                }}>
+                <MaterialIcons name="add" size={40} color="#fff"  
+                onPress={()=>{Navigation.navigate('SetCampaignPharmacy') }}
+                />
+              </DarkGradient>
+            </View>
+          
         </View>
       </View>
       {/* </ScrollView> */}
@@ -197,4 +221,4 @@ function AgendaSendBill(props) {
   );
 }
 
-export default AgendaSendBill;
+export default CurrentCampaignPharmacy;
