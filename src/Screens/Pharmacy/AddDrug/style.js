@@ -1,6 +1,5 @@
 import { StyleSheet, Dimensions } from "react-native";
 import baseColors from "../../../Theme/Colors/Colors";
-
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
 
@@ -40,7 +39,6 @@ export const styles = StyleSheet.create({
   screenMiddle: {
     width: deviceWidth / 1 - 20,
     flexDirection: "column",
-    marginBottom: 100
   },
   items: {
     backgroundColor: baseColors.lightColor,

@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   Dimensions,
   Image,
+  StyleSheet,
   ScrollView,
 } from "react-native";
 import AppHeader from "../../../Components/AppHeader/index";
@@ -19,7 +20,7 @@ import {
 import { styles } from "./style";
 import DarkGradient from "../../../Components/Gradient/DarkGradient";
 import { useNavigation } from "@react-navigation/native";
-import { AvatarPerson2 } from "../../../Assets/Images/index";
+import { AvatarPerson2 } from "../../../Assets/images";
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
@@ -293,6 +294,3 @@ function SelectDateAppointment() {
   );
 }
 
-
-
-export default SelectDateAppointment;

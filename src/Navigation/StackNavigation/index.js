@@ -43,11 +43,27 @@ import MedicationPharmacy from "../../Screens/Pharmacy/MedicationPharmacy";
 import NearbyHospital from "../../Screens/Hospital/NearByHospital";
 import HospitalDoctor from "../../Screens/Hospital/HospitalDoctor";
 import AppointmentDoctor from "../../Screens/Hospital/AppointmentDoctor";
+import SelectDateAppointment from "../../Screens/Hospital/SelectDateAppointment";
+import AddANewDoctorHospital from "../../Screens/Hospital/AddANewDoctorHospital";
+import AddServices from "../../Screens/Hospital/AddServices";
+import AgendaAppointment from "../../Screens/Hospital/Agenda/AgendaAppointment";
+import AgendaAppointmentDetail from "../../Screens/Hospital/Agenda/AgendaAppointmentDetail";
+import TestAppointmentDetail from "../../Screens/Hospital/Agenda/TestAppointmentDetail";
+import AssociationDetailHospital from "../../Screens/Hospital/AssociationDetailHospital";
+import DoctorDetailHospital from "../../Screens/Hospital/DoctorDetailHospital";
+import OverViewHospitality from "../../Screens/Hospital/Overview";
+import ProfileDetailHopital from "../../Screens/Hospital/ProfileDetailHospital";
+import CreatePostHospital from "../../Screens/Hospital/Publicity/CreatePost";
+import AddSpecializationHospital from "../../Screens/Hospital/Services/AddSpecialization";
+import DentistsHospital from "../../Screens/Hospital/Services/Dentists";
+import SpecialistAndDiagnosticsHospital from "../../Screens/Hospital/Services/SpecialistAndDiagnostics";
+import UltraSoundHospital from "../../Screens/Hospital/Services/UltraSound";
+import StuffDetailHospital from "../../Screens/Hospital/StuffDetailHospital";
+import WorkingDetailHospital from "../../Screens/Hospital/WorkingDetailHospital";
 import NearByDoctor from "../../Screens/Doctor/NearByDoctor";
 import Availability from "../../Screens/Doctor/Availability";
 import NearbyDonation from "../../Screens/Donation/NearByDonation";
 import AddDonation from "../../Screens/Donation/AddDonation";
-import SelectDateAppointment from "../../Screens/Hospital/SelectDateAppointment";
 import ProtecteeDetail from "../../Screens/Common/Details/ProtecteeDetail";
 import AssociationDetail from "../../Screens/Common/Details/AssosiationDetail"
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -64,6 +80,7 @@ import AssuranceEditDetail from "../../Screens/Assurances/AssuranceEditDetail"
 import RegisteredClientsAssurance from "../../Screens/Assurances/RegisteredClients"
 import AssurancePlanDetail from "../../Screens/Assurances/AssurancePlanDetail"
 import AssuranceTermsAndCondition from "../../Screens/Assurances/AssuranceTermsAndCondition"
+import HospitalityTabBottomNavigation from "../HospitalityTabBottomNavigation";
 const Stack = createNativeStackNavigator();
 const StackNavigation = () => {
   return (
@@ -121,9 +138,6 @@ const StackNavigation = () => {
         <Stack.Screen name="SelectDateAppointment" component={SelectDateAppointment} />
         <Stack.Screen name="ProtecteeDetail" component={ProtecteeDetail} />
         <Stack.Screen name= "AssociationDetail" component={AssociationDetail} />
-        <Stack.Screen name="AssuranceTab" component={InsuranceTabBottomNavigation}/>
-        <Stack.Screen name="UserTabs" component={UserTabBottomNavigation} />
-        <Stack.Screen name="Tab" component={MyTabs} />
         <Stack.Screen name="AssuranceAppHome" component={AssuranceAppHome}/>
         <Stack.Screen name="AssuranceDetail" component={AssuranceDetail}/>
         <Stack.Screen name="AssuranceServices" component={AssuranceServices}/>
@@ -134,6 +148,26 @@ const StackNavigation = () => {
         <Stack.Screen name="RegisteredClientsAssurance" component={RegisteredClientsAssurance}/>
         <Stack.Screen name="AssurancePlanDetail" component={AssurancePlanDetail}/>
         <Stack.Screen name="AssuranceTermsAndCondition" component={AssuranceTermsAndCondition}/>
+        <Stack.Screen name="AddANewDoctorHospital" component={AddANewDoctorHospital}/>
+        <Stack.Screen name="AddServices" component={AddServices}/>
+        <Stack.Screen name="AgendaAppointment" component={AgendaAppointment}/>
+        <Stack.Screen name="AgendaAppointmentDetail" component={AgendaAppointmentDetail}/>
+        <Stack.Screen name="TestAppointmentDetail" component={TestAppointmentDetail}/>
+        <Stack.Screen name="AssociationDetailHospital" component={AssociationDetailHospital}/>
+        <Stack.Screen name="DoctorDetailHospital" component={DoctorDetailHospital}/>
+        <Stack.Screen name="OverViewHospitality" component={OverViewHospitality}/>
+        <Stack.Screen name="ProfileDetailHopital" component={ProfileDetailHopital}/>
+        <Stack.Screen name="CreatePostHospital" component={CreatePostHospital}/>
+        <Stack.Screen name="AddSpecializationHospital"component={AddSpecializationHospital}/>
+        <Stack.Screen name="DentistsHospital" component={DentistsHospital}/>
+        <Stack.Screen name="SpecialistAndDiagnosticsHospital" component={SpecialistAndDiagnosticsHospital}/>
+        <Stack.Screen name="UltraSoundHospital"component={UltraSoundHospital}/>
+        <Stack.Screen name="StuffDetailHospital" component={StuffDetailHospital}/>
+        <Stack.Screen name="WorkingDetailHospital" component={WorkingDetailHospital}/>
+        <Stack.Screen name="AssuranceTab" component={InsuranceTabBottomNavigation}/>
+        <Stack.Screen name="UserTabs" component={UserTabBottomNavigation} />
+        <Stack.Screen name="Tab" component={MyTabs} />
+        <Stack.Screen name="HospitalityTabBottomNavigation" component={HospitalityTabBottomNavigation}/>
       </Stack.Navigator>
     </>
   );

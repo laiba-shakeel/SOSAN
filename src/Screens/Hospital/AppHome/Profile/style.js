@@ -1,5 +1,5 @@
 import { StyleSheet, Dimensions } from "react-native";
-import baseColors from "../../../../Constant/color";
+import baseColors from "../../../../Theme/Colors/Colors";
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
@@ -59,13 +59,14 @@ export const styles = StyleSheet.create({
   Listmain: {
     flexDirection: "column",
     alignItems: "center",
-    width: deviceWidth / 1 - 30,
+    width: deviceWidth / 1 ,
     paddingVertical: 10,
+    
   },
   ListBottom: {
     borderBottomWidth: 0.3,
     borderBottomColor: baseColors.secondaryTextColor,
-    width: deviceWidth / 1.2,
+    width: deviceWidth / 1.1,
     justifyContent: "center",
     alignItems: "center",
   },
@@ -73,7 +74,7 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    width: deviceWidth / 1.5,
+    width: deviceWidth / 1.2,
     marginVertical: 2,
     paddingVertical: 2,
   },

@@ -1,10 +1,10 @@
 import React from 'react'
 import {Text, View, style} from 'react-native'
-import baseColors from '../../../Constant/color'
+import baseColors from '../../../Theme/Colors/Colorsr'
 import CommonDetail from '../../Auth/Details/CommonDetail'
 import { useNavigation } from '@react-navigation/native'
 
-function index() {
+function AddANewDoctorHospital() {
   const Navigation = useNavigation();
   return (
     <CommonDetail>
@@ -21,4 +21,4 @@ function index() {
   )
 }
 
-export default index
+export default AddANewDoctorHospital

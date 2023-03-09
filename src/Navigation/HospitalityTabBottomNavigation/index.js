@@ -7,7 +7,7 @@ import Feed from "../../Screens/Hospital/AppHome/Feed/index";
 import Notification from "../../Screens/Common/AppHome/Notification/index";
 import Profile from "../../Screens/Hospital/AppHome/Profile/index";
 import Document from "../../Screens/Hospital/AppHome/Document/index";
-import baseColors from "../../Constant/color";
+import baseColors from "../../Theme/Colors/Colors";
 
 
 function HospitalityTabBottomNavigation() {
