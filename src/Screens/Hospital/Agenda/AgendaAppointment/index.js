@@ -88,23 +88,9 @@ function AgendaAppointmentHospital() {
                 paddingVertical: 5,
               }}
             >
-              <View
-                style={{
-                  flexDirection: "row",
-                  paddingLeft: 10,
-                }}
-              >
-                <Text
-                  style={{
-                    fontSize: 18,
-                    fontWeight: "bold",
-                    paddingHorizontal: 5,
-                  }}
-                >
-                  August, 2022
-                </Text>
+              
                 <Calender />
-              </View>
+             
               <Image
                 source={AvatarPerson3}
                 style={{ width: 60, height: 60, borderRadius: 50 }}

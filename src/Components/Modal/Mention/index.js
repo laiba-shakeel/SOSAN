@@ -3,7 +3,7 @@ import { Text, View, Dimensions, Image, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { SuccessImage } from "../../../Assets/Images";
 import Modal from "react-native-modal";
-import baseColors from "../../../Theme/Colors";
+import baseColors from "../../../Theme/Colors/Colors";
 import DarkGradient from "../../Gradient/DarkGradient";
 import InputField from "../../InputFiled";
 

@@ -39,9 +39,10 @@ import HospitalDoctor from "../../Screens/Hospital/HospitalDoctor";
 import AppointmentDoctor from "../../Screens/Hospital/AppointmentDoctor";
 import SelectDateAppointment from "../../Screens/Hospital/SelectDateAppointment";
 import AddANewDoctorHospital from "../../Screens/Hospital/AddANewDoctorHospital";
-import AddServicesHospital from "../../Screens/Hospital/AddServices";
+import AddServicesHospital from "../../Screens/Hospital/AddServices/index";
 import AgendaAppointment from "../../Screens/Hospital/Agenda/AgendaAppointment";
 import AgendaAppointmentDetailPharmacy from "../../Screens/Hospital/Agenda/AgendaAppointmentDetail";
+import AgendaAppointmentHospital from "../../Screens/Hospital/Agenda/AgendaAppointment"; 
 import TestAppointmentDetailPharmacy from "../../Screens/Hospital/Agenda/TestAppointmentDetail";
 import AssociationDetailHospital from "../../Screens/Hospital/AssociationDetailHospital";
 import DoctorDetailHospital from "../../Screens/Hospital/DoctorDetailHospital";
@@ -77,6 +78,7 @@ import AssuranceEditDetail from "../../Screens/Assurances/AssuranceEditDetail"
 import RegisteredClientsAssurance from "../../Screens/Assurances/RegisteredClients"
 import AssurancePlanDetail from "../../Screens/Assurances/AssurancePlanDetail"
 import AssuranceTermsAndCondition from "../../Screens/Assurances/AssuranceTermsAndCondition"
+import AgendaDrugRequest from "../../Screens/Pharmacy/Agenda/DrugRequest";
 import PharmacyOrderList from "../../Screens/Pharmacy/OrderList";
 import SearchDrug from "../../Screens/Pharmacy/SearchDrug";
 import Plans from "../../Screens/Assurances/Plans"
@@ -102,7 +104,8 @@ import SetCampaignPharmacy from "../../Screens/Pharmacy/Publicity/SetCampaign";
 import HospitalityTabBottomNavigation from "../HospitalityTabBottomNavigation";
 import PharmacyTabBottomNavigation from "../PharmacyTabBottomNavigation";
 import AssuranceFormEdit from "../../Screens/Assurances/AssuranceFormEdit";
-
+import AssuranceTrackingDetail from "../../Screens/Assurances/AssuranceTrackingDetail";
+import HospitalityAppHome from "../../Screens/Hospital/AppHome";
 const Stack = createNativeStackNavigator();
 const StackNavigation = () => {
   return (
@@ -171,15 +174,15 @@ const StackNavigation = () => {
         <Stack.Screen name="AssurancePlanDetail" component={AssurancePlanDetail} />
         <Stack.Screen name="AssuranceTermsAndCondition" component={AssuranceTermsAndCondition} />
         <Stack.Screen name="AddANewDoctorHospital" component={AddANewDoctorHospital} />
-        <Stack.Screen name="AddServicesHospital " component={AddServicesHospital} />
+        <Stack.Screen name="AddServicesHospital" component={AddServicesHospital} />
         <Stack.Screen name="AgendaAppointment" component={AgendaAppointment} />
-        <Stack.Screen name="AgendaAppointmentDetailPharmacy " component={AgendaAppointmentDetailPharmacy} />
-        <Stack.Screen name="TestAppointmentDetailPharmacy " component={TestAppointmentDetailPharmacy} />
-        <Stack.Screen name="AssociationDetailHospital " component={AssociationDetailHospital} />
+        <Stack.Screen name="AgendaAppointmentDetailPharmacy" component={AgendaAppointmentDetailPharmacy} />
+        <Stack.Screen name="TestAppointmentDetailPharmacy" component={TestAppointmentDetailPharmacy} />
+        <Stack.Screen name="AssociationDetailHospital" component={AssociationDetailHospital} />
         <Stack.Screen name="DoctorDetailHospital" component={DoctorDetailHospital} />
         <Stack.Screen name="OverViewHospitality" component={OverViewHospitality} />
         <Stack.Screen name="ProfileDetailHospital" component={ProfileDetailHospital} />
-        <Stack.Screen name="CreatePostHospital " component={CreatePostHospital} />
+        <Stack.Screen name="CreatePostHospital" component={CreatePostHospital} />
         <Stack.Screen name="AddSpecializationHospital" component={AddSpecializationHospital} />
         <Stack.Screen name="DentistsHospital" component={DentistsHospital} />
         <Stack.Screen name="SpecialistAndDiagnosticsHospital" component={SpecialistAndDiagnosticsHospital} />
@@ -211,6 +214,10 @@ const StackNavigation = () => {
         <Stack.Screen name="PharmacyTabBottomNavigation" component={PharmacyTabBottomNavigation} />
         <Stack.Screen name="Plans" component={Plans}/>
         <Stack.Screen name="AssuranceFormEdit" component={AssuranceFormEdit}/>
+        <Stack.Screen name="AssuranceTrackingDetail" component={AssuranceTrackingDetail}/>
+        <Stack.Screen name="AgendaAppointmentHospital" component={AgendaAppointmentHospital}/>
+        <Stack.Screen name="HospitalityAppHome" component={HospitalityAppHome}/>
+        <Stack.Screen name="AgendaDrugRequest" component={AgendaDrugRequest}/>
       </Stack.Navigator>
     </>
   );

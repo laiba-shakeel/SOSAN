@@ -5,7 +5,10 @@ import CheckButton from '../../../Components/CheckboxButton';
 import Button from "../../../Components/Buttons";
 import {styles} from "./style"
 
-const AddServicesHospital = () => {
+
+
+function AddServicesHospital() {
+  
   const navigation = useNavigation();
   return (
     <View style={styles.screenContainer}>
@@ -40,7 +43,7 @@ const AddServicesHospital = () => {
 
       </View>
     </View>
-  );
-};
+  )
+}
 
-export default AddServicesHospital;
+export default AddServicesHospital

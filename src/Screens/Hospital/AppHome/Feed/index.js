@@ -6,7 +6,7 @@ import SearchField from "../../../../Components/SearchField";
 import DarkGradient from "../../../../Components/Gradient/DarkGradient";
 import ReverseDarkGradient from "../../../../Components/Gradient/ReverseGradient";
 import { useNavigation } from "@react-navigation/native";
-import { Logo,  BottomImage, FlagButtonOne } from "../../../../Assets/Images/index";
+import { LogoR,  bgHero, FlagButtonOne } from "../../../../Assets/Images/index";
 import {
   FontAwesome5,
   Fontisto,
@@ -53,7 +53,7 @@ const navigation = useNavigation();
             }}
           >
             <Image
-              source={Logo}
+              source={LogoR}
               style={{ height: 30, width: 125 }}
             />
           </View>
@@ -153,7 +153,7 @@ const navigation = useNavigation();
       </View>
 
       <Image
-        source={BottomImage}
+        source={bgHero}
         style={{ height: 270, resizeMode: "contain" }}
       />
     </View>

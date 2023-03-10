@@ -4,6 +4,9 @@ import baseColors from '../../../Theme/Colors/Colors'
 import CommonDetail from '../../Common/Details/CommonDetail'
 import { useNavigation } from '@react-navigation/native'
 
+
+
+
 function AssociationDetailHospital() {
   const Navigation = useNavigation();
   return (
@@ -22,3 +25,4 @@ function AssociationDetailHospital() {
 }
 
 export default AssociationDetailHospital
+

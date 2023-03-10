@@ -1010,7 +1010,7 @@ export const NewRequestsAndObjectionsData = [
     image:AvatarPerson1,
     title: "Alfonso Vetrovs",
     year:"23years` Male",
-    goto:'AssuranceEditDetail',
+    goto:'AssuranceTrackingDetail',
     goToChat:'ChatScreen'
     
     
