@@ -70,6 +70,9 @@ export default function AssuranceServices() {
           }}
         >
           <Text
+          onPress={()=>{
+            navigation.navigate("Feed")
+          }}
             style={{
               fontSize: 20,
               paddingEnd: 5,

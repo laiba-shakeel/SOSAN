@@ -9,13 +9,13 @@ import {
 } from "react-native";
 import AppHeader from "../../../Components/AppHeader";
 import DarkGradient from "../../../Components/Gradient/DarkGradient"
-
 import { styles } from "./style";
 import { Ionicons,MaterialIcons } from "@expo/vector-icons";
 import baseColors from "../../../Theme/Colors/Colors";
 import AvaialbleEditCard from "../../../Components/Cards/AvaialableEditCard";
 import YourPlanCard from "../../../Components/Cards/YourPlanCard";
 const deviceWidth = Dimensions.get("window").width;
+const deviceHeight = Dimensions.get("window").height;
 export default function Plans() {
   const navigation = useNavigation();
   return (
@@ -83,6 +83,8 @@ export default function Plans() {
             <View
               style={{
                 flexDirection: "column",
+                // borderWidth:1,
+                height:deviceHeight / 1.3
               }}
             >
             <YourPlanCard/>

@@ -37,7 +37,7 @@ export default function AssurancePlanDetail() {
               <TouchableOpacity>
                 <Ionicons
                   onPress={() => {
-                    navigation.goBack("AssurancesAbout");
+                    navigation.goBack(" ");
                   }}
                   name="chevron-back-sharp"
                   size={37}
@@ -118,7 +118,7 @@ export default function AssurancePlanDetail() {
                 <Button styles={styles.LoginBtn}>
                   <Text
                     onPress={() => {
-                      navigation.navigate("AssuranceTermsAndCondition");
+                      navigation.goBack("");
                     }}
                     style={styles.LoginTextSty}
                   >

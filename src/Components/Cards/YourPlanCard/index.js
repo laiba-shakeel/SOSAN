@@ -18,6 +18,9 @@ export default function YourPlanCard(props) {
   const navigation = useNavigation();
   return (
     <View>
+      <TouchableOpacity onPress={()=>{
+        navigation.navigate("AssuranceTermsAndCondition")
+      }}>
       <View
         style={{
           borderWidth: 2,
@@ -26,6 +29,7 @@ export default function YourPlanCard(props) {
           borderColor: baseColors.lightGreyColor,
           elevation: 6,
           backgroundColor: baseColors.LightSecondaryColor,
+         
         }}
       >
         <View
@@ -35,6 +39,7 @@ export default function YourPlanCard(props) {
             alignItems: "center",
             height: 55,
             width: deviceWidth / 1 - 20,
+            // borderWidth:1
           }}
         >
           <ImageBackground
@@ -137,8 +142,7 @@ export default function YourPlanCard(props) {
               style={{ fontSize: 16, color: "gray" }}
               onPress={()=>{
                 navigation.navigate("AssuranceFormEdit")
-              }}
-              
+              }}  
             >
               View Details
             </Text>
@@ -147,6 +151,7 @@ export default function YourPlanCard(props) {
           {props.children}
         </View>
       </View>
+      </TouchableOpacity>
     </View>
   );
 }

@@ -13,6 +13,7 @@ import { styles } from "./style";
 import { Ionicons } from "@expo/vector-icons";
 import baseColors from "../../../Theme/Colors/Colors";
 import Button from "../../../Components/Buttons";
+import AddedSuccessfully from "../../../Components/Modal/AddedSuccessfully";
 const deviceWidth = Dimensions.get("window").width;
 export default function AssuranceFormEdit() {
   const navigation = useNavigation();
@@ -87,39 +88,47 @@ export default function AssuranceFormEdit() {
               <View style={{ marginHorizontal: 10, marginTop: 15 }}>
                 <Text style={styles.formText}>Plan name:</Text>
                 <InputField
+                placeholder="Javen Sethi"
                   styles={styles.InputStyling}
-                ><Text>Javne Sethi </Text></InputField>
+               />
                 <Text style={styles.formText}>Health Covergae:</Text>
-                <InputField styles={styles.InputStyling} ><Text> 80 % </Text></InputField>
+                <InputField 
+                placeholder="80 %"
+                styles={styles.InputStyling} />
                 <Text style={styles.formText}>Total fee(per year):</Text>
                 <InputField placeholder=" $ 80 " styles={styles.InputStyling} />
                 <Text style={styles.formText}>Tenure</Text>
                 <InputField
+                placeholder="20 years "
                   styles={styles.InputStyling}
-                ><Text>20 years </Text></InputField>
+                />
                 <Text style={styles.formText}>Coverege</Text>
                 <InputField
+                placeholder="lbndh hfdjfh dhfh
+                 fhdhff hfhfhf dhfgdfg
+                 lbndh hfdjfh dhfh fhdhff hfhfhf
+                  dhfgdfg  lbndh hfdjfh dhfh 
+                  fhdhff hfhfhf dhfgdfg  "
+                placeholderTextColor = "black"
                   multiline={true}
                   numberOfLines={8}
                   styles={styles.AboutSty}
-                ><Text>lbndh hfdjfh dhfh fhdhff hfhfhf dhfgdfg fgsdh fgsdhfgshf gshfgs dhfg dfhghfgfhg fgsdhfg</Text></InputField>
+                />
                 <Text style={styles.formText}>Terms and Conditions</Text>
                 <InputField
+                 placeholder="lbndh hfdjfh dhfh
+                 fhdhff hfhfhf dhfgdfg
+                 lbndh hfdjfh dhfh fhdhff hfhfhf
+                  dhfgdfg  lbndh hfdjfh dhfh 
+                  fhdhff hfhfhf dhfgdfg  "
                   multiline={true}
                   numberOfLines={8}
                   styles={styles.AboutSty}
-                ><Text>lbndh hfdjfh dhfh fhdhff hfhfhf dhfgdfg fgsdh fgsdhfgshf gshfgs dhfg dfhghfgfhg fgsdhfg</Text></InputField>
+                />
               </View>
               <View style={{ justifyContent: "center", alignItems: "center" }}>
                 <Button styles={styles.LoginBtn}>
-                  <Text
-                    onPress={() => {
-                      navigation.navigate("AssuranceTermsAndCondition");
-                    }}
-                    style={styles.LoginTextSty}
-                  >
-                    Save
-                  </Text>
+                     <AddedSuccessfully>save</AddedSuccessfully>
                 </Button>
               </View>
             </View>

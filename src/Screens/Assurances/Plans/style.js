@@ -5,6 +5,7 @@ const deviceWidth = Dimensions.get("window").width;
 export const styles = StyleSheet.create({
     screenContainer: {
         height: deviceHeight / 1,
+        // borderWidth:1,
         width: deviceWidth / 1,
         flex: 1,
         flexDirection: "column",
@@ -17,7 +18,8 @@ export const styles = StyleSheet.create({
         width: deviceWidth / 1,
         borderBottomLeftRadius: 15,
         borderBottomRightRadius: 15,
-        paddingVertical: 8
+        paddingVertical: 8,
+        // borderWidth:1
     },
     LinearGradient: {
         borderColor: baseColors.lightColor,
