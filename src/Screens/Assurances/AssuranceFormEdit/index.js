@@ -8,15 +8,13 @@ import {
   ScrollView,
 } from "react-native";
 import AppHeader from "../../../Components/AppHeader";
-import DarkGradient from "../../../Components/Gradient/DarkGradient"
-
+import InputField from "../../../Components/InputFiled";
 import { styles } from "./style";
-import { Ionicons,MaterialIcons } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 import baseColors from "../../../Theme/Colors/Colors";
-import AvaialbleEditCard from "../../../Components/Cards/AvaialableEditCard";
-import YourPlanCard from "../../../Components/Cards/YourPlanCard";
+import Button from "../../../Components/Buttons";
 const deviceWidth = Dimensions.get("window").width;
-export default function Plans() {
+export default function AssuranceFormEdit() {
   const navigation = useNavigation();
   return (
     <View style={styles.screenContainer}>
@@ -39,7 +37,7 @@ export default function Plans() {
               <TouchableOpacity>
                 <Ionicons
                   onPress={() => {
-                    navigation.goBack(" ");
+                    navigation.goBack("AssurancesAbout");
                   }}
                   name="chevron-back-sharp"
                   size={37}
@@ -47,6 +45,7 @@ export default function Plans() {
                     color: baseColors.darkColor,
                     justifyContent: "center",
                     alignItems: "center",
+                    marginStart: 10,
                   }}
                 />
               </TouchableOpacity>
@@ -58,7 +57,7 @@ export default function Plans() {
                 justifyContent: "center",
               }}
             >
-              <Text style={styles.textHeading}>Your Plans</Text>
+              <Text style={styles.textHeading}>Edit Plan Detail</Text>
             </View>
             <View
               style={{
@@ -85,33 +84,44 @@ export default function Plans() {
                 flexDirection: "column",
               }}
             >
-            <YourPlanCard/>
-            </View>
-            <View style={{
-              flexDirection: 'row',
-              alignItems: 'flex-end',
-              justifyContent: 'flex-end',
-              width: deviceWidth / 1 - 30,
-
-            }}>
-
-              <DarkGradient
-                styles={{
-                  elevation: 8,
-                  backgroundColor: baseColors.sucessColor,
-                  borderRadius: 50,
-                  padding: 10,
-                  // paddingHorizontal: 12,
-                  width: 60,
-                  justifyContent: "center",
-                  alignItems: "center",
-                  height: 60,
-                  // marginVertical: 20,
-                }}>
-                <MaterialIcons name="add" size={40} color="#fff" onPress={() => {
-                  navigation.navigate("AssurancePlanDetail");
-                }} />
-              </DarkGradient>
+              <View style={{ marginHorizontal: 10, marginTop: 15 }}>
+                <Text style={styles.formText}>Plan name:</Text>
+                <InputField
+                  styles={styles.InputStyling}
+                ><Text>Javne Sethi </Text></InputField>
+                <Text style={styles.formText}>Health Covergae:</Text>
+                <InputField styles={styles.InputStyling} ><Text> 80 % </Text></InputField>
+                <Text style={styles.formText}>Total fee(per year):</Text>
+                <InputField placeholder=" $ 80 " styles={styles.InputStyling} />
+                <Text style={styles.formText}>Tenure</Text>
+                <InputField
+                  styles={styles.InputStyling}
+                ><Text>20 years </Text></InputField>
+                <Text style={styles.formText}>Coverege</Text>
+                <InputField
+                  multiline={true}
+                  numberOfLines={8}
+                  styles={styles.AboutSty}
+                ><Text>lbndh hfdjfh dhfh fhdhff hfhfhf dhfgdfg fgsdh fgsdhfgshf gshfgs dhfg dfhghfgfhg fgsdhfg</Text></InputField>
+                <Text style={styles.formText}>Terms and Conditions</Text>
+                <InputField
+                  multiline={true}
+                  numberOfLines={8}
+                  styles={styles.AboutSty}
+                ><Text>lbndh hfdjfh dhfh fhdhff hfhfhf dhfgdfg fgsdh fgsdhfgshf gshfgs dhfg dfhghfgfhg fgsdhfg</Text></InputField>
+              </View>
+              <View style={{ justifyContent: "center", alignItems: "center" }}>
+                <Button styles={styles.LoginBtn}>
+                  <Text
+                    onPress={() => {
+                      navigation.navigate("AssuranceTermsAndCondition");
+                    }}
+                    style={styles.LoginTextSty}
+                  >
+                    Save
+                  </Text>
+                </Button>
+              </View>
             </View>
           </View>
         </View>

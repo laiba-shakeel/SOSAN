@@ -7,33 +7,79 @@ import {
   ImageBackground,
 } from "react-native";
 import { bluebtn } from "../../../Assets/Images/index";
-import { Foundation } from "@expo/vector-icons";
 import DarkGradient from "../../../Components/Gradient/DarkGradient";
 import baseColors from "../../../Theme/Colors/Colors";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
-import { styles } from "./style.js";
+
 const deviceWidth = Dimensions.get("window").width;
 
 export default function YourPlanCard(props) {
   const navigation = useNavigation();
   return (
     <View>
-      <View style={styles.ScreenContainer}>
-        <View style={styles.ScreenTop}>
+      <View
+        style={{
+          borderWidth: 2,
+          marginTop: 15,
+          borderRadius: 10,
+          borderColor: baseColors.lightGreyColor,
+          elevation: 6,
+          backgroundColor: baseColors.LightSecondaryColor,
+        }}
+      >
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+            height: 55,
+            width: deviceWidth / 1 - 20,
+          }}
+        >
           <ImageBackground
             resizeMode="cover"
             source={bluebtn}
-            style={styles.ImageStyling}
+            style={{ height: 30, width: 120 }}
           >
-            <Text style={styles.textStyling}>25 years</Text>
+            <Text
+              style={{
+                color: "#fff",
+                fontSize: 14,
+                paddingHorizontal: 10,
+                paddingVertical: 5,
+              }}
+            >
+              25 years
+            </Text>
           </ImageBackground>
-          <TouchableOpacity style={styles.TouchButton}>
-            <Text style={styles.ButtonText}> Per month $50 </Text>
+          <TouchableOpacity
+            style={{
+              elevation: 8,
+              backgroundColor: baseColors.sucessColor,
+              borderRadius: 5,
+              width: 140,
+              justifyContent: "center",
+              alignItems: "center",
+              height: 30,
+              marginVertical: 20,
+            }}
+          >
+            <Text
+              style={{
+                color: baseColors.lightTextColor,
+                flexDirection: "column",
+                textAlign: "center",
+                fontSize: 14,
+              }}
+            >
+              Per month $50
+            </Text>
           </TouchableOpacity>
         </View>
-          <View style={styles.CardRow}>
-            <Text style={styles.TextCardRow}>
+        <View style={{}}>
+          <View style={{ flexDirection: "row" }}>
+            <Text style={{ fontSize: 18, paddingHorizontal: 15 }}>
               Plan Name
             </Text>
           </View>
@@ -46,48 +92,60 @@ export default function YourPlanCard(props) {
               paddingBottom: 5,
             }}
           >
-            <View style={{ flexDirection: "Row" , justifyContent:'center' ,  }}>
-              <Text
-                style={{ fontSize: 13.5, paddingHorizontal: 10, color: "gray" }}
-              >
-                Health Coverage of 80%
-              </Text>
-              
-            </View>
-            <View style={{ flexDirection: "column", paddingHorizontal: 15 }}>
-              <Foundation
-                onPress={() => {
-                  navigation.navigate("AssurancePlanDetail");
-                }}
-                name="pencil"
-                size={24}
-                color="black"
-              />
-            </View>
-          </View>
-          <View>
             <View
               style={{
-                height: 40,
-                justifyContent: "center",
-                alignItems: "center",
                 flexDirection: "row",
-                paddingHorizontal: 5,
+                justifyContent: "space-between",
+                width: deviceWidth / 1 - 20,
+                marginHorizontal:5
               }}
             >
-              <Text
-                style={{ fontSize: 16, color: "gray" }}
-                onPress={props.onPress}
-                // onPress={()=> {
-                //     navigation.navigate("AssurancesAbout")
-                //   }}
-              >
-                View Details
+              <Text style={{ fontSize: 13.5, paddingStart: 5, color: "gray" }}>
+                Health Coverage of 80%
               </Text>
-              <Ionicons name="chevron-forward" size={30} color="gray" />
+              <Text style={{ fontSize: 12, color: "gray" }}>
+                Remain 20 years{" "}
+              </Text>
             </View>
-            {props.children}
           </View>
+          <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "flex-end",
+               width:deviceWidth / 1 - 30,
+               paddingVertical:5
+              }}
+            >
+              <Ionicons
+              onPress={()=> {
+                navigation.navigate("AssuranceTermsAndCondition")
+              }}
+              name="trash-bin-sharp" size={20} color="red" />
+            </View>
+        </View>
+        <View>
+          <View
+            style={{
+              height: 40,
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "row",
+              paddingHorizontal: 5,
+            }}
+          >
+            <Text
+              style={{ fontSize: 16, color: "gray" }}
+              onPress={()=>{
+                navigation.navigate("AssuranceFormEdit")
+              }}
+              
+            >
+              View Details
+            </Text>
+            <Ionicons name="chevron-forward" size={30} color="gray" />
+          </View>
+          {props.children}
+        </View>
       </View>
     </View>
   );

@@ -101,7 +101,7 @@ import CurrentCampaignPharmacy from "../../Screens/Pharmacy/Publicity/CurrentCam
 import SetCampaignPharmacy from "../../Screens/Pharmacy/Publicity/SetCampaign";
 import HospitalityTabBottomNavigation from "../HospitalityTabBottomNavigation";
 import PharmacyTabBottomNavigation from "../PharmacyTabBottomNavigation";
-
+import AssuranceFormEdit from "../../Screens/Assurances/AssuranceFormEdit";
 
 const Stack = createNativeStackNavigator();
 const StackNavigation = () => {
@@ -210,6 +210,7 @@ const StackNavigation = () => {
         <Stack.Screen name="SetCampaignPharmacy" component={SetCampaignPharmacy}/>
         <Stack.Screen name="PharmacyTabBottomNavigation" component={PharmacyTabBottomNavigation} />
         <Stack.Screen name="Plans" component={Plans}/>
+        <Stack.Screen name="AssuranceFormEdit" component={AssuranceFormEdit}/>
       </Stack.Navigator>
     </>
   );
