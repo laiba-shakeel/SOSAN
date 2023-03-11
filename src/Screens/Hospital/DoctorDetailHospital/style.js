@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
     justifyContent: "flex-end",
     alignItems: "center",
     height: 40,
-    marginTop: 35,
+    marginTop: 30,
     width: deviceWidth / 1.2,
     paddingVertical: 8,
     marginBottom: 3,

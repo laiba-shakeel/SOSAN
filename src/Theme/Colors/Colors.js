@@ -17,6 +17,9 @@ const baseColors = {
     primaryMiddleColor: "#B3E5FC",
     LightSecondaryColor: "#F5F5F5",
     primaryLightTextColor: "#E1F5FE",
+    limeColor: "#EEDF00",
+    sucessColorTransparent: "rgba(124, 217, 87, 0.7)",
+    purpleColor: "#5713d6",
 
 
 };

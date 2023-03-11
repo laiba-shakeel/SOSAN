@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
         flexDirection: "column",
         alignItems:'center',
         paddingHorizontal: 20,
-        marginTop: 36, 
+        marginTop: 30, 
         backgroundColor: baseColors.lightColor,
         
         

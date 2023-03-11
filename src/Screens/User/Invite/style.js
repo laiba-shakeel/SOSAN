@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     width: deviceWidth / 1,
     flex: 1,
     flexDirection: "column",
-    paddingTop: 36,
+    paddingTop: 30,
     backgroundColor: baseColors.lightColor,
   },
   screenBackground: {

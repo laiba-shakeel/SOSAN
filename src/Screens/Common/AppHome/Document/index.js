@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   headerContainer: {
     backgroundColor: baseColors.lightColor,
     height: 50,
-    marginTop: 35,
+    marginTop: 30,
     width: deviceWidth / 1,
   },
 });

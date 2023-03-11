@@ -56,7 +56,7 @@ function CommonDetail({children}) {
           styles={styles.AboutSty}
         />
         <View>
-          <Button
+          <Button styles={styles.Button}
             // styles={styles.LoginBtn}
             // onPress={() => {
             //   navigation.navigate("Services");

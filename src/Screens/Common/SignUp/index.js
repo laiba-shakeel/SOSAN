@@ -1,176 +1,231 @@
 import React from "react";
-import { View,Dimensions, Text } from "react-native";
+import { View, Text, Dimensions } from "react-native";
+import InputField from "../../../Components/InputFiled";
+import Button from "../../../Components/Buttons";
 import { useNavigation } from "@react-navigation/native";
-import TouchableButton from "../../../Components/Buttons";
+import { styles } from "./style";
 import baseColors from "../../../Theme/Colors/Colors";
-import styles from "./style";
-import TextInputField from "../../../Components/InputFiled";
-import CheckButton from "../../../Components/CheckboxButton";
+// import CheckButton from "../../../Components/CheckButton/index";
 import ModalTester from "../../../Components/Modal/SectionModal";
-import Background from "../../../Components/Gradient/Background";
+import GradientBackground from "../../../Components/Gradient/Background";
+import { Checkbox } from "react-native-paper";
+
+const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
-const SignUp = () => {
-  const navigation = useNavigation();
+
+function SignUp() {
+  const Navigation = useNavigation();
+  const [checked, setChecked] = React.useState(false);
+  const [switchValue, setswitchValue] = React.useState(false);
+
   return (
     <View style={styles.screenContainer}>
-      <Background>
-      <View style={styles.screenBackground}>
-        <View style={styles.middleScreen}>
-          <Text var style={styles.heading}>
-            Create a new account
-          </Text>
-          <Text style={styles.TextSty}>Enter Email</Text>
-          <TextInputField 
-          styles={{height: 40,
-            margin: 12,
-            borderColor: baseColors.sucessColor,
-            borderWidth: 1,
-            borderRadius: 50,
-            padding: 10,}}
-             placeholder="abc@gmail.com" />
-          <Text style={styles.TextSty}>Enter Username</Text>
-          <TextInputField 
-          styles={{height: 40,
-            margin: 12,
-            borderColor: baseColors.sucessColor,
-            borderWidth: 1,
-            borderRadius: 50,
-            padding: 10,}}
-          placeholder="Enter Username" />
-          <Text style={styles.TextSty}>Enter Phonenumber</Text>
-          <TextInputField 
-          styles={{height: 40,
-            margin: 12,
-            borderColor: baseColors.sucessColor,
-            borderWidth: 1,
-            borderRadius: 50,
-            padding: 10,}}
-          placeholder="00923584582" />
-          <Text style={styles.TextSty}>Enter Password</Text>
-          <TextInputField 
-          styles={{height: 40,
-            margin: 12,
-            borderColor: baseColors.sucessColor,
-            borderWidth: 1,
-            borderRadius: 50,
-            padding: 10,}}
-          placeholder="*************" />
-          <Text>What are you</Text>
-          <View
+      <GradientBackground>
+        <View style={styles.screenBackground}>
+          <View style={styles.screenMiddle}>
+            <Text style={styles.Text}>create a new account</Text>
+            <Text style={styles.formText}>Enter Email</Text>
+            <InputField
+              placeholder="abc@gmail.com"
+              styles={{
+                height: 40,
+                margin: 12,
+                borderColor: baseColors.sucessColor,
+                borderWidth: 1,
+                borderRadius: 50,
+                padding: 10,
+              }}
+            ></InputField>
+            <Text style={styles.formText}>Enter Username</Text>
+            <InputField
+              placeholder="Your Username"
+              styles={{
+                height: 40,
+                margin: 12,
+                borderColor: baseColors.sucessColor,
+                borderWidth: 1,
+                borderRadius: 50,
+                padding: 10,
+              }}
+            ></InputField>
+            <Text style={styles.formText}>Enter PhoneNumber</Text>
+            <InputField
+              placeholder="0092331524568"
+              styles={{
+                height: 40,
+                margin: 12,
+                borderColor: baseColors.sucessColor,
+                borderWidth: 1,
+                borderRadius: 50,
+                padding: 10,
+              }}
+            ></InputField>
+            <Text style={styles.formText}>Enter Password</Text>
+            <InputField
+              placeholder="*************"
+              secureTextEntry={true}
+              styles={{
+                height: 40,
+                margin: 12,
+                borderColor: baseColors.sucessColor,
+                borderWidth: 1,
+                borderRadius: 50,
+                padding: 10,
+              }}
+            ></InputField>
+            <Text style={styles.Textleft}> What are You? </Text>
+            <View
               style={{
                 flexDirection: "row",
-                justifyContent: 'space-between',
-                width:deviceWidth/1.1,
+                justifyContent: "space-between",
+                width: deviceWidth / 1.1,
                 alignItems: "center",
               }}
             >
               <View
-              style={{
-                flexDirection: "row",
-                justifyContent: 'space-between',
-                width:deviceWidth/2.5,
-                alignItems: "center",
-                paddingVertical: 5,
-                paddingHorizontal: 15,
-              }}
-              >
-              <CheckButton />
-              <Text
-                onPress={() => {
-                  navigation.navigate("Verification");
+                style={{
+                  flexDirection: "row",
+                  justifyContent: 'space-between',
+                  width: deviceWidth / 2.3,
+                  alignItems: "center",
+                  paddingVertical: 5,
+                  paddingHorizontal: 15,
                 }}
               >
-                Individual
-              </Text>
+                <Checkbox
+                  status={checked ? "unchecked" : "checked" }
+                  onPress={() => {
+                    setChecked(!checked);
+                    setswitchValue(false)
+                  }}
+                />
+                <Text>
+                  Individual
+                </Text>
               </View>
               <View
-              style={{
-                flexDirection: "row",
-                justifyContent: 'space-between',
-                width:deviceWidth/2.3,
-                alignItems: "center",
-                paddingVertical: 5,
-                paddingHorizontal: 10,
-                
-              }}
+                style={{
+                  flexDirection: "row",
+                  justifyContent: 'space-between',
+                  width: deviceWidth / 2.3,
+                  alignItems: "center",
+                  paddingVertical: 5,
+                  paddingHorizontal: 15,
+                }}
               >
-              <CheckButton />
-              <ModalTester />
-
+                <Checkbox
+                status={checked ? "checked" : "unchecked"}
+                  onPress={() => {
+                    setChecked(!checked);
+                    setswitchValue(true)
+                  }}
+                />
+                <Text>
+                 Professional
+                </Text>
               </View>
             </View>
 
             <View
               style={{
                 flexDirection: "row",
-                justifyContent: 'space-evenly',
-                width:deviceWidth/1-50,
+                justifyContent: "space-evenly",
+                alignItems:'center',
+                width: deviceWidth / 1.1-5,
               }}
             >
-              <CheckButton />
+               <Checkbox
+                  status={"checked"}
+                />
               <Text>i agree with the terms and agreements</Text>
             </View>
-          <View
-            style={{ flexDirection: "row", justifyContent: "space-evenly" }}>
-            <TouchableButton
-              styles={{
-                elevation: 8,
-                backgroundColor: baseColors.secondaryColor,
-                borderRadius: 10,
-                paddingVertical: 10,
-                paddingHorizontal: 12,
-                justifyContent: "center",
-                alignItems: "center",
-                width: 130,
+
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-evenly",
+                paddingTop: 30,
               }}
-              onPress={() => {
-                navigation.navigate("SignIn");
-              }}>
-              <Text
-                style={{
-                  fontSize: 15,
-                  color: "#fff",
-                  fontWeight: "600",
-                  alignSelf: "center",
-                  textTransform: "uppercase",
+            >
+              <Button
+                styles={{
+                  elevation: 8,
+                  backgroundColor: baseColors.secondaryColor,
                   borderRadius: 50,
-                  textAlign: "center",
-                }}>
-                Cancel
-              </Text>
-            </TouchableButton>
-            <TouchableButton
-              styles={{
-                elevation: 8,
-                backgroundColor: baseColors.primaryColor,
-                borderRadius: 10,
-                paddingVertical: 10,
-                paddingHorizontal: 12,
-                justifyContent: "center",
-                alignItems: "center",
-                width: 130,
-              }}
-              onPress={() => {
-                navigation.navigate("Individuals");
-              }}>
-              <Text
-                style={{
-                  fontSize: 15,
-                  color: "#fff",
-                  fontWeight: "600",
-                  alignSelf: "center",
-                  textTransform: "uppercase",
+                  paddingVertical: 10,
+                  paddingHorizontal: 12,
+                  width: 150,
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+                onPress={() => {
+                  Navigation.goBack("");
+                }}
+              >
+                <Text
+                  style={{
+                    color: baseColors.lightColor,
+                    fontWeight: "bold",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Cancel
+                </Text>
+              </Button>
+              {switchValue !== true ? (
+              <Button
+                styles={{
+                  elevation: 8,
+                  backgroundColor: baseColors.primaryColor,
                   borderRadius: 50,
-                  textAlign: "center",
-                }}>
-                Next
-              </Text>
-            </TouchableButton>
+                  paddingVertical: 10,
+                  paddingHorizontal: 12,
+                  width: 150,
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+                
+                onPress={() => {
+                  Navigation.navigate("Individuals");
+                }}
+              >
+                
+                <Text
+                  style={{
+                    color: baseColors.lightColor,
+                    fontWeight: "bold",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Next
+                </Text>
+              </Button>
+              ) :(
+
+                <Button
+                styles={{
+                  elevation: 8,
+                  backgroundColor: baseColors.primaryColor,
+                  borderRadius: 50,
+                  paddingVertical: 10,
+                  paddingHorizontal: 12,
+                  width: 150,
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+                onPress={() => {
+                  Navigation.navigate("SignIn");
+                }}
+              >
+                <ModalTester />
+              </Button>
+              )}
+            </View>
           </View>
         </View>
-      </View>
-      </Background>
+      </GradientBackground>
     </View>
   );
-};
+}
+
 export default SignUp;

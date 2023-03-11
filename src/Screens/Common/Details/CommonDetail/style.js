@@ -82,7 +82,7 @@ export const styles = StyleSheet.create({
     padding: 10,
     textAlignVertical: "top",
   },
-  LoginBtn: {
+  Button: {
     elevation: 8,
     backgroundColor: baseColors.primaryColor,
     borderRadius: 50,
@@ -92,6 +92,11 @@ export const styles = StyleSheet.create({
     width: deviceWidth / 1 - 40,
     justifyContent: "center",
     alignItems: "center",
+  },
+  ButtonText: {
+    color: baseColors.lightColor,
+    fontWeight: "bold",
+    textTransform: "uppercase",
   },
   ImgSty:{
     height: 200,

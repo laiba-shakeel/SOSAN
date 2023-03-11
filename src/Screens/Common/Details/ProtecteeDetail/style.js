@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     height: deviceHeight / 1,
     width: deviceWidth / 1,
     flexDirection: "column",
-    marginTop: 35,
+    marginTop: 30,
   },
   headerContainer: {
     backgroundColor: baseColors.sucessColor,

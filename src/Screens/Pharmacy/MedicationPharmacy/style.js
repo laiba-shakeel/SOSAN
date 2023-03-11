@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
   headerContainer:{ 
     backgroundColor:baseColors.lightColor,
     height: 80, 
-    marginTop: 35, 
+    marginTop: 30, 
     width: deviceWidth/1 ,
     borderBottomLeftRadius:7,
     borderBottomRightRadius:7,

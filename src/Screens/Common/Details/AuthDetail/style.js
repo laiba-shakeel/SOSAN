@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
         width: deviceWidth / 1,
         flexDirection: "column",
         paddingHorizontal: 20,
-        marginTop: 36, 
+        marginTop: 30, 
         backgroundColor: baseColors.lightColor,
         
         

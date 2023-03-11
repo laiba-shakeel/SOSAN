@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity, Dimensions, Image } from "react-native";
+import { View, Text, TouchableOpacity, Dimensions, Image , ScrollView } from "react-native";
 import { Logo, AvatarPerson1, AvatarPerson2 } from "../../../Assets/Images/index";
 import AppHeader from "../../../Components/AppHeader/index";
 import { styles } from "./style";
@@ -55,7 +55,7 @@ function OverViewHospitality() {
           </View>
         </AppHeader>
       </View>
-      {/* <ScrollView> */}
+      <ScrollView>
       <View
         style={{
           flexDirection: "column",
@@ -163,7 +163,7 @@ function OverViewHospitality() {
           </View>
         </View>
       </View>
-      {/* </ScrollView> */}
+      </ScrollView>
     </View>
   );
 }

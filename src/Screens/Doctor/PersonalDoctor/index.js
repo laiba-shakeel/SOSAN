@@ -6,7 +6,7 @@ import SelectDropdown from "../../../Components/SelectDropDown";
 import Button from "../../../Components/Buttons";
 import AppHeader from "../../../Components/AppHeader";
 import { Ionicons } from "@expo/vector-icons";
-import { DummyPerson } from "../../../Assets/Images/index";
+import { Dummy } from "../../../Assets/Images/index";
 import { useNavigation } from "@react-navigation/native";
 
 
@@ -43,7 +43,7 @@ function  PersonalDetailDoctor() {
         <View style={styles.imageStyle}>
           <Image
             style={styles.image}
-            source={DummyPerson}
+            source={Dummy}
           />
         </View>
 

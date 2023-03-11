@@ -46,7 +46,7 @@ const Individuals = () => {
             <TouchableButton
               styles={styles.NextBtn}
               onPress={() => {
-                navigation.navigate("SignIn");
+                navigation.navigate("UserSignIn");
               }}>
               <Text style={styles.TextSty}>Next</Text>
             </TouchableButton>

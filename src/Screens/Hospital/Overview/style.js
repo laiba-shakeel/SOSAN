@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     backgroundColor: baseColors.lightColor,
+  
   },
   headerContainer:{
     height: 60, 
@@ -26,6 +27,8 @@ export const styles = StyleSheet.create({
     flexDirection:'column',
     alignItems: "center",
     justifyContent:'center',
+    // borderWidth:1
+    
     
   },
   Listmain: {
@@ -34,18 +37,21 @@ export const styles = StyleSheet.create({
     justifyContent:'center',
     width: deviceWidth / 1 - 30,
     paddingVertical: 10,
-    marginVertical:10
+    marginVertical:10,
+   
     
   },
   ListBottom: {
     borderBottomWidth:0.5,
     borderBottomColor: baseColors.darkColor,
     width: deviceWidth / 1.2,
+    // borderWidth:1
 
   },
   Listitems: {
     flexDirection: 'column',
     width: deviceWidth / 1.2,
+   
     
   },
   textHeading:{
@@ -115,7 +121,9 @@ export const styles = StyleSheet.create({
     width:deviceWidth/1-40,
     backgroundColor:baseColors.LightSecondaryColor,
     borderRadius:15,
-    marginTop:10
+    marginTop:10,
+    // borderWidth:1,
+    
   },
   ActivityImage:{
     height: 50, 

@@ -11,14 +11,14 @@ export const styles = StyleSheet.create({
         width: deviceWidth / 1,
         flexDirection: "column",
         alignItems:'center',
-        marginTop: 36, 
+        marginTop: 30, 
         backgroundColor: baseColors.lightColor,
         
         
       },
       headerContainer:{
         backgroundColor: baseColors.sucessColor,  
-        height:60,
+        height:50,
         width: deviceWidth/1,
 
     },

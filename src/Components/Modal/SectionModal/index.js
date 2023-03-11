@@ -8,6 +8,7 @@ import {
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
 import Modal from "react-native-modal";
+import baseColors from "../../../Theme/Colors/Colors";
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
@@ -22,9 +23,18 @@ function ModalTester() {
 
   return (
     <View style={{ flex: 1 }}>
-      <Text onPress={toggleModal}> professional</Text>
+      <Text
+        onPress={toggleModal}
+        style={{
+          color: baseColors.lightColor,
+          fontWeight: "bold",
+          textTransform: "uppercase",
+        }}
+      >
+        Next
+      </Text>
 
-      <Modal isVisible={isModalVisible}>
+      <Modal isVisible={isModalVisible} onBackdropPress={toggleModal}>
         <View
           style={{
             flex: 1,
@@ -32,7 +42,8 @@ function ModalTester() {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-          }}>
+          }}
+        >
           <View style={styles.modal}>
             <Text style={styles.Text}>Select Institude Type</Text>
 
@@ -40,7 +51,8 @@ function ModalTester() {
               style={{
                 flexWrap: "wrap",
                 flexDirection: "row",
-              }}>
+              }}
+            >
               <View style={styles.modalView}>
                 <FontAwesome5
                   name="clinic-medical"
@@ -52,7 +64,8 @@ function ModalTester() {
                     Navigation.navigate("AssociationDetailHospital");
                     toggleModal();
                   }}
-                  style={styles.modalViewText}>
+                  style={styles.modalViewText}
+                >
                   Hospital Prive/public
                 </Text>
               </View>
@@ -68,7 +81,8 @@ function ModalTester() {
                     Navigation.navigate("AssociationDetailPharmacy");
                     toggleModal();
                   }}
-                  style={styles.modalViewTextReverse}>
+                  style={styles.modalViewTextReverse}
+                >
                   Pharmacie
                 </Text>
               </View>
@@ -84,7 +98,8 @@ function ModalTester() {
                     Navigation.navigate("PersonalDetailDoctor");
                     toggleModal();
                   }}
-                  style={styles.modalViewTextReverse}>
+                  style={styles.modalViewTextReverse}
+                >
                   prise de rdv medecin
                 </Text>
               </View>
@@ -100,7 +115,8 @@ function ModalTester() {
                     Navigation.navigate("AssociationDetailDonation");
                     toggleModal();
                   }}
-                  style={styles.modalViewText}>
+                  style={styles.modalViewText}
+                >
                   Dons ong/ associations
                 </Text>
               </View>
@@ -116,7 +132,8 @@ function ModalTester() {
                     Navigation.navigate("AssuranceDetail");
                     toggleModal();
                   }}
-                  style={styles.modalViewText}>
+                  style={styles.modalViewText}
+                >
                   insurance / Company
                 </Text>
               </View>
