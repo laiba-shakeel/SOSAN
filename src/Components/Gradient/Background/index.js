@@ -16,7 +16,8 @@ function Background({ children, styles: customStyles, }) {
 
   return (
     <View>
-      <LinearGradient
+      <LinearGradient 
+      
         colors={[baseColors.gradientsucessColor, baseColors.gradientprimaryColor, baseColors.primaryColor]}
         start={{
           x: 0,

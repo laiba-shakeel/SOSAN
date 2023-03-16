@@ -5,6 +5,7 @@ import Button from "../../../Components/Buttons";
 import { useNavigation } from "@react-navigation/native";
 import { styles } from "./style";
 import baseColors from "../../../Theme/Colors/Colors";
+import AppHeader from "../../../Components/AppHeader";
 // import CheckButton from "../../../Components/CheckButton/index";
 import ModalTester from "../../../Components/Modal/SectionModal";
 import GradientBackground from "../../../Components/Gradient/Background";
@@ -21,58 +22,60 @@ function SignUp() {
   return (
     <View style={styles.screenContainer}>
       <GradientBackground>
+      <AppHeader styles={styles.headerContainer}>
+              <Text style={styles.textHeading}>SOSAN</Text>
+        </AppHeader>
         <View style={styles.screenBackground}>
           <View style={styles.screenMiddle}>
             <Text style={styles.Text}>create a new account</Text>
-            <Text style={styles.formText}>Enter Email</Text>
+            <Text style={styles.TextSty}>Enter Email</Text>
+        <InputField
+          styles={{
+            height: 40,
+            margin: 12,
+            borderColor: baseColors.sucessColor,
+            borderWidth: 3,
+            borderRadius: 50,
+            padding: 10,
+          }}
+          placeholder=" abc@gmail.com"
+        />
+            <Text style={styles.TextSty}>Enter Username</Text>
             <InputField
-              placeholder="abc@gmail.com"
-              styles={{
-                height: 40,
-                margin: 12,
-                borderColor: baseColors.sucessColor,
-                borderWidth: 1,
-                borderRadius: 50,
-                padding: 10,
-              }}
-            ></InputField>
-            <Text style={styles.formText}>Enter Username</Text>
+          styles={{
+            height: 40,
+            margin: 12,
+            borderColor: baseColors.sucessColor,
+            borderWidth: 3,
+            borderRadius: 50,
+            padding: 10,
+          }}
+          placeholder=" Enter Username"
+        />
+            <Text style={styles.TextSty}>Enter PhoneNumber</Text>
             <InputField
-              placeholder="Your Username"
-              styles={{
-                height: 40,
-                margin: 12,
-                borderColor: baseColors.sucessColor,
-                borderWidth: 1,
-                borderRadius: 50,
-                padding: 10,
-              }}
-            ></InputField>
-            <Text style={styles.formText}>Enter PhoneNumber</Text>
+          styles={{
+            height: 40,
+            margin: 12,
+            borderColor: baseColors.sucessColor,
+            borderWidth: 3,
+            borderRadius: 50,
+            padding: 10,
+          }}
+          placeholder=" 00955332158476"
+        />
+            <Text style={styles.TextSty}>Enter Password</Text>
             <InputField
-              placeholder="0092331524568"
-              styles={{
-                height: 40,
-                margin: 12,
-                borderColor: baseColors.sucessColor,
-                borderWidth: 1,
-                borderRadius: 50,
-                padding: 10,
-              }}
-            ></InputField>
-            <Text style={styles.formText}>Enter Password</Text>
-            <InputField
-              placeholder="*************"
-              secureTextEntry={true}
-              styles={{
-                height: 40,
-                margin: 12,
-                borderColor: baseColors.sucessColor,
-                borderWidth: 1,
-                borderRadius: 50,
-                padding: 10,
-              }}
-            ></InputField>
+          styles={{
+            height: 40,
+            margin: 12,
+            borderColor: baseColors.sucessColor,
+            borderWidth: 3,
+            borderRadius: 50,
+            padding: 10,
+          }}
+          placeholder="  ***************** "
+        />
             <Text style={styles.Textleft}> What are You? </Text>
             <View
               style={{
@@ -92,7 +95,8 @@ function SignUp() {
                   paddingHorizontal: 15,
                 }}
               >
-                <Checkbox
+                <Checkbox 
+                color="green"
                   status={checked ? "unchecked" : "checked" }
                   onPress={() => {
                     setChecked(!checked);
@@ -114,6 +118,7 @@ function SignUp() {
                 }}
               >
                 <Checkbox
+                color="green"
                 status={checked ? "checked" : "unchecked"}
                   onPress={() => {
                     setChecked(!checked);
@@ -135,6 +140,7 @@ function SignUp() {
               }}
             >
                <Checkbox
+               color="green"
                   status={"checked"}
                 />
               <Text>i agree with the terms and agreements</Text>

@@ -10,8 +10,9 @@ export const styles = StyleSheet.create({
     width: deviceWidth / 1,
     flex: 1,
     flexDirection: "column",
-    paddingTop: 36,
+    paddingTop: 26,
     backgroundColor: baseColors.lightColor,
+    borderWidth:1
   },
   screenBackground: {
     // backgroundColor: baseColors.primaryColor ,
@@ -19,14 +20,46 @@ export const styles = StyleSheet.create({
     width: deviceWidth / 1,
     flexDirection: "column",
     justifyContent: "center",
+    // borderWidth:1
   },
   screenMiddle: {
-    height: deviceHeight / 1.2,
-    width: deviceWidth / 1,
+    height: deviceHeight / 1.15,
+    // width: deviceWidth / 1,
     borderRadius: 20,
-    paddingHorizontal: 15,
+    paddingHorizontal: 10,
     justifyContent: "center",
     backgroundColor: baseColors.lightColor,
+    // borderWidth:1, 
+    marginBottom:80
+  },
+  headerContainer: {
+    width: deviceWidth / 1 - 30,
+    //  borderWidth:1,
+    // marginTop: 30,
+    marginHorizontal: 15,
+    flexDirection: "column",
+    justifyContent: "center",
+    paddingHorizontal: 45,
+  },
+  textHeading: {
+    color: baseColors.lightTextColor,
+    fontSize: 30,
+    fontWeight: "bold",
+    textAlign: "center",
+    // borderWidth:1,
+    width: deviceWidth / 1.5,
+    flexDirection: "row",
+    alignContent: "center",
+    justifyContent: "center",
+    paddingTop:20
+  },
+  TextSty: {
+    flexDirection:'row',
+    width:deviceWidth / 1 - 70,
+    fontSize:16,
+    // borderWidth:1, 
+marginHorizontal:20, 
+fontWeight:'350'
   },
   Text: {
     color: baseColors.darkTextColor,
@@ -34,12 +67,15 @@ export const styles = StyleSheet.create({
     textTransform: "uppercase",
     textAlign: "center",
     paddingVertical: 10,
+    fontSize:16
   },
   Textleft: {
     color: baseColors.darkTextColor,
-    fontWeight: "bold",
-    textTransform: "uppercase",
-    padding: 10,
+    flexDirection:'row',
+    width:deviceWidth / 1 - 70,
+    fontSize:18,
+    fontWeight: "600", 
+marginHorizontal:20,
   },
   formText: {
     paddingLeft: 20,

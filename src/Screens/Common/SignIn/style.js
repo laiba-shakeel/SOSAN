@@ -8,36 +8,46 @@ const styles = StyleSheet.create({
       width: deviceWidth / 1,
       flex: 1,
       flexDirection: "column",
-      padding: 20,
+      padding: 10,
       backgroundColor: baseColors.lightColor,
-      paddingVertical:10
+      paddingVertical:10, 
+      // borderWidth:2
     },
     screenTop: {
       flexDirection: "row",
       justifyContent: "flex-end",
-      paddingVertical: 40,
+      // paddingVertical: 40,
+      // borderWidth:1, 
+      borderColor: "blue", 
+      marginTop: 40
     },
     screenMid: {
       flexDirection: "column",
       justifyContent: "center",
       paddingVertical: 20,
+      // borderWidth:1
       // flex: 1,
     },
     LoginBtn: {
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
-      paddingTop: 10,
+      paddingTop: 6,
     },
     TextSty: {
-      paddingLeft: 11,
-      fontWeight: "600",
+      flexDirection:'row',
+      width:deviceWidth / 1 - 70,
+      fontSize:16,
+      // borderWidth:1, 
+marginHorizontal:20, 
+fontWeight:'350'
     },
     container: {
       flex: 1,
       backgroundColor: "#fff",
       alignItems: "center",
       justifyContent: "center",
+      borderWidth:1
     },
     image: {
       flex: 1,

@@ -1,18 +1,24 @@
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, ImageBackground , Dimensions } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import TouchableButton from "../../../Components/Buttons";
 import TextInputField from "../../../Components/InputFiled";
 import baseColors from "../../../Theme/Colors/Colors";
+
 import styles from "./style";
+
+const deviceHeight = Dimensions.get("window").height;
+const deviceWidth = Dimensions.get("window").width;
 const SignIn = () => {
   const navigation = useNavigation();
 
   return (
     <View style={styles.screenContainer}>
       <View style={styles.screenTop}>
-        <Text>
-          <Text style={styles.textColorSuccess}>English</Text> | French
+        <Text style>
+          <Text style={styles.textColorSuccess}>English</Text>
+          <Text style={{color:'gray' ,fontSize:20}}> |</Text>
+          <Text style={{color:'gray'}}> French</Text>
         </Text>
       </View>
       <View style={styles.screenMid}>
@@ -24,20 +30,24 @@ const SignIn = () => {
         >
           <Image
             source={require("../../../Assets/Images/logoR.png")}
-            style={{ height: 50 }}
+            style={{ height: 60 }}
           />
         </View>
+        <View style={{flexDirection:'row' ,justifyContent:'center'}}>
+          <Text style={{fontSize:18, color:baseColors.sucessColor, fontWeight:"bold"}}>Log In</Text>
+        </View>
+        <View style={{ marginTop:15 , height: deviceHeight /1.34}}>
         <Text style={styles.TextSty}>Enter Email</Text>
         <TextInputField
           styles={{
             height: 40,
             margin: 12,
             borderColor: baseColors.sucessColor,
-            borderWidth: 1,
+            borderWidth: 3,
             borderRadius: 50,
             padding: 10,
           }}
-          placeholder="abc@gmail.com"
+          placeholder=" abc@gmail.com"
         />
         <Text style={styles.TextSty}>Enter Password</Text>
         <TextInputField
@@ -45,11 +55,11 @@ const SignIn = () => {
             height: 40,
             margin: 12,
             borderColor: baseColors.sucessColor,
-            borderWidth: 1,
+            borderWidth: 3,
             borderRadius: 50,
             padding: 10,
           }}
-          placeholder="************"
+          placeholder=" ************"
           secureTextEntry={true}
         />
         <View style={styles.LoginBtn}>
@@ -58,9 +68,9 @@ const SignIn = () => {
               elevation: 8,
               backgroundColor: baseColors.primaryColor,
               borderRadius: 50,
-              paddingVertical: 10,
+              paddingVertical: 7,
               paddingHorizontal: 12,
-              width: 200,
+              width: 220,
               justifyContent: "center",
               alignItems: "center",
             }}
@@ -72,7 +82,7 @@ const SignIn = () => {
               style={{
                 color: "#fff",
                 fontWeight: "bold",
-                textTransform: "uppercase",
+                fontSize:20
               }}
             >
               Log In
@@ -90,12 +100,15 @@ const SignIn = () => {
           >
             Registered Now
           </Text>
+          
         </View>
-      </View>
-      <Image
+     
+      <ImageBackground 
         source={require("../../../Assets/Images/bgHero1.png")}
-        style={{ height: 270, resizeMode: "contain" }}
+        style={{height: 222, resizeMode: "contain" }}
       />
+       </View>
+       </View>
     </View>
   );
 };

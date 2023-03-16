@@ -11,7 +11,7 @@ const TextInputField = ({ placeholder, keyboardType, secureTextEntry, styles: cu
   return (
     <SafeAreaView>
       <TextInput
-        placeholderTextColor= "black"
+        placeholderTextColor= "gray"
         style={styles}
         onChangeText={onChangeNumber}
         value={number}
@@ -36,6 +36,7 @@ const defaultStyles = StyleSheet.create({
     textAlignVertical: "top",
     fontSize:20,
     paddingStart: 10,
+    textAlign:'center'
     
   },
 });
