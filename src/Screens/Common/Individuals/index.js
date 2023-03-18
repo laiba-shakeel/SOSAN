@@ -33,8 +33,10 @@ const Individuals = () => {
                 marginHorizontal: 5,
                 justifyContent: "space-evenly",
               }}>
-              <InputFiled
-                placeholderTextColor="gray"
+              <InputFiled 
+               
+                placeholderTextColor={baseColors.lightGreyColor}
+                maxLength={1}
                 placeholder="4"
                 styles={{
                   border: "1px solid",
@@ -48,7 +50,8 @@ const Individuals = () => {
                 }}
               />
               <InputFiled
-                placeholderTextColor="gray"
+                placeholderTextColor={baseColors.lightGreyColor}
+                maxLength={1}
                 placeholder="4"
                 styles={{
                   border: "1px solid",
@@ -62,7 +65,8 @@ const Individuals = () => {
                 }}
               />
               <InputFiled
-                placeholderTextColor="gray"
+                placeholderTextColor={baseColors.lightGreyColor}
+                maxLength={1}
                 placeholder="0"
                 styles={{
                   border: "1px solid",
@@ -76,7 +80,8 @@ const Individuals = () => {
                 }}
               />
               <InputFiled
-                placeholderTextColor="gray"
+             placeholderTextColor={baseColors.lightGreyColor}
+                maxLength={1}
                 placeholder="0"
                 styles={{
                   border: "1px solid",
@@ -90,7 +95,8 @@ const Individuals = () => {
                 }}
               />
               <InputFiled
-                placeholderTextColor="gray"
+                placeholderTextColor={baseColors.lightGreyColor}
+                maxLength={1}
                 placeholder="3"
                 styles={{
                   border: "1px solid",

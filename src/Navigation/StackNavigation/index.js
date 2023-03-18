@@ -106,6 +106,7 @@ import PharmacyTabBottomNavigation from "../PharmacyTabBottomNavigation";
 import AssuranceFormEdit from "../../Screens/Assurances/AssuranceFormEdit";
 import AssuranceTrackingDetail from "../../Screens/Assurances/AssuranceTrackingDetail";
 import HospitalityAppHome from "../../Screens/Hospital/AppHome";
+import { Example } from "../../Screens/Common/Example";
 const Stack = createNativeStackNavigator();
 const StackNavigation = () => {
   return (
@@ -218,6 +219,7 @@ const StackNavigation = () => {
         <Stack.Screen name="AgendaAppointmentHospital" component={AgendaAppointmentHospital}/>
         <Stack.Screen name="HospitalityAppHome" component={HospitalityAppHome}/>
         <Stack.Screen name="AgendaDrugRequest" component={AgendaDrugRequest}/>
+        <Stack.Screen name="Example" component={Example}/>
       </Stack.Navigator>
     </>
   );

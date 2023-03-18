@@ -4,7 +4,7 @@ import { useNavigation } from "@react-navigation/native";
 import TouchableButton from "../../../Components/Buttons";
 import TextInputField from "../../../Components/InputFiled";
 import baseColors from "../../../Theme/Colors/Colors";
-
+import {FullBottomImage , LogoR} from "../../../Assets/Images/index"
 import styles from "./style";
 
 const deviceHeight = Dimensions.get("window").height;
@@ -26,17 +26,18 @@ const UserSignIn = () => {
           style={{
             alignItems: "center",
             justifyContent: "center",
+            paddingVertical:17
           }}
         >
           <Image
-            source={require("../../../Assets/Images/logoR.png")}
-            style={{ height: 60 }}
+            source={LogoR}
+            style={{ height: 50 , }}
           />
         </View>
         <View style={{flexDirection:'row' ,justifyContent:'center'}}>
           <Text style={{fontSize:18, color:baseColors.sucessColor, fontWeight:"bold"}}>Log In</Text>
         </View>
-        <View style={{ marginTop:15 , height: deviceHeight /1.34}}>
+        <View style={{ }}>
         <Text style={styles.TextSty}>Enter Email</Text>
         <TextInputField
           styles={{
@@ -47,7 +48,7 @@ const UserSignIn = () => {
             borderRadius: 50,
             padding: 10,
           }}
-          placeholder="  Jane20@gmail.com"
+          placeholder=" Jane20@gmail.com"
         />
         <Text style={styles.TextSty}>Enter Password</Text>
         <TextInputField
@@ -75,7 +76,7 @@ const UserSignIn = () => {
               alignItems: "center",
             }}
             onPress={() => {
-              navigation.navigate("UserAppHome");
+              navigation.navigate("AppHome");
             }}
           >
             <Text
@@ -103,9 +104,9 @@ const UserSignIn = () => {
           
         </View>
      
-      <ImageBackground 
-        source={require("../../../Assets/Images/bgHero1.png")}
-        style={{height: 222, resizeMode: "contain" }}
+      <Image
+        source={FullBottomImage}
+        style={{height: 250, resizeMode: "contain" , width:380}}
       />
        </View>
        </View>

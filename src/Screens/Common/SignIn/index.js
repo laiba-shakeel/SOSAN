@@ -4,7 +4,7 @@ import { useNavigation } from "@react-navigation/native";
 import TouchableButton from "../../../Components/Buttons";
 import TextInputField from "../../../Components/InputFiled";
 import baseColors from "../../../Theme/Colors/Colors";
-import {FullBottomImage} from "../../../Assets/Images/index"
+import {FullBottomImage , LogoR} from "../../../Assets/Images/index"
 import styles from "./style";
 
 const deviceHeight = Dimensions.get("window").height;
@@ -30,8 +30,8 @@ const SignIn = () => {
           }}
         >
           <Image
-            source={require("../../../Assets/Images/logoR.png")}
-            style={{ height: 50 , }}
+            source={LogoR}
+            style={{ height: 50 ,}}
           />
         </View>
         <View style={{flexDirection:'row' ,justifyContent:'center'}}>

@@ -1,10 +1,10 @@
-import React from 'react'
+import React , { useState, useCallback, useEffect } from 'react'
 import { View, TouchableOpacity, Dimensions, Text, Image } from 'react-native'
 import AppHeader from "../../../Components/AppHeader";
 import { styles } from "./style";
 import baseColors from '../../../Theme/Colors/Colors';
 import { Ionicons } from "@expo/vector-icons";
-import { AvatarPerson1,  } from '../../../Assets/Images';
+import { AvatarPerson1, } from '../../../Assets/Images';
 import SendMessage from '../../../Components/Cards/ChattingCard/SendMessage/index';
 import ReceiveMessage from "../../../Components/Cards/ChattingCard/ReceiveMessage"
 import TextInputField from '../../../Components/InputFiled';
@@ -13,8 +13,10 @@ import { useNavigation } from '@react-navigation/native';
 const deviceWidth = Dimensions.get("window").width;
 const deviceHeight = Dimensions.get("window").height;
 
+
 const ChatScreen = () => {
     const navigation = useNavigation();
+    
     return (
         <View style={styles.screenContainer}>
             <View>
@@ -36,9 +38,9 @@ const ChatScreen = () => {
                         >
                             <TouchableOpacity>
                                 <Ionicons
-                                onPress={()=>{
-                                    navigation.navigate("Chat")
-                                }}
+                                    onPress={() => {
+                                        navigation.navigate("Chat")
+                                    }}
                                     name="chevron-back-sharp"
                                     size={45}
                                     style={{ color: baseColors.lightTextColor, justifyContent: 'center', alignItems: 'center' }}
@@ -76,9 +78,8 @@ const ChatScreen = () => {
                     alignItems: "center",
                     // paddingHorizontal: 10
                 }}
-            > 
+            >
                 <View style={styles.screenMiddle}>
-               
                     <View style={{
                         flexDirection: 'column'
                     }}>

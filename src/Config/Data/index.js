@@ -111,7 +111,7 @@ export const ChatData = [
     title: "Jack",
     message: "hi EveryOne I'm Jack",
     time: "10:00 Am",
-    goTo: "ChatScreen"
+    goTo: "Example"
 
   },
   {
