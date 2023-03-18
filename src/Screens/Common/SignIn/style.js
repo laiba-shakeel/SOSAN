@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
       padding: 10,
       backgroundColor: baseColors.lightColor,
       paddingVertical:10, 
-      // borderWidth:2
+      borderWidth:2
     },
     screenTop: {
       flexDirection: "row",
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     screenMid: {
       flexDirection: "column",
       justifyContent: "center",
-      paddingVertical: 20,
+      // paddingVertical: 20,
       // borderWidth:1
       // flex: 1,
     },

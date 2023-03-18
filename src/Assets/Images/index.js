@@ -1,4 +1,6 @@
 import bgHero from "../Images/bgHero1.png";
+import FullBottomImage from "../Images/FullBottomImage.png";
+import FullBottomImageTwo from "../Images/FullBottomImageTwo.png";
 import Dummy from "../Images/Dummy-Person.png";
 import Dummy1 from "../Images/dummy1.webp";
 import dommy from "../Images/dummy.webp";
@@ -68,5 +70,7 @@ export {
   PharmacieCard6,
   PharmacieCard7,
   PharmacieCard8,
-  keyboardImg
+  keyboardImg,
+  FullBottomImage,
+  FullBottomImageTwo,
 };
