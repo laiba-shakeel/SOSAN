@@ -8,7 +8,7 @@ import {
   FlatList,
 } from "react-native";
 import baseColors from "../../Theme/Colors/Colors";
-import { DummyPerson } from "../../Assets/Images/index";
+import { Dummy } from "../../Assets/Images/index";
 import InputField from "../InputFiled";
 import SelectDropdown from "../SelectDropDown";
 import Button from "../Buttons/index";
@@ -73,8 +73,8 @@ function index(props) {
             fontSize: 17,
             fontWeight: "400",
           }}
-          onPress={props.onPress}
-          // onPress={()=>{Navigation.navigate('AddANewDoctorHospital')}}
+          // onPress={props.onPress}
+          onPress={()=>{Navigation.navigate('AddANewDoctorHospital')}}
           >Doctor Detail</Text>
         </View>
       </View>
@@ -88,7 +88,7 @@ function index(props) {
         }}
       >
         <View style={styles.imageStyle}>
-          <Image style={styles.image} source={DummyPerson} />
+          <Image style={styles.image} source={Dummy} />
         </View>
 
         <Text style={styles.formText}>Stuff Name</Text>

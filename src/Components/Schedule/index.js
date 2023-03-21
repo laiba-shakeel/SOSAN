@@ -1,58 +1,39 @@
 import React, { Children } from "react";
-import { Text, View } from "react-native";
+import { Text, View, Dimensions } from "react-native";
 import { styles } from "./style";
 import SwitchButton from "./Switch";
 import TimePicker from "./TimePicker";
-
-function Schedule({children}) {
+const deviceHeight = Dimensions.get("window").height;
+const deviceWidth = Dimensions.get("window").width;
+function Schedule({ children }) {
   return (
     <View style={styles.screenContainer}>
       <Text style={{
         marginVertical: 5,
         fontSize: 16,
-        fontWeight:'bold'
+        fontWeight: 'bold'
       }}>{children}</Text>
 
       <View style={styles.scheduleMain}>
         <View style={styles.schedulecolumn}>
-          <Text style={styles.scheduleDay}>Sunday</Text>
-          <Text style={styles.scheduleDay}>Monday</Text>
-          <Text style={styles.scheduleDay}>Tuesday</Text>
-          <Text style={styles.scheduleDay}>Wednesday</Text>
-          <Text style={styles.scheduleDay}>Friday</Text>
-          <Text style={styles.scheduleDay}>Sunday</Text>
-          <Text style={styles.scheduleDay}>Saturday</Text>
-          <Text style={styles.scheduleDay}>24/7</Text>
-        </View>
-
-        <View style={styles.schedulecolumn}>
-          <View style={styles.scheduleBtn}>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', width: deviceWidth / 1 - 5 }}>
+            <Text style={styles.scheduleDay}>Sun</Text>
+            <View style={styles.scheduleBtn}>
+              <SwitchButton />
+            </View>
+            <Text style={styles.scheduleTiming}>
+              <TimePicker />
+              <View>
+                <Text>To</Text>
+              </View>
+              <TimePicker />
+            </Text>
+          </View>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', width: deviceWidth / 1 - 5 }}>
+         <Text style={styles.scheduleDay}>Mon</Text>
+         <View style={styles.scheduleBtn}>
             <SwitchButton />
           </View>
-          <View style={styles.scheduleBtn}>
-            <SwitchButton />
-          </View>
-          <View style={styles.scheduleBtn}>
-            <SwitchButton />
-          </View>
-          <View style={styles.scheduleBtn}>
-            <SwitchButton />
-          </View>
-          <View style={styles.scheduleBtn}>
-            <SwitchButton />
-          </View>
-          <View style={styles.scheduleBtn}>
-            <SwitchButton />
-          </View>
-          <View style={styles.scheduleBtn}>
-            <SwitchButton />
-          </View>
-          <View style={styles.scheduleBtn}>
-            <SwitchButton />
-          </View>
-        </View>
-
-        <View style={styles.schedulecolumn}>
           <Text style={styles.scheduleTiming}>
             <TimePicker />
             <View>
@@ -60,50 +41,73 @@ function Schedule({children}) {
             </View>
             <TimePicker />
           </Text>
-
-          <Text style={styles.scheduleTiming}>
-            <TimePicker />
-            <View>
-              <Text>To</Text>
             </View>
-            <TimePicker />
-          </Text>
-          <Text style={styles.scheduleTiming}>
-            <TimePicker />
-            <View>
-              <Text>To</Text>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-evenly',alignItems:'center', width: deviceWidth / 1 - 5 }}>
+            <Text style={styles.scheduleDay}>Tues</Text>
+            <View style={styles.scheduleBtn}>
+              <SwitchButton />
             </View>
-            <TimePicker />
-          </Text>
-          <Text style={styles.scheduleTiming}>
-            <TimePicker />
-            <View>
-              <Text>To</Text>
+            <Text style={styles.scheduleTiming}>
+              <TimePicker />
+              <View>
+                <Text>To</Text>
+              </View>
+              <TimePicker />
+            </Text>
+          </View>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-evenly',alignItems:'center', width: deviceWidth / 1 - 5 }}>
+            <Text style={styles.scheduleDay}>Wed</Text>
+            <View style={styles.scheduleBtn}>
+              <SwitchButton />
             </View>
-            <TimePicker />
-          </Text>
-          <Text style={styles.scheduleTiming}>
-            <TimePicker />
-            <View>
-              <Text>To</Text>
+            <Text style={styles.scheduleTiming}>
+              <TimePicker />
+              <View>
+                <Text>To</Text>
+              </View>
+              <TimePicker />
+            </Text>
+          </View>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-evenly',alignItems:'center', width: deviceWidth / 1 - 5 }}>
+            <Text style={styles.scheduleDay}>Thurs</Text>
+            <View style={styles.scheduleBtn}>
+              <SwitchButton />
             </View>
-            <TimePicker />
-          </Text>
-          <Text style={styles.scheduleTiming}>
-            <TimePicker />
-            <View>
-              <Text>To</Text>
+            <Text style={styles.scheduleTiming}>
+              <TimePicker />
+              <View>
+                <Text>To</Text>
+              </View>
+              <TimePicker />
+            </Text>
+          </View>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-evenly',alignItems:'center', width: deviceWidth / 1 - 5 }}>
+            <Text style={styles.scheduleDay}>Fri</Text>
+            <View style={styles.scheduleBtn}>
+              <SwitchButton />
             </View>
-            <TimePicker />
-          </Text>
-          <Text style={styles.scheduleTiming}>
-            <TimePicker />
-            <View>
-              <Text>To</Text>
+            <Text style={styles.scheduleTiming}>
+              <TimePicker />
+              <View>
+                <Text>To</Text>
+              </View>
+              <TimePicker />
+            </Text>
+          </View>
+          <View style={{ flexDirection: 'row', justifyContent: 'space-evenly',alignItems:'center', width: deviceWidth / 1 - 5 }}>
+            <Text style={styles.scheduleDay}>Sat</Text>
+            <View style={styles.scheduleBtn}>
+              <SwitchButton/>
             </View>
-            <TimePicker />
-          </Text>
-        </View>
+            <Text style={styles.scheduleTiming}>
+              <TimePicker />
+              <View>
+                <Text>To</Text>
+              </View>
+              <TimePicker />
+            </Text>
+          </View>
+            </View>
       </View>
     </View>
   );

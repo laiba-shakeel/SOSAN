@@ -15,6 +15,8 @@ export const styles = StyleSheet.create({
   modal: {
     backgroundColor: baseColors.lightColor,
     borderRadius: 10,
+    borderWidth: 2,
+    width: deviceWidth / 1 - 5,
   },
   modalView: {
     flexDirection: "row",
@@ -22,7 +24,7 @@ export const styles = StyleSheet.create({
     width: deviceWidth / 2 - 30,
     backgroundColor: baseColors.lightColor,
     borderColor: baseColors.sucessColor,
-    borderWidth: 1,
+   borderWidth: 2, 
     borderRadius: 20,
     alignItems: "center",
     justifyContent: "center",
@@ -31,6 +33,7 @@ export const styles = StyleSheet.create({
     paddingVertical: 12,
     marginHorizontal: 5,
     marginVertical: 15,
+    
   },
   modalViewReverse: {
     flexDirection: "row",

@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     padding: 20,
-
+    borderWidth: 1,
     backgroundColor: baseColors.lightColor,
   },
   headerContainer: {
@@ -26,18 +26,19 @@ export const styles = StyleSheet.create({
   },
   Headeritems: {
     flexDirection: "row",
-    alignItems:'center'
+    alignItems: 'center'
   },
   HeaderText: {
-    fontSize:17,
-    color:baseColors.primaryTextColor
+    fontSize: 17,
+    color: baseColors.primaryTextColor
   },
 
   screenMiddle: {
     flexDirection: "column",
-    justifyContent: "center",
-    paddingVertical: 20,
+    // paddingVertical: 20,
     width: deviceWidth / 1,
+    // borderWidth:1, 
+    height: deviceHeight / 1.5,
   },
   Button: {
     elevation: 8,
@@ -55,5 +56,5 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     textTransform: "uppercase",
   },
-  
+
 });

@@ -17,7 +17,7 @@ function AddServicesHospital() {
         <View style={styles.Box}>
           <Text style={styles.TextSty}>Services</Text>
           <View style={styles.span}>
-            <CheckButton />
+            <CheckButton/>
             <Text style={styles.TextSpan}>Laboratory</Text>
           </View>
           <View style={styles.span}>

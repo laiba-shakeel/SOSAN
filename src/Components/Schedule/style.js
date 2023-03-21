@@ -20,19 +20,23 @@ export const styles = StyleSheet.create({
     paddingVertical: 10,
   },
   scheduleMain: {
-    width: (deviceWidth / 1) - 60,
+    width: (deviceWidth / 1)-40,
     // flex:1,
+    // marginHorizontal:10,
     flexDirection: "row",
     alignItems: "flex-start",
     justifyContent: "center",
     backgroundColor: baseColors.lightColor,
     borderColor: baseColors.secondaryColor,
-    borderWidth: 1,
+    // borderWidth: 1,
     borderRadius: 20,
-    elevation: 2,
+    // elevation: 2,
   },
   schedulecolumn: {
     flexDirection: "column",
+    // borderWidth:1,
+    justifyContent:'space-evenly', 
+    alignItems:'baseline'
   },
   scheduleDay: {
     paddingVertical: 14,

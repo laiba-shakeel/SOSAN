@@ -15,9 +15,10 @@ export const styles = StyleSheet.create({
   Text: {
     color: baseColors.darkTextColor,
     fontWeight: "bold",
-    textTransform: "uppercase",
+    // textTransform: "uppercase",
+    fontSize:18,
     textAlign: "center",
-    paddingVertical: 10,
+    paddingVertical: 18,
   },
   screenTop: {
     flexDirection: "column",
@@ -26,6 +27,9 @@ export const styles = StyleSheet.create({
   },
   formText: {
     paddingLeft: 20,
+    fontSize:14,
+    marginTop:10
+    
   },
   ScreenMap: {
     border: "2px",
@@ -57,6 +61,7 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 50,
     padding: 10,
+   
   },
   AboutSty: {
     margin: 12,

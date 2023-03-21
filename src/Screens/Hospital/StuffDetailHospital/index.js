@@ -50,6 +50,7 @@ function StuffDetailHospital() {
             width:deviceWidth/1-40,
             backgroundColor: baseColors.lightColor,
             elevation: 4,
+            borderWidth:1
           }}
         >
           <MaterialIcons name="person-add-alt-1" size={24} color="black" />

@@ -5,7 +5,7 @@ import InputField from "../../../../Components/InputFiled";
 import SelectDropdown from "../../../../Components/SelectDropDown";
 import Button from "../../../../Components/Buttons";
 
-function PersonalDetail() {
+function PersonalDetail(props) {
   return (
     <ScrollView style={styles.screenContainer}>
       <View style={styles.screen}>
@@ -44,7 +44,8 @@ function PersonalDetail() {
           numberOfLines={6}
           styles={styles.InputFieldAbout}></InputField>
         <View>
-          <Button
+          <Button 
+          onPress={props.onPress}
             styles={styles.Button}
             // onPress={() => {
             //   Navigation.navigate("");

@@ -8,13 +8,13 @@ import {
   ImageBackground,
   ScrollView,
 } from "react-native";
-import AppHeader from "../AppHeader/index";
+import AppHeader from "../../Components/AppHeader";
 import baseColors from "../../Theme/Colors/Colors";
 import { Ionicons, AntDesign } from "@expo/vector-icons";
 import { map } from "../../Assets/Images/index";
 import BottomSheet from "react-native-simple-bottom-sheet";
-import NearbyModal from "../../Components/Modal/NearByModal/index";
-import NearByMenuList from "../List/NearByMenuList/index"
+import NearbyModal from "../../Components/Modal/NearByModal";
+import NearByMenuList from "../../Components/List/NearByMenuList"
 import { useNavigation } from "@react-navigation/native";
 
 const deviceHeight = Dimensions.get("window").height;

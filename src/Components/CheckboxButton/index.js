@@ -4,7 +4,8 @@ import { useState } from "react";
 const CheckBtn = () => {
 const [checked, setChecked] = useState(false);
   return (
-    <Checkbox
+    <Checkbox 
+    color='green'
       status={checked ? "checked" : "unchecked"}
       onPress={() => {
         setChecked(!checked);

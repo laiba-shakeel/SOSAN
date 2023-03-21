@@ -33,19 +33,21 @@ function DoctorDetailHospital() {
       {/* <ScrollView> */}
 
       <View style={styles.screenMiddle}>
-        <View style={{ paddingVertical: 10 }}>
+        <View>
           <SkipSwitchReverseButton />
         </View>
-        <View
+      <View style={{marginTop:150}}>
+      <View
           style={{
             flexDirection: "row",
             justifyContent: "center",
             alignItems: "center",
             borderRadius: 15,
             height: 100,
-            width:deviceWidth/1-40,
+            width:deviceWidth/1-50,
             backgroundColor: baseColors.lightColor,
-            elevation: 4,
+            elevation: 4, 
+            // borderWidth:1
           }}
         >
           <MaterialIcons name="person-add-alt-1" size={24} color="black" />
@@ -62,8 +64,11 @@ function DoctorDetailHospital() {
             Add New Staff
           </Text>
         </View>
+      </View>
+       
 
-        <View
+      </View>
+      <View
           style={{
             height: 60,
             flexDirection: "column",
@@ -83,7 +88,6 @@ function DoctorDetailHospital() {
             }}>Continue</Text>
           </Button>
         </View>
-      </View>
     </ScrollView>
   );
 }

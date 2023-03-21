@@ -5,27 +5,21 @@ import { useNavigation } from "@react-navigation/native";
 import { styles } from "./style";
 import InputField from "../../../../Components/InputFiled/index";
 import Gallary from "../../../../Components/Gallary";
+import { Entypo } from '@expo/vector-icons';
 import Schedule from "../../../../Components/Schedule";
 import Button from "../../../../Components/Buttons";
 import Map from '../../../../Components/Map';
-function CommonDetail({children}) {
+function CommonDetail(props) {
   const navigation = useNavigation();
   return (
     <ScrollView style={styles.screenContainer}>
       <View style={styles.screenTop}>
-        <Text style={styles.Text}>Detail</Text>
+        <Text style={styles.Text}>{props.title}</Text>
         <Text style={styles.formText}>Institution Name</Text>
         <InputField placeholder="Type Here" styles={styles.InputStyling} />
-        <Text style={styles.formText}>Set Location</Text>
-        <InputField placeholder="Type Here" styles={styles.InputStyling} />
+       <Text style={styles.formText}>Set Location</Text>
+       <InputField placeholder="Type Here" styles={styles.InputStyling} />
         <Map/>
-        {/* <Text style={styles.lightText}>Set on map</Text>
-        <View style={styles.Mapping}>
-          <Image
-            style={styles.ImgSty}
-            source={require("../../../../Assets/Images/map.png")}
-          />
-        </View> */}
         <Text style={styles.formText}>Phone</Text>
         <InputField placeholder="Type Here" styles={styles.InputStyling} />
         <Text style={styles.formText}>Website (if any) </Text>
@@ -61,7 +55,7 @@ function CommonDetail({children}) {
             // onPress={() => {
             //   navigation.navigate("Services");
             // }} 
-            >{children}
+            >{props.children}
             {/* <Text style={styles.LoginTextSty}>Login</Text> */}
           </Button>
         </View>

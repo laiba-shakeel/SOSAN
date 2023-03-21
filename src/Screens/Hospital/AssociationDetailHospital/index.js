@@ -10,7 +10,7 @@ import { useNavigation } from '@react-navigation/native'
 function AssociationDetailHospital() {
   const Navigation = useNavigation();
   return (
-    <CommonDetail>
+    <CommonDetail title="Association Detail">
     <Text style={{
     color: baseColors.lightTextColor,
     fontWeight: "bold",

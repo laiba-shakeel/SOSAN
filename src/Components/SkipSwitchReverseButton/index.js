@@ -8,10 +8,6 @@ import {
   FlatList,
 } from "react-native";
 import baseColors from "../../Theme/Colors/Colors";
-import { DummyPerson } from "../../Assets/Images/index";
-import InputField from "../InputFiled";
-import SelectDropdown from "../SelectDropDown";
-import Button from "../Buttons/index";
 import { useNavigation } from "@react-navigation/native";
 
 const deviceHeight = Dimensions.get("window").height;
@@ -25,16 +21,18 @@ function index() {
       <View
         style={{
           flexDirection: "row",
-          alignItems: "center",
+          // alignItems: "center",
           backgroundColor: baseColors.lightColor,
           elevation: 4,
           width: deviceWidth / 1.2,
           height: 40,
           borderRadius: 50,
+          // borderWidth:1 , 
+          marginVertical: 10
         }}
       >
         <View
-           style={{
+          style={{
             height: 38,
             borderRadius: 47,
             flexDirection: "row",
@@ -44,53 +42,56 @@ function index() {
           }}
         >
           <Text
+
+            onPress={() => { Navigation.navigate('AppointmentDoctor') }}
             style={{
-                color: baseColors.darkColor,
-            fontSize: 17,
-            fontWeight: "400",
-              
+              color: baseColors.darkColor,
+              fontSize: 17,
+              fontWeight: "400",
+
             }}
-            
+
           >
             Stuff Detail
           </Text>
         </View>
         <View
-        style={{
+          style={{
             borderWidth: 2,
             borderColor: baseColors.sucessColor,
             backgroundColor: baseColors.sucessColor,
-            width: deviceWidth / 2-15,
+            width: deviceWidth / 2 - 15,
             height: 38,
             borderRadius: 50,
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "center",
           }}
-         
+
         >
           <Text
-          style={{
-            color: baseColors.lightTextColor,
+            style={{
+              color: baseColors.lightTextColor,
               fontSize: 17,
               fontWeight: "400",
-          }}
-          onPress={()=>{Navigation.navigate('AddANewDoctorPharmacy')}}
+            }}
+            onPress={() => { Navigation.navigate('AddANewDoctorPharmacy') }}
           >Doctor Detail</Text>
         </View>
-      
-      
+
+
       </View>
     </View>
   );
 }
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    // flex: 1,
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
     width: deviceWidth / 1 - 50,
+    // borderWidth:1
   },
   ActivityView: {
     flexDirection: "row",
