@@ -1,7 +1,7 @@
 import React from 'react'
 import {Text, View, style} from 'react-native'
 import baseColors from '../../../Theme/Colors/Colors'
-import CommonDetail from '../../Common/Details/CommonDetail'
+import LayoutCommonDetail from "../../../Layout/LayoutCommonDetail"
 import { useNavigation } from '@react-navigation/native'
 import InformationOkay from '../../../Components/Modal/InformationOkay'
 
@@ -14,7 +14,7 @@ function AssociationDetailDonation() {
     };
 
   return (
-    <CommonDetail>
+    <LayoutCommonDetail>
     <InformationOkay
     onPress={toggleModal} 
     isVisible={isModalVisible}
@@ -26,7 +26,7 @@ function AssociationDetailDonation() {
     }}
     >Continue</Text>
     </InformationOkay>
-    </CommonDetail>
+    </LayoutCommonDetail>
   )
 }
 

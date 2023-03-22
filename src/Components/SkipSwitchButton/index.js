@@ -73,8 +73,8 @@ function index(props) {
             fontSize: 17,
             fontWeight: "400",
           }}
-          // onPress={props.onPress}
-          onPress={()=>{Navigation.navigate('AddANewDoctorHospital')}}
+          onPress={props.onPress}
+          // onPress={()=>{Navigation.navigate('AddANewDoctorHospital')}}
           >Doctor Detail</Text>
         </View>
       </View>

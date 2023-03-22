@@ -1,7 +1,7 @@
 import React from "react";
 import SignIn from "../../Screens/Common/SignIn";
 import SignUp from "../../Screens/Common/SignUp";
-import PersonalDetail from "../../Screens/Common/Details/PersonalDetail";
+// import PersonalDetail from "../../Screens/Common/Details/PersonalDetail";
 import CommonDetail from "../../Screens/Common/Details/CommonDetail";
 import Individuals from "../../Screens/Common/Individuals";
 import Services from "../../Screens/Common/Services";
@@ -116,7 +116,7 @@ const StackNavigation = () => {
         <Stack.Screen name="SignIn" component={SignIn} />
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="Individuals" component={Individuals} />
-        <Stack.Screen name="PersonalDetail" component={PersonalDetail} />
+        {/* <Stack.Screen name="PersonalDetail" component={PersonalDetail} /> */}
         <Stack.Screen name="CommonDetail" component={CommonDetail} />
         <Stack.Screen name="Services" component={Services} />
         <Stack.Screen name="AppHome" component={AppHome} />

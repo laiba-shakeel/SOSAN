@@ -7,7 +7,7 @@ import {
   FlatList,
   Image
 } from "react-native";
-import AppHeader from "../../Components/AppHeader/index";
+import AppHeader from "../../Components/AppHeader";
 import { styles } from "./style";
 import baseColors from "../../Theme/Colors/Colors";
 import { Ionicons } from "@expo/vector-icons";

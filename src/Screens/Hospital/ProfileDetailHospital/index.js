@@ -1,13 +1,13 @@
 import React from 'react'
 import {Text, View, style} from 'react-native'
 import baseColors from '../../../Theme/Colors/Colors'
-import CommonDetail from '../../Common/Details/CommonDetail'
+import LayoutCommonDetail from '../../../Layout/LayoutCommonDetail'
 import { useNavigation } from '@react-navigation/native'
 
 function ProfileDetailHopital() {
   const Navigation = useNavigation();
   return (
-    <CommonDetail>
+   <LayoutCommonDetail>
     <Text style={{
     color: baseColors.lightTextColor,
     fontWeight: "bold",
@@ -17,7 +17,7 @@ function ProfileDetailHopital() {
         Navigation.navigate("AddServicesHospital");
       }}
     >Continue</Text>
-    </CommonDetail>
+    </LayoutCommonDetail>
   )
 }
 

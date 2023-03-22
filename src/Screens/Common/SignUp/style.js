@@ -10,75 +10,59 @@ export const styles = StyleSheet.create({
     width: deviceWidth / 1,
     flex: 1,
     flexDirection: "column",
-    paddingTop: 26,
+    paddingTop: 36,
     backgroundColor: baseColors.lightColor,
-    borderWidth:1
   },
   screenBackground: {
     // backgroundColor: baseColors.primaryColor ,
     height: deviceHeight / 1,
     width: deviceWidth / 1,
     flexDirection: "column",
-    justifyContent: "center",
-    // borderWidth:1
+    justifyContent: 'center',
+    
+  },
+  headingTop:{
+    textAlign:'center',
+    fontSize:35,
+    fontWeight:'bold',
+    color:baseColors.lightTextColor,
+    paddingBottom:5
+
   },
   screenMiddle: {
-    height: deviceHeight / 1.15,
-    // width: deviceWidth / 1,
+    height: deviceHeight / 1.2,
+    width: deviceWidth / 1,
     borderRadius: 20,
-    paddingHorizontal: 10,
-    justifyContent: "center",
+    paddingHorizontal: 15,
+    paddingTop:30,
     backgroundColor: baseColors.lightColor,
-    // borderWidth:1, 
-    marginBottom:80
-  },
-  headerContainer: {
-    width: deviceWidth / 1 - 30,
-    //  borderWidth:1,
-    // marginTop: 30,
-    marginHorizontal: 15,
-    flexDirection: "column",
-    justifyContent: "center",
-    paddingHorizontal: 45,
-  },
-  textHeading: {
-    color: baseColors.lightTextColor,
-    fontSize: 30,
-    fontWeight: "bold",
-    textAlign: "center",
-    // borderWidth:1,
-    width: deviceWidth / 1.5,
-    flexDirection: "row",
-    alignContent: "center",
-    justifyContent: "center",
-    paddingTop:20
-  },
-  TextSty: {
-    flexDirection:'row',
-    width:deviceWidth / 1 - 70,
-    fontSize:16,
-    // borderWidth:1, 
-marginHorizontal:20, 
-fontWeight:'350'
   },
   Text: {
     color: baseColors.darkTextColor,
     fontWeight: "bold",
+    fontSize:16,
     textTransform: "uppercase",
     textAlign: "center",
-    paddingVertical: 10,
-    fontSize:16
+    paddingBottom: 10,
   },
   Textleft: {
     color: baseColors.darkTextColor,
-    flexDirection:'row',
-    width:deviceWidth / 1 - 70,
-    fontSize:18,
-    fontWeight: "600", 
-marginHorizontal:20,
+    fontWeight: "bold",
+    textTransform: "uppercase",
+    fontSize:15,
+    padding: 10,
   },
   formText: {
     paddingLeft: 20,
+  },
+  InputField:{
+    height: 40,
+    marginHorizontal:12,
+    marginVertical:5,
+    borderColor: baseColors.sucessColor,
+    borderWidth: 1.7,
+    borderRadius: 50,
+    padding: 10,
   },
   modalView: {
     flex: 1,

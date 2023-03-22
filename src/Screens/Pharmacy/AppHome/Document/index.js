@@ -9,7 +9,7 @@ import {
 } from "react-native";
 
 
-import LayoutReservationPharmacy from "../../../../Components/LayoutReservationPharmacy/index"
+import LayoutReservationPharmacy from "../../../../Layout/LayoutReservationPharmacy"
 import { useNavigation } from "@react-navigation/native";
 
 function Documents() {

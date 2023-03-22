@@ -1,15 +1,15 @@
 import React from "react";
-import { View, Text, Dimensions } from "react-native";
+import { View, Text, Dimensions, TouchableOpacity } from "react-native";
 import InputField from "../../../Components/InputFiled";
 import Button from "../../../Components/Buttons";
 import { useNavigation } from "@react-navigation/native";
 import { styles } from "./style";
 import baseColors from "../../../Theme/Colors/Colors";
-import AppHeader from "../../../Components/AppHeader";
 // import CheckButton from "../../../Components/CheckButton/index";
 import ModalTester from "../../../Components/Modal/SectionModal";
 import GradientBackground from "../../../Components/Gradient/Background";
 import { Checkbox } from "react-native-paper";
+import { AntDesign } from "@expo/vector-icons";
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
@@ -18,64 +18,42 @@ function SignUp() {
   const Navigation = useNavigation();
   const [checked, setChecked] = React.useState(false);
   const [switchValue, setswitchValue] = React.useState(false);
+  const [Agreechecked, setAgreeChecked] = React.useState(false);
+
+  const [estado, setEstado] = React.useState(false);
+
+  const agregarFavoritos = () => {
+    setEstado(!estado);
+  };
 
   return (
     <View style={styles.screenContainer}>
-      <GradientBackground>
-      <AppHeader styles={styles.headerContainer}>
-              <Text style={styles.textHeading}>SOSAN</Text>
-        </AppHeader>
+      <GradientBackground >
         <View style={styles.screenBackground}>
+          <Text style={styles.headingTop}>SOSAN</Text>
           <View style={styles.screenMiddle}>
             <Text style={styles.Text}>create a new account</Text>
-            <Text style={styles.TextSty}>Enter Email</Text>
-        <InputField
-          styles={{
-            height: 40,
-            margin: 12,
-            borderColor: baseColors.sucessColor,
-            borderWidth: 3,
-            borderRadius: 50,
-            padding: 10,
-          }}
-          placeholder=" abc@gmail.com"
-        />
-            <Text style={styles.TextSty}>Enter Username</Text>
+            <Text style={styles.formText}>Enter Email</Text>
             <InputField
-          styles={{
-            height: 40,
-            margin: 12,
-            borderColor: baseColors.sucessColor,
-            borderWidth: 3,
-            borderRadius: 50,
-            padding: 10,
-          }}
-          placeholder=" Enter Username"
-        />
-            <Text style={styles.TextSty}>Enter PhoneNumber</Text>
+              placeholder="abc@gmail.com"
+              styles={styles.InputField}
+            ></InputField>
+            <Text style={styles.formText}>Enter Username</Text>
             <InputField
-          styles={{
-            height: 40,
-            margin: 12,
-            borderColor: baseColors.sucessColor,
-            borderWidth: 3,
-            borderRadius: 50,
-            padding: 10,
-          }}
-          placeholder=" 00955332158476"
-        />
-            <Text style={styles.TextSty}>Enter Password</Text>
+              placeholder="Your Username"
+              styles={styles.InputField}
+            ></InputField>
+            <Text style={styles.formText}>Enter PhoneNumber</Text>
             <InputField
-          styles={{
-            height: 40,
-            margin: 12,
-            borderColor: baseColors.sucessColor,
-            borderWidth: 3,
-            borderRadius: 50,
-            padding: 10,
-          }}
-          placeholder="  ***************** "
-        />
+              placeholder="0092331524568"
+              styles={styles.InputField}
+            ></InputField>
+            <Text style={styles.formText}>Enter Password</Text>
+            <InputField
+              placeholder="*************"
+              secureTextEntry={true}
+              styles={styles.InputField}
+            ></InputField>
             <Text style={styles.Textleft}> What are You? </Text>
             <View
               style={{
@@ -88,46 +66,49 @@ function SignUp() {
               <View
                 style={{
                   flexDirection: "row",
-                  justifyContent: 'space-between',
+                  justifyContent: "space-between",
                   width: deviceWidth / 2.3,
                   alignItems: "center",
                   paddingVertical: 5,
                   paddingHorizontal: 15,
                 }}
               >
-                <Checkbox 
-                color="green"
-                  status={checked ? "unchecked" : "checked" }
-                  onPress={() => {
-                    setChecked(!checked);
-                    setswitchValue(false)
-                  }}
-                />
-                <Text>
-                  Individual
-                </Text>
+                <TouchableOpacity onPress={checked}>
+                  <AntDesign
+                    name="checkcircle"
+                    size={20}
+                    color={checked  ?baseColors.secondaryTextColor : baseColors.sucessTextColor }
+                    onPress={() => {
+                      setChecked(!checked);
+                      setswitchValue(false);
+                    }}
+                  />
+                </TouchableOpacity>
+
+                <Text>Individual</Text>
               </View>
               <View
                 style={{
                   flexDirection: "row",
-                  justifyContent: 'space-between',
+                  justifyContent: "space-between",
                   width: deviceWidth / 2.3,
                   alignItems: "center",
                   paddingVertical: 5,
                   paddingHorizontal: 15,
                 }}
               >
-                <Checkbox
-                color="green"
-                status={checked ? "checked" : "unchecked"}
-                  onPress={() => {
-                    setChecked(!checked);
-                    setswitchValue(true)
-                  }}
-                />
-                <Text>
-                 Professional
-                </Text>
+                <TouchableOpacity onPress={checked}>
+                  <AntDesign
+                    name="checkcircle"
+                    size={20}
+                    color={checked  ? baseColors.sucessTextColor  : baseColors.secondaryTextColor }
+                    onPress={() => {
+                      setChecked(!checked);
+                      setswitchValue(true);
+                    }}
+                  />
+                </TouchableOpacity>
+                <Text>Professional</Text>
               </View>
             </View>
 
@@ -135,14 +116,18 @@ function SignUp() {
               style={{
                 flexDirection: "row",
                 justifyContent: "space-evenly",
-                alignItems:'center',
-                width: deviceWidth / 1.1-5,
+                alignItems: "center",
+                width: deviceWidth / 1.1 - 5,
               }}
             >
-               <Checkbox
-               color="green"
-                  status={"checked"}
-                />
+              <Checkbox
+                status={Agreechecked ? "checked" : "unchecked"}
+                onPress={() => {
+                  setAgreeChecked(!Agreechecked);
+                }}
+                color={baseColors.sucessTextColor}
+              />
+
               <Text>i agree with the terms and agreements</Text>
             </View>
 
@@ -160,7 +145,7 @@ function SignUp() {
                   borderRadius: 50,
                   paddingVertical: 10,
                   paddingHorizontal: 12,
-                  width: 150,
+                  width: 130,
                   justifyContent: "center",
                   alignItems: "center",
                 }}
@@ -179,52 +164,46 @@ function SignUp() {
                 </Text>
               </Button>
               {switchValue !== true ? (
-              <Button
-                styles={{
-                  elevation: 8,
-                  backgroundColor: baseColors.primaryColor,
-                  borderRadius: 50,
-                  paddingVertical: 10,
-                  paddingHorizontal: 12,
-                  width: 150,
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-                
-                onPress={() => {
-                  Navigation.navigate("Individuals");
-                }}
-              >
-                
-                <Text
-                  style={{
-                    color: baseColors.lightColor,
-                    fontWeight: "bold",
-                    textTransform: "uppercase",
+                <Button
+                  styles={{
+                    elevation: 8,
+                    backgroundColor: baseColors.primaryColor,
+                    borderRadius: 50,
+                    paddingVertical: 10,
+                    paddingHorizontal: 12,
+                    width: 130,
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                  onPress={() => {
+                    Navigation.navigate("Individuals");
                   }}
                 >
-                  Next
-                </Text>
-              </Button>
-              ) :(
-
+                  <Text
+                    style={{
+                      color: baseColors.lightColor,
+                      fontWeight: "bold",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    Next
+                  </Text>
+                </Button>
+              ) : (
                 <Button
-                styles={{
-                  elevation: 8,
-                  backgroundColor: baseColors.primaryColor,
-                  borderRadius: 50,
-                  paddingVertical: 10,
-                  paddingHorizontal: 12,
-                  width: 150,
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-                onPress={() => {
-                  Navigation.navigate("SignIn");
-                }}
-              >
-                <ModalTester />
-              </Button>
+                  styles={{
+                    elevation: 8,
+                    backgroundColor: baseColors.primaryColor,
+                    borderRadius: 50,
+                    paddingVertical: 10,
+                    paddingHorizontal: 12,
+                    width: 130,
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <ModalTester />
+                </Button>
               )}
             </View>
           </View>
